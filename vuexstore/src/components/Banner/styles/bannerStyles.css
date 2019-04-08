@@ -1,0 +1,40 @@
+.banner {
+    background-image: url("../img/brunch.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    margin-top: 100px;
+    width: 100vw;
+    height: 700px;
+    margin-left: -9px;
+    font-family: Arial, Helvetica, sans-serif;
+    
+    
+}
+
+h1 {
+    position: relative;
+    color: white;
+    left: 12%;
+    top: 26%;
+    font-size: 300%;
+    
+}
+
+h3 {
+    position: relative;
+    color: white;
+    left: 12%;
+    top: 24%;
+    font-size: 200%;
+}
+
+p {
+    position: relative;
+    color: white;
+    left: 12%;
+    top: 21%;
+    font-size: 100%;
+}
+
+   

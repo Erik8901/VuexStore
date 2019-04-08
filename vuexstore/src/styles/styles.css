@@ -1,0 +1,15 @@
+body {
+   background-color: wheat;
+   overflow-y: auto;
+   width: 100vw;
+   height: auto;
+   overflow-x: hidden;
+   
+}
+
+.app {
+   background-color: wheat;
+}
+
+
+
