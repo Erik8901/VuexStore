@@ -6,12 +6,25 @@
     top:0%;
     left: 0%;
     color: white;
+    z-index: 1000;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+.companyName {
+    position: absolute;
+    left: 6%;
+    top: 16%;
+    font-size: 200%;
+    font-family: "Lucida Bright", Georgia, serif;
+    font-style: oblique;
+    color: white;
 }
 
 .buttonsMenu {
     position: relative;
-    top: 40%;
-    left: 6%;
+    top: 60%;
+    text-align: center;
 }
 
 .buttons {
@@ -20,8 +33,29 @@
     border: none;
     cursor:pointer;
     margin-left: 40px;
-    font-size: 160%;
+    font-size: 120%;
     font-family: Arial, Helvetica, sans-serif;
     color: white;
 
+}
+
+.buttons:hover {
+    border-bottom: 2px solid;
+}
+
+
+.searchBar {
+    position: absolute;
+    left: 72%;
+    bottom: 21%;
+    font-size: 90%;
+    font-family: Arial, Helvetica, sans-serif;
+    border: none;
+}
+
+.searchField {
+    border: none;
+    width: 300px;
+    height: 20px;
+    background-repeat:no-repeat;
 }

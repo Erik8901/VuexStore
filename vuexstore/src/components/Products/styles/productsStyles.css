@@ -1,18 +1,49 @@
 .products {
     position: relative;
-    background-color: white;
+    background-color: wheat;
     top: 30px;
     left: 0%;
-    height: 1000px;
+    height: auto;
+    text-align: center;
 }
 
 ul {
     position: relative;
     display: inline-flex;
+    list-style-type: none;
+    margin: 40px;
     
 }
 
 li {
     position: relative;
     margin-left: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 120%;
+    margin: 20px;
+    cursor: pointer;
+    text-align: left;
+}
+
+.img {
+    height: 200px;
+    width: 300px;
+}
+
+.name {
+    top: -6%;
+    color: black;
+    
+}
+
+.price {
+    top: -13%;
+    color: black;
+
+}
+
+.info {
+    top: -19%;
+    color: black;
+
 }

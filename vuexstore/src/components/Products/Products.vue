@@ -1,10 +1,11 @@
 <template>
   <div class="products">
     <ul id="example-1">
-        <li v-for="product in productsList" :key="product.id">
-        {{ product.name }}
-        {{ product.price }}
-        {{ product.img }}
+        <li v-for="product in productsList.slice(0,4)" :key="product.name">
+        <img class="img" :src="product.img"/>
+        <p class="name"></br>{{ product.name }}</p>
+        <p class="price"></br>Price:{{ product.price }} €</p>
+        <p class="info"></br>{{ product.info }}</p>
         </li>
     </ul>   
   </div>
@@ -23,35 +24,35 @@ export default {
   data() {
       return {
        productsList: [
-          { name: 'prod1',
-            price: '400',
-            img: '',
-            id: '1'
+          { name: 'The Chefs kitchen knife',
+            price: '100',
+            img: require('@/assets/Knife.jpg'),
+            info: 'New all around knife for 2019!'
           },
-          { name: 'prod2',
-            price: '1000',
-            img: '',
-            id: '2'
+          { name: 'Steel Cutlery Set',
+            price: '60',
+            img: require('@/assets/ForksandKnifes.jpg'),
+            info: 'All around set'
           },
-          { name: 'prod3',
-            price: '300',
-            img: '',
-            id: '4'
+          { name: 'Wooden Sleeves',
+            price: '16',
+            img: require('@/assets/sleeves.jpeg'),
+            info: 'Perfect for cooking'
           },
-          { name: 'prod4',
-            price: '120',
-            img: '',
-            id: '3'
+          { name: 'Wineglass set',
+            price: '20',
+            img: require('@/assets/wineglasses.jpg'),
+            info: 'Perfect for dinnerparties'
           },
           { name: 'prod5',
             price: '600',
-            img: '',
-            id:'5'
+            img: require('@/assets/Knife.jpg'),
+            info:'5'
           },
           { name: 'prod6',
             price: '1300',
-            img: '',
-            id: '6'
+            img: require('@/assets/Knife.jpg'),
+            info: '6'
           },
         ]
       }
