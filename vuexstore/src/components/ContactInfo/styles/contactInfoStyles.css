@@ -1,0 +1,61 @@
+.contactInfo {
+    position: absolute;
+    left: 19.6%;
+    margin-top: 70px;
+    width: 600px;
+    height: 400px;
+    background-color: darkslategrey;
+}
+
+.companyName2 {
+    font-family: "Lucida Bright", Georgia, serif;
+    font-style: oblique;
+    color: white;
+    top: 3%;
+    left: 20%;
+}
+
+.city {
+   font-family: Arial, Helvetica, sans-serif;
+   top: 1%;
+   font-weight: 600;
+   left: 40%;
+}
+
+.street {
+    font-family: Arial, Helvetica, sans-serif;
+    top: 1%;
+    font-weight: 400;
+}
+
+.adress {
+    font-family: Arial, Helvetica, sans-serif;
+    top: -2%;
+    font-weight: 400;
+}
+
+.tele {
+    font-family: Arial, Helvetica, sans-serif;
+    top: -5.1%;
+    font-weight: 400;
+}
+
+.dropLine{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin-left: 36%;
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    width: 160px;
+    font-size: 120%;
+}
+
+.dropLine:hover {
+    color: wheat;
+}
+
+
+

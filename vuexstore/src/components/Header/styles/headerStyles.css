@@ -57,5 +57,7 @@
     border: none;
     width: 300px;
     height: 20px;
+    padding: 3px;
     background-repeat:no-repeat;
+    left: 10%;
 }

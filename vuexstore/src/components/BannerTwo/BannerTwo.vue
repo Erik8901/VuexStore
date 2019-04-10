@@ -7,6 +7,7 @@
         <div class="background2">
             <h2>Only high Quality!</h2> 
         </div>
+        
     </div>
 </template>
 

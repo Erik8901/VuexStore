@@ -5,7 +5,7 @@
       <button class="buttons">Products</button>
       <button class="buttons">Inspiration</button>
       <button class="buttons">About</button>
-      <button class="buttons">Contact</button>
+      <button class="buttons" @click="scrollTo()">Contact</button>
     </div>
     <searchBar class="searchBar"></searchBar>
   </div>
@@ -27,7 +27,13 @@ export default {
 
   },
   props: {
-     }
+     },
+  methods: {
+    scrollTo() {
+      console.log("ihp")
+      window.scrollTo(0, 3900);
+    }
+  }
 }
 </script>
 

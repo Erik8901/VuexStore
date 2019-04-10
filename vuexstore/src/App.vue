@@ -7,11 +7,14 @@
       <Products></Products>
       
       <BannerTwo></BannerTwo>
-      <div class="testdiv"></div>
+      <ContactInfo></ContactInfo>
+
+      <GoogleMap></GoogleMap>
     </div>
     <Footer></Footer>
   </div>
 </template>
+
 
 <script>
 import HeaderTop from './components/HeaderTop/HeaderTop.vue'
@@ -20,6 +23,10 @@ import Footer from './components/Footer/Footer.vue'
 import Banner from './components/Banner/Banner.vue'
 import Products from './components/Products/Products.vue'
 import BannerTwo from './components/BannerTwo/BannerTwo.vue'
+import ContactInfo from './components/ContactInfo/ContactInfo.vue'
+import GoogleMap from './components/GoogleMap/GoogleMap.vue'
+
+
 
 
 
@@ -37,7 +44,10 @@ export default {
     Footer,
     Banner,
     Products,
-    BannerTwo
+    BannerTwo,
+    GoogleMap,
+    ContactInfo
+    
 
   }
 }

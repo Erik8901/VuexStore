@@ -1,0 +1,80 @@
+.contactUs {
+    position: relative;
+    z-index: 3000;
+    height: 600px;
+    width: 600px;
+    background-color: #d4a55d;
+    top: -100%;
+    left: 40%;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+
+.backgroundImg {
+    background-image: url("./img/tables.jpg");
+    background-size: cover;
+    height: 27%;
+}
+
+.questionH1 {
+    font-family: Arial, Helvetica, sans-serif;
+    top: -19%;
+    font-size: 200%;
+    left: 24%;
+}
+
+.sendForm {
+    margin-top: -60px;
+}
+
+.email {
+    font-size: 100%;
+    margin-left: -40px;
+    
+}
+
+.firstName {
+    font-size: 100%;
+    margin-left: -40px;
+}
+
+.lastName {
+    font-size: 100%;
+    margin-left: -40px;
+}
+
+input {
+    width: 300px;
+    height: 20px;
+    border-radius: 3px;
+    margin-left: 30px;
+    margin-top: -20px;
+}
+
+.questions {
+    font-size: 130%;
+    margin-left: 160px;
+}
+
+.questionsArea {
+    font-family: Arial, Helvetica, sans-serif;
+    height: 70px;
+    width: 460px;
+    margin-left: 60px;
+}
+
+.sendQuestion {
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    color: white;
+    font-size: 130%;
+    margin-left: 200px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.sendQuestion:hover {
+    color: #507661;
+}
