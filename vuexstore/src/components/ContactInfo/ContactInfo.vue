@@ -5,8 +5,9 @@
                 <p class="street">Teststreet 4D</p>
                 <p class="adress">416 99 Göteborg</p>
                 <p class="tele">Tel: 031 - 01 01 01</p>
-                <button class="dropLine" @click="isHidden = !isHidden">Drop us a line!</button>
-                <contactUs v-if="!isHidden"/>
+                <button id="btnq" class="dropLine" @click="isHidden = !isHidden">{{ this.text }}</button>
+                <contactUs id="test" class="sendForm" v-if="!isHidden"/>
+                
     </div>
 </template>
 
@@ -23,26 +24,39 @@ export default {
   },
   data() {
       return {
-        isHidden: true
+        isHidden: true,
+        text: "Drop us a line!",
+        text2: "Close"
       }
   },
-  updated(isHidden) {
+    mounted() {
       
-      window.onkeydown = function(e) {
-          if(e.keyCode == 27)  {
-              console.log("iuoboiboi")
-              !this.isHidden
-              console.log(this.isHidden)
-          }
-      }
 
   },
-  methods: {
-     showContactUs() {
-         console.log("bvobphpi")
+    updated() {
+        if(!this.isHidden) {
+           this.text = this.text2
+       } else if(this.isHidden) {
+           this.text = "Drop us a line!"
+    }
+    // let sendForm = document.getElementById("test");
+    // let btnq = document.getElementById("btnq");
+    //   //   console.log(sendForm)
+    //  document.onclick = function(e, data) {
+    //     if(e.target.id !== "btnq" && e.target.id !== "test") {
+    //           console.log("outsidez")
+    //           sendForm.style.display = "none"
+    //            }
+    //         }
+    //   window.onkeydown = function(e) {
+    //       if(e.keyCode == 27)  {
+    //           sendForm.style.display = "none"
+    //       }
+    //   }
 
-         
-      }
+},
+    methods: {
+     
   }
 }
 </script>

@@ -1,10 +1,8 @@
 .contactUs {
-    position: relative;
     z-index: 3000;
     height: 600px;
     width: 600px;
     background-color: #d4a55d;
-    top: -100%;
     left: 40%;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
@@ -24,55 +22,81 @@
     left: 24%;
 }
 
-.sendForm {
-    margin-top: -60px;
-}
-
 .email {
+    position: absolute;
     font-size: 100%;
-    margin-left: -40px;
-    
+    margin-left: 77px;
+    margin-top:60px;
 }
 
-.firstName {
-    font-size: 100%;
-    margin-left: -40px;
-}
-
-.lastName {
-    font-size: 100%;
-    margin-left: -40px;
-}
-
-input {
+.emailInput {
+    position: absolute;
     width: 300px;
     height: 20px;
     border-radius: 3px;
-    margin-left: 30px;
-    margin-top: -20px;
+    margin-left: 146px;
+    margin-top: -30px;
+}
+
+.firstName {
+    position: absolute;
+    font-size: 100%;
+    margin-left: 77px;
+    margin-top: 120px;
+}
+
+.nameInput {
+    position: absolute;
+    width: 300px;
+    height: 20px;
+    border-radius: 3px;
+    margin-left: 146px;
+    margin-top: 30px;
+}
+
+
+.lastName {
+    position: absolute;
+    font-size: 100%;
+    margin-left: 77px;
+    margin-top:181px;
+}
+
+.lastNameInput {
+    position: absolute;
+    width: 300px;
+    height: 20px;
+    border-radius: 3px;
+    margin-left: 146px;
+    margin-top: 91px;
 }
 
 .questions {
+    position: absolute;
     font-size: 130%;
     margin-left: 160px;
+    margin-top: 270px;
 }
 
 .questionsArea {
+    position: absolute;
     font-family: Arial, Helvetica, sans-serif;
     height: 70px;
     width: 460px;
     margin-left: 60px;
+    margin-top: 200px;
 }
 
 .sendQuestion {
+    position: absolute;
     background-color: Transparent;
     background-repeat:no-repeat;
     border: none;
     color: white;
     font-size: 130%;
-    margin-left: 200px;
+    margin-left: 220px;
     cursor: pointer;
-    margin-top: 10px;
+    margin-top: 310px;
 }
 
 .sendQuestion:hover {
