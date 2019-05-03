@@ -6,4 +6,16 @@
     bottom: 0%;
     left: 0%;
     z-index: 1000;
+
+    
+}
+
+h4 {
+    position: absolute;
+    color: white;
+    font-family: "Lucida Bright", Georgia, serif;
+    font-style: italic;
+    color: white;
+    left: 30%;
+    top: -10%;
 }

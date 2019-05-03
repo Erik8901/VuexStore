@@ -1,5 +1,6 @@
 <template>
   <div class="products">
+
     <ul id="example-1">
         <li v-for="product in productsList.slice(0,4)" :key="product.name">
         <img class="img" :src="product.img"/>

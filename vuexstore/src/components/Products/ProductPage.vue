@@ -1,6 +1,7 @@
 <template>
-  <div class="productsPage">
-      PRODUCTPAGE
+  <div class="productspage">
+      <h1 class="ppage">PRODUCT PAGE</h1>
+
   </div>
 </template>
 
@@ -9,7 +10,7 @@
 
 <script>
 //styles
-import productsStyles from './styles/productsStyles.css';
+import productsStyles from './styles/productPageStyles.css';
 
 
 export default {

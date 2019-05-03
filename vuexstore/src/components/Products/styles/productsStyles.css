@@ -76,14 +76,11 @@ hr {
     left: 16%;
     cursor: pointer;
     width: 100px;
+    border-radius: 3px;
 }
 
 .addToCart:hover {
     background-color: darkgreen;
 }
 
-.productsPage {
-    background-color: yellow;
-    width: 1000px;
-    height: 1000px;
-}
+

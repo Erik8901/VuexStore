@@ -1,6 +1,6 @@
 <template>
   <div class="footer">
-    Footer
+    <h4>Kitchen Equipment, Since 2013</h4>
   </div>
 </template>
 
