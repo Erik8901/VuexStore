@@ -13,7 +13,7 @@ import productsStyles from './styles/productsStyles.css';
 
 
 export default {
-  name: 'Products',
+  name: 'ProductPage',
   data() {
       return {
       

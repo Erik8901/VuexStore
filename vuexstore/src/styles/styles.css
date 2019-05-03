@@ -4,11 +4,16 @@ body {
    width: 100vw;
    height: auto;
    overflow-x: hidden;
-   
 }
 
+.banner{
+   position: relative;
+   top: 10%;
+}
 .app {
    background-color: wheat;
+   
+   
 }
 
 

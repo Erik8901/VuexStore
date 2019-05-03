@@ -3,9 +3,11 @@
     <ul id="example-1">
         <li v-for="product in productsList.slice(0,4)" :key="product.name">
         <img class="img" :src="product.img"/>
-        <p class="name"></br>{{ product.name }}</p>
-        <p class="price"></br>Price:{{ product.price }} €</p>
-        <p class="info"></br>{{ product.info }}</p>
+        <p class="name">{{ product.name }}</p>
+        <p class="price">Price: {{ product.price }} €</p>
+        <p class="info">{{ product.info }}</p> <hr/>
+        <button class="addToCart">Add to cart</button>
+        
         </li>
     </ul>   
   </div>
@@ -27,22 +29,22 @@ export default {
           { name: 'The Chefs kitchen knife',
             price: '100',
             img: require('@/assets/Knife.jpg'),
-            info: 'New all around knife for 2019!'
+            info: 'New all around knife for 2019! Lorem ipsum dolor sit amet, consectetur adipiscing elit'
           },
           { name: 'Steel Cutlery Set',
             price: '60',
             img: require('@/assets/ForksandKnifes.jpg'),
-            info: 'All around set'
+            info: 'All around set. Lorem ipsum dolor sit amet, consectetur adipiscing elit'
           },
           { name: 'Wooden Sleeves',
             price: '16',
             img: require('@/assets/sleeves.jpeg'),
-            info: 'Perfect for cooking'
+            info: 'Perfect for cooking. Lorem ipsum dolor sit amet, consectetur adipiscing elit'
           },
           { name: 'Wineglass set',
             price: '20',
             img: require('@/assets/wineglasses.jpg'),
-            info: 'Perfect for dinnerparties'
+            info: 'Perfect for dinnerparties. Lorem ipsum dolor sit amet, consectetur adipiscing elit'
           },
           { name: 'prod5',
             price: '600',

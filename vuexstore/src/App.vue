@@ -1,11 +1,14 @@
 <template>
   <div id="app">
     <HeaderTop></HeaderTop>
-    <Header></Header>
-    <div class="scrollDiv">
+    <Header></Header> 
+     <div class="scrollDiv">
       <Banner></Banner>
       <Products></Products>
-      
+      <div id="nav">
+        <router-link to="/">ProductPage</router-link>
+      </div>
+      <router-view/>
       <BannerTwo></BannerTwo>
       <ContactInfo></ContactInfo>
 
@@ -25,6 +28,7 @@ import Products from './components/Products/Products.vue'
 import BannerTwo from './components/BannerTwo/BannerTwo.vue'
 import ContactInfo from './components/ContactInfo/ContactInfo.vue'
 import GoogleMap from './components/GoogleMap/GoogleMap.vue'
+import ProductPage from './components/Products/ProductPage.vue'
 
 
 
@@ -46,7 +50,8 @@ export default {
     Products,
     BannerTwo,
     GoogleMap,
-    ContactInfo
+    ContactInfo,
+    ProductPage
     
 
   }
