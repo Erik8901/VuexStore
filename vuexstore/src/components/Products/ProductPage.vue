@@ -1,6 +1,6 @@
 <template>
   <div class="productspage">
-      <h1 class="ppage">PRODUCT PAGE  </h1>
+      <h1 class="ppage">PRODUCT PAGE{{items}}  </h1>
       <ul class="productsUl">
         <li v-for="item in items" :key="item.name">
             <p>{{item.price}}</p>
@@ -31,7 +31,7 @@ export default {
     var self = this;
     axios
       .get("products.json")
-      .then(response => (this.items = response.data))
+      .then(response => (this.items.push(response.data)))
      
     
 

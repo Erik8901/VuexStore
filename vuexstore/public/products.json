@@ -1,5 +1,4 @@
-{
-  "productsList": [
+[
     {
       "name": "Old Style Cutlery",
       "price": "100",
@@ -44,4 +43,3 @@
     }
     
   ]
-}
