@@ -12,6 +12,8 @@ ul {
     display: inline-flex;
     list-style-type: none;
     margin: 40px;
+    left: -2%;
+    border: none;
     
 }
 
@@ -73,7 +75,7 @@ hr {
     color: white;
     background-color: #8AEC97;
     padding: 6px;
-    left: 16%;
+    left: 34%;
     cursor: pointer;
     width: 100px;
     border-radius: 3px;
@@ -83,4 +85,11 @@ hr {
     background-color: darkgreen;
 }
 
+
+
+.productsUl {
+    position: absolute;
+    background-color: yellow;
+    top: 30%;
+}
 
