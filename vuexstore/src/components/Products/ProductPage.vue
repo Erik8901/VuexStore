@@ -1,43 +1,35 @@
 <template>
-  <div class="productspage">
-      <h1 class="ppage">PRODUCT PAGE{{items}}  </h1>
+  <div class="productsPage">
+      <!-- <p class="ppage">Checkout our online Store!</p> -->
       <ul class="productsUl">
-        <li v-for="item in items" :key="item.name">
-            <p>{{item.price}}</p>
+        <li class="productsLi" v-for="item in items" :key="item.name">
+            <img class="img" :src="item.img"/>
+            <p class="productName">{{item.name}}</p>
+            <p class="productPrice">Price: {{item.price}}</p>
+            <p class="info">{{ item.info }}</p> <hr/>
+            <button class="addToCart">Add to cart</button>
+            <button class="getInfo">Info</button>
         </li>
-        
-
-        </ul>
+      </ul>
   </div>
 </template>
-
-
-
 
 <script>
 //styles
 import productsStyles from './styles/productPageStyles.css';
 import axios from 'axios'
 
-
 export default {
   name: 'ProductPage',
-  data() {
+data() {
     return {
-      items: []
+      items: null
       }
      },
-  mounted () {
-    var self = this;
-    axios
+mounted () {
+     axios
       .get("products.json")
-      .then(response => (this.items.push(response.data)))
-     
-    
-
-     
-
-
+      .then(response => (this.items = response.data))
   }
 }
 </script>

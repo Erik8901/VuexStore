@@ -1,7 +1,7 @@
 .products {
     position: relative;
     background-color: wheat;
-    top: 30px;
+    top: 6px;
     left: 0%;
     height: auto;
     text-align: center;
@@ -12,9 +12,9 @@ ul {
     display: inline-flex;
     list-style-type: none;
     margin: 40px;
-    left: -2%;
+    left: -2.4%;
     border: none;
-    
+    width: auto;
 }
 
 li {
@@ -23,11 +23,11 @@ li {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 120%;
     margin: 20px;
-    cursor: pointer;
     text-align: left;
     background-color: #507661;
     color: white;
     height: 400px;
+    width: 300px;
 }
 
 .img {
@@ -38,31 +38,26 @@ li {
 .name {
     position: absolute;
     display: block;
-    top: 52%;
-    
-    
+    top: 49%;
 }
 
 .price {
     position: absolute;
     display: block;
-    top: 62%;
-   
-}
+    top: 59%;
+   }
 
 .info {
     position: absolute;
     display: block;
     top: 72%;
     font-size: 72%;
-
-
 }
 
 hr {
     position: absolute;
     display: block;
-    top: 87%;
+    top: 84%;
     width: 100%;
 
 }
@@ -70,12 +65,12 @@ hr {
 .addToCart {
     position: absolute;
     display: block;
-    top: 91.6%;
+    top: 90%;
     border:none;
     color: white;
     background-color: #8AEC97;
     padding: 6px;
-    left: 34%;
+    left: 56%;
     cursor: pointer;
     width: 100px;
     border-radius: 3px;
@@ -85,11 +80,70 @@ hr {
     background-color: darkgreen;
 }
 
+.productsPage {
+    position: relative;
+    top: 130px;
+    height: auto;
+    width: 600px;
+}
 
-
-/* .productsUl {
-    position: absolute;
-    background-color: yellow;
-    top: 30%;
+/* .ppage {
+    position: relative;
+    margin-top: -801px;
+    left: 100%;
+    z-index: 400;
+    display: inline;
+    font-size: 360%;
+    width: 900px;
+    font-family: Arial, Helvetica, sans-serif;
 } */
+
+.productsUl {
+    position: relative;
+    width: 240%;
+    display: inline-block;
+    margin: 40px;
+    left: 22%;
+    background: none;
+    z-index: 0;
+}
+
+.productsLi {
+    position: relative;
+    display: inline-block;
+    margin: 30px;
+}
+
+.productName {
+    position: relative;
+    display: block;
+    top: 1%;
+}
+
+.productPrice {
+    position: relative;
+    display: block;
+    top: 1%;
+}
+
+.getInfo {
+    position: absolute;
+    display: block;
+    top: 90%;
+    border:none;
+    color: white;
+    background-color: #d4a55d;
+    padding: 6px;
+    left: 10%;
+    cursor: pointer;
+    width: 100px;
+    border-radius: 3px;
+}
+
+.getInfo:hover {
+    background-color: burlywood;
+}
+
+
+
 
