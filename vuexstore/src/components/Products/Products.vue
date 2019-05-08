@@ -22,8 +22,9 @@ import { mapGetters } from "vuex";
 
 export default {
   name: 'Products',
+  props: ["items"],
   data() {
-      return {
+    return {
       products: []
       }
     },
@@ -38,12 +39,13 @@ export default {
   mounted () {
     axios
       .get("products.json")
-      .then(response => (this.products = response.data))
-      // this.$store.dispatch("$_productList/setItems", { 
-      //   productList: response.data,
-      //   type: "search" });
-     }
-
+      .then(response => {
+      this.$store.dispatch("$_productList/setItems", { 
+        productList: response.data,
+        type: "search" 
+      })
+      })
+}
 }
 </script>
 

@@ -17,7 +17,7 @@ export default {
     },
      mutations: {
       SET_ITEMS: (state, items) => {
-         state.items = items;
+         state.items = items
        }
     //   SET_ITEMS_COUNT: (state, itemsCount) => {
     //     state.itemsCount = itemsCount;
@@ -30,4 +30,5 @@ export default {
     //   }
     // }
   
-  };
+  }
+}
