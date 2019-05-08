@@ -17,6 +17,7 @@
 //styles
 import productsStyles from './styles/productsStyles.css';
 import axios from 'axios'
+import { mapGetters } from "vuex";
 
 
 export default {
@@ -26,10 +27,21 @@ export default {
       products: []
       }
     },
+  computed: {
+    ...mapGetters({
+     Items: "$_Cart/items",
+      // cartItemsCount: "$_Cart/itemsCount",
+      // cartTotalPrice: "$_Cart/totalPrice",
+      // loading: "$_Cart/loading"
+    })
+  },
   mounted () {
     axios
       .get("products.json")
       .then(response => (this.products = response.data))
+      // this.$store.dispatch("$_productList/setItems", { 
+      //   productList: response.data,
+      //   type: "search" });
      }
 
 }

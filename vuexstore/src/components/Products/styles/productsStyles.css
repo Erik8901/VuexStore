@@ -108,10 +108,21 @@ hr {
     z-index: 0;
 }
 
+@media only screen and (max-width: 1600px) {
+    .productsUl  {
+        left: -8.4%;
+    }
+  }
+
 .productsLi {
     position: relative;
     display: inline-block;
     margin: 30px;
+}
+
+.productImg {
+    height: 200px;
+    width: 300px;
 }
 
 .productName {

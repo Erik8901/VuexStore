@@ -1,45 +1,90 @@
 [
     {
-      "name": "Old Style Cutlery",
+      "name": "Bread Knifewq",
       "price": "100",
-      "img": "https://cdn.pixabay.com/photo/2014/06/26/08/56/cutlery-377700_1280.jpg",
+      "img": "https://images.unsplash.com/photo-1469014221409-dea4fc6a6b2e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1355&q=80",
+      "type": "Knife",
       "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
     },
     {
       "name": "Pots",
       "price": "60",
-      "img": "https://cdn.pixabay.com/photo/2014/11/24/14/35/pot-544071_1280.jpg",
+      "img": "https://images.unsplash.com/photo-1487357911997-0785d96c024f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
       "info": "Lorem ipsum dolor sit amet , consectetur adipiscing elit"
     },
     {
       "name": "Steel Cutlery",
       "price": "16",
-      "img": "https://pixabay.com/photos/map-postcard-greeting-birthday-2527413/",
+      "img": "https://images.unsplash.com/photo-1556618487-acc1948b1a14?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80",
       "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
     },
     {
       "name": "Stainless Steel Kitchen Knife",
       "price": "20",
-      "img": "https://cdn.pixabay.com/photo/2015/12/11/17/51/knife-1088529_1280.png",
+      "img": "https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
       "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
     },
     {
       "name": "Knife set",
       "price": "600",
-      "img": "https://cdn.pixabay.com/photo/2016/11/19/12/37/food-1839061_1280.jpg",
+      "img": "https://images.unsplash.com/photo-1556216708-8cfd9746d773?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
       "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
     },
     {
       "name": "Yellow Pots",
       "price": "1300",
-      "img": "https://cdn.pixabay.com/photo/2015/05/25/14/29/tea-783352_1280.jpg",
+      "img": "https://images.unsplash.com/photo-1525696774870-7c2a6e80421c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+      "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+    },
+    {
+      "name": "Bread Knifewq",
+      "price": "100",
+      "img": "https://images.unsplash.com/photo-1469014221409-dea4fc6a6b2e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1355&q=80",
+      "type": "Knife",
       "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
     },
     {
       "name": "Steel Fork",
       "price": "60",
-      "img": "https://cdn.pixabay.com/photo/2014/10/26/17/46/kiwi-504174_1280.jpg",
+      "img": "https://images.unsplash.com/photo-1518291344630-4857135fb581?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
       "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+    },
+    {
+      "name": "Stainless Steel Kitchen Knife",
+      "price": "20",
+      "img": "https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
+      "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+    },
+    {
+      "name": "Stainless Steel Kitchen Knife",
+      "price": "20",
+      "img": "https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
+      "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+    },
+    {
+      "name": "Pots",
+      "price": "60",
+      "img": "https://images.unsplash.com/photo-1487357911997-0785d96c024f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
+      "info": "Lorem ipsum dolor sit amet , consectetur adipiscing elit"
+    },
+    {
+      "name": "Steel Fork",
+      "price": "60",
+      "img": "https://images.unsplash.com/photo-1518291344630-4857135fb581?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+      "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+    },
+    {
+      "name": "Steel Fork",
+      "price": "60",
+      "img": "https://images.unsplash.com/photo-1518291344630-4857135fb581?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+      "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+    },
+    {
+      "name": "Pots",
+      "price": "60",
+      "img": "https://images.unsplash.com/photo-1487357911997-0785d96c024f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
+      "info": "Lorem ipsum dolor sit amet , consectetur adipiscing elit"
     }
     
   ]
+  

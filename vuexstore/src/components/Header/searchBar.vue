@@ -12,7 +12,7 @@
 //styles
 import headerStyles from './styles/headerStyles.css';
 import ProductPage from '../Products/ProductPage.vue'
-
+import { mapGetters } from "vuex";
 
 
 export default {
@@ -23,6 +23,14 @@ export default {
   props: {
      
   },
+  computed: {
+    ...mapGetters({
+     Items: "$_Prod/items",
+      // cartItemsCount: "$_Cart/itemsCount",
+      // cartTotalPrice: "$_Cart/totalPrice",
+      // loading: "$_Cart/loading"
+    })
+  },
   methods: {
     loadProductPage: function () {
      this.$router.push({ path: '/Productpage' })
@@ -31,7 +39,9 @@ export default {
     handleSearch(e) {
     
     console.log("jeloqqw")
-   
+   this.$store.dispatch("$_Prod/setItems", { 
+        productList: response.data,
+        type: "search" });
     }
 
   },
