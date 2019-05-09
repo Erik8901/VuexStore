@@ -18,11 +18,15 @@
 import productsStyles from './styles/productsStyles.css';
 import axios from 'axios'
 import { mapGetters } from "vuex";
+import store from "@/utils/store.js";
 
 
 export default {
   name: 'Products',
   props: ["items"],
+  components: {
+    store
+  },
   data() {
     return {
       products: []
@@ -40,10 +44,10 @@ export default {
     axios
       .get("products.json")
       .then(response => {
-      this.$store.dispatch("$_productList/setItems", { 
-        productList: response.data,
-        type: "search" 
-      })
+      this.$store.commit('SET_ITEMS', response.data)
+       // productList: response.data,
+        //type: "search" 
+     this.products = store.state.items
       })
 }
 }

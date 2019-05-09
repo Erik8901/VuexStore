@@ -1,12 +1,9 @@
 import Vue from "vue";
 
-const setItems =(context, {productList,type}) => {
+const getSearch =(context, {query,type}) => {
 
 
-        //context.commit
-
-
-    if(type == "search") {
+      if(type == "search") {
         console.log("search")
 
     }
@@ -19,6 +16,7 @@ const setItems =(context, {productList,type}) => {
 
 }
 
+
 export default {
-    setItems
+    getSearch
 };

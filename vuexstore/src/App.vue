@@ -4,13 +4,9 @@
     <Header></Header> 
     <router-view>
      <div class="scrollDiv">
-      
-
       <!-- <div id="nav">
       
       </div> -->
-   
-    
     </div>
       </router-view>
     <Footer></Footer>
@@ -25,14 +21,8 @@ import LandingPage from './components/LandingPage/LandingPage.vue'
 import ProductPage from './components/Products/ProductPage.vue'
 
 
-
-
-
 //styles
 import styles from './styles/styles.css';
-
-
-
 
 export default {
   name: 'app',
@@ -42,9 +32,7 @@ export default {
     Footer,
     LandingPage,
     ProductPage
-    
-
-  }
+    }
 }
 </script>
 

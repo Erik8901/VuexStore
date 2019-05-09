@@ -87,17 +87,6 @@ hr {
     width: 600px;
 }
 
-/* .ppage {
-    position: relative;
-    margin-top: -801px;
-    left: 100%;
-    z-index: 400;
-    display: inline;
-    font-size: 360%;
-    width: 900px;
-    font-family: Arial, Helvetica, sans-serif;
-} */
-
 .productsUl {
     position: relative;
     width: 240%;
@@ -155,6 +144,11 @@ hr {
     background-color: burlywood;
 }
 
-
+.SearchPage {
+    position: relative;
+    top: 130px;
+    height: auto;
+    width: 600px;
+}
 
 

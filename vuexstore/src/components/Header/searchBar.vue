@@ -1,7 +1,13 @@
 <template>
   <div class="search-container">
-      <input @keydown="loadProductPage" @input="handleSearch()" placeholder="Search our store" class="searchField"/>
-     
+      <input placeholder="Search our store" class="searchField"
+      @keyup="loadSearchPage"
+
+      v-on:input="keyWords = $event.target.value"
+     :value="keyWords"
+   />
+   
+     <ProductPage v-show="false" :search="keyWords"/>
   </div>
 </template>
 
@@ -13,39 +19,67 @@
 import headerStyles from './styles/headerStyles.css';
 import ProductPage from '../Products/ProductPage.vue'
 import { mapGetters } from "vuex";
+import store from "@/utils/store.js";
+
 
 
 export default {
   name: 'searchBar',
+  
   components: {
     ProductPage
   },
-  props: {
-     
-  },
-  computed: {
-    ...mapGetters({
-     Items: "$_Prod/items",
-      // cartItemsCount: "$_Cart/itemsCount",
-      // cartTotalPrice: "$_Cart/totalPrice",
-      // loading: "$_Cart/loading"
-    })
-  },
-  methods: {
-    loadProductPage: function () {
-     this.$router.push({ path: '/Productpage' })
+  data() {
+    return {
+      keyWords: 'hej'
+      
+      }
+     },
+  mounted() {
     
     },
-    handleSearch(e) {
-    
-    console.log("jeloqqw")
-   this.$store.dispatch("$_Prod/setItems", { 
-        productList: response.data,
-        type: "search" });
-    }
+  methods: {
+    loadSearchPage: function () {
+    let minKeys = 3
+    let searchText = this.keyWords
+   
+  
+   console.log(searchText)
+    if(searchText.length >= minKeys) {
+      console.log("more then 3")
+      this.$router.push({ path: '/SearchPage+' + searchText })
 
-  },
+     
+
+       
+     }
+     
+     console.log(this.keyWords)
+
+     
+     
+    //  this.$store.dispatch("$_Search/getSearch", { 
+    //     type: "search",
+    //     query: searchText });
+     
+     
+     
+     
+     
+     
+     
+    console.log("iohbni")
+   
+    // console.log(this.$store.state.items)
+    }
+   
     
+   
+    
+  
+
+  
+  } 
 }
 </script>
 
