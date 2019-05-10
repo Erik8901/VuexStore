@@ -1,8 +1,5 @@
 <template>
-  <div class="SearchPage">
-  <searchBar v-show="false" />{{search}}
-    SearchPage
-      <!-- <p class="ppage">Checkout our online Store!</p> -->
+  <div class="SearchPage" >
       <ul class="productsUl">
         <li class="productsLi" v-for="item in items" :key="item.name">
             <img class="productImg" :src="item.img"/>
@@ -20,22 +17,22 @@
 //styles
 import productsStyles from './styles/productsStyles.css';
 import axios from 'axios'
-import searchBar from '../Header/searchBar.vue';
+
 
 export default {
   name: 'SearchPage',
-  props: ['search'],
+  props:['keyWords'],
   components: {
-    searchBar
+    
   },
-data() {
-    return {
-      items: [],
-      //terms: this.props
-      }
-     },
-mounted () {
-console.log(this.search.keyWords)
+ computed: {
+    items() {
+      return this.$store.state.items
+    }
+
+  },
+    mounted () {
+//console.log(this.keyWords)
 //let filter = searchText.toUpperCase();
     //  for(let i=0; i < productList.length; i++) {
     //       if(searchText.toUpperCase().indexOf(filter)) {
@@ -45,11 +42,7 @@ console.log(this.search.keyWords)
     //  }
   
   //this.items = this.$store.state.items
-   axios
-      .get("products.json")
-      .then(response => {
-        this.items = response.data
-      })
+   
     }
 }
 

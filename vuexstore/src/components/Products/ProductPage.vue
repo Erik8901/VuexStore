@@ -1,6 +1,6 @@
 <template>
   <div class="productsPage">
-      <!-- <p class="ppage">Checkout our online Store!</p> -->
+      
       <ul class="productsUl">
         <li class="productsLi" v-for="item in items" :key="item.name">
             <img class="productImg" :src="item.img"/>
@@ -22,21 +22,22 @@ import axios from 'axios'
 
 export default {
   name: 'ProductPage',
-data() {
-    return {
-      items: []
-      }
-     },
+  computed: {
+    items() {
+      return this.$store.state.items
+    }
+  },
+
 mounted () {
   
-  //this.items = this.$store.state.items
-   axios
-      .get("products.json")
-      .then(response => {
-        this.items = response.data
-      })
     }
 }
+
+// data() {
+//     return {
+//       items: []
+//       }
+//      }
 
 </script>
 
