@@ -5,7 +5,8 @@ Vue.use(Vuex);
 export default new Vuex.Store({
     state: {
         items: null,
-        searchText: ''
+        searchText: '',
+        searchedList: []
       },
       mutations: {
         SET_ITEMS: (state, items) => {
@@ -14,7 +15,14 @@ export default new Vuex.Store({
          },
          SET_SEARCH: (state, keyWords) => {
            console.log(keyWords)
-            state.searchText = keyWords
+           //keyWords
+            let filter = keyWords.toUpperCase();
+              for(let i=0; i < state.items.length; i++) {
+                if(keyWords.toUpperCase().indexOf(filter)) {
+                  return filter
+          }
+           console.log(filter)
+     }
          },
       // },
       // getters: {
