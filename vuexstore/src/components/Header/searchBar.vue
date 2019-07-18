@@ -23,6 +23,12 @@ export default {
   components: {
     SearchPage
   },
+  computed: {
+    items() {
+      return this.$store.state.items
+    }
+
+  },
   data() {
     return {
       keyWords: ''
@@ -30,6 +36,8 @@ export default {
      },
   mounted() {
    
+   console.log(this.items)
+    
     },
   methods: {
     loadSearchPage: function () {
@@ -38,9 +46,10 @@ export default {
   setTimeout(() =>{
     if(this.keyWords.length >= minKeys) {
       
-      
+       console.log(this.items)
       this.$router.push({ path: '/SearchPage' })
       this.$store.commit('SET_SEARCH', this.keyWords)
+       this.$store.commit('SET_SEARCHPRODUCTS', this.items)
 
 
       this.keyWords = ''

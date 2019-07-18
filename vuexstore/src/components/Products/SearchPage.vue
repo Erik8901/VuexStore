@@ -32,7 +32,9 @@ export default {
 
   },
     mounted () {
-//console.log(this.keyWords)
+    
+    console.log(this.items)
+    
 // let filter = searchText.toUpperCase();
 //      for(let i=0; i < productList.length; i++) {
 //           if(searchText.toUpperCase().indexOf(filter)) {

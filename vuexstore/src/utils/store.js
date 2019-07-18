@@ -13,25 +13,30 @@ export default new Vuex.Store({
           state.items = items
            console.log(items)
          },
-         SET_SEARCH: (state, keyWords) => {
+         SET_SEARCH: (state, keyWords, items) => {
            console.log(keyWords)
+           
            //keyWords
-            let filter = keyWords.toUpperCase();
-              for(let i=0; i < state.items.length; i++) {
-                if(keyWords.toUpperCase().indexOf(filter)) {
-                  return filter
-          }
-           console.log(filter)
-     }
+    //         let filter = keyWords.toUpperCase();
+    //           for(let i=0; i < state.items.length; i++) {
+                
+    //             if(keyWords.toUpperCase().indexOf(filter)) {
+    //               return filter
+    //       }
+    //        console.log(filter)
+    //  }
          },
-      // },
-      // getters: {
-      //   items: state => state.items
-      //  },
-      // actions: {
-      //   getSearch: (context, payload) => {
-      //     console.log(payload)
-      //     context.commit('getSearch', payload)
-      //   }
+         SET_SEARCHPRODUCTS:(state,items) => {
+          console.log(items)
+         },
+      },
+      getters: {
+        items: state => state.items
+       },
+      actions: {
+        getSearch: (context, payload) => {
+          console.log(payload)
+          context.commit('getSearch', payload)
+        }
        }
 });
