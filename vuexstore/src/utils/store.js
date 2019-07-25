@@ -5,33 +5,34 @@ Vue.use(Vuex);
 export default new Vuex.Store({
     state: {
         items: null,
-        searchText: '',
-        searchedList: []
+        searchText: null,
+        searchedList: null
       },
       mutations: {
-        SET_ITEMS: (state, items) => {
-          state.items = items
-           console.log(items)
+        SET_ITEMS: (state, products) => {
+           state.items = products
+             console.log(state.items)
          },
-         SET_SEARCH: (state, keyWords, items) => {
-           console.log(keyWords)
+         SET_SEARCH: (state,searchedObj, searchedList, searchText) => {
+         //console.log(searchedObj)
+         state.searchText = searchedObj.searchWords
+         //console.log(state.searchText)
+         
            
            //keyWords
-    //         let filter = keyWords.toUpperCase();
-    //           for(let i=0; i < state.items.length; i++) {
+    //         let filter = searchedObj.searchWords.toUpperCase();
+    //           for(let i=0; i < searchedObj.allItems.length; i++) {
                 
-    //             if(keyWords.toUpperCase().indexOf(filter)) {
+    //             if(searchedObj.searchWords.toUpperCase().indexOf(filter)) {
     //               return filter
     //       }
     //        console.log(filter)
     //  }
          },
-         SET_SEARCHPRODUCTS:(state,items) => {
-          console.log(items)
-         },
+        
       },
       getters: {
-        items: state => state.items
+        //items: state => state.items
        },
       actions: {
         getSearch: (context, payload) => {

@@ -32,22 +32,20 @@ export default {
       products: []
       }
     },
-  computed: {
-    ...mapGetters({
-     Items: "$_Cart/items",
-      // cartItemsCount: "$_Cart/itemsCount",
-      // cartTotalPrice: "$_Cart/totalPrice",
-      // loading: "$_Cart/loading"
-    })
-  },
+  // computed: {
+  //   ...mapGetters({
+  //    Items: "$_Cart/items",
+  //     // cartItemsCount: "$_Cart/itemsCount",
+  //     // cartTotalPrice: "$_Cart/totalPrice",
+  //     // loading: "$_Cart/loading"
+  //   })
+  // },
   mounted () {
     axios
       .get("products.json")
       .then(response => {
       this.$store.commit('SET_ITEMS', response.data)
-       // productList: response.data,
-        //type: "search" 
-     this.products = store.state.items
+      this.products = store.state.items
       })
 }
 }

@@ -25,27 +25,45 @@ export default {
   components: {
     
   },
+  data() {
+    return {
+     
+    }
+  },
  computed: {
     items() {
       return this.$store.state.items
+    },
+    searchInput() {
+      return this.$store.state.searchText
     }
 
   },
-    mounted () {
+  
+  mounted () {
     
+    console.log("searchPage")
     console.log(this.items)
     
-// let filter = searchText.toUpperCase();
-//      for(let i=0; i < productList.length; i++) {
-//           if(searchText.toUpperCase().indexOf(filter)) {
-//              return filter
-//           }
-//            console.log(filter)
-//      }
-  
-  //this.items = this.$store.state.items
+    console.log(this.searchInput)
+    
+    
    
-    }
+    
+    //this.items = this.$store.state.items
+   
+    },
+  methods: {
+    test: function(list) {
+    console.log("test")
+  
+   
+    
+   
+   }
+    
+  
+  }
 }
 
 </script>

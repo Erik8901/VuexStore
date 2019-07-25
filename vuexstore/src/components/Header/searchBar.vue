@@ -36,7 +36,7 @@ export default {
      },
   mounted() {
    
-   console.log(this.items)
+  console.log("seachBar")
     
     },
   methods: {
@@ -46,17 +46,17 @@ export default {
   setTimeout(() =>{
     if(this.keyWords.length >= minKeys) {
       
-       console.log(this.items)
-      this.$router.push({ path: '/SearchPage' })
-      this.$store.commit('SET_SEARCH', this.keyWords)
-       this.$store.commit('SET_SEARCHPRODUCTS', this.items)
-
-
+       this.$store.commit('SET_SEARCH', {
+        searchWords: this.keyWords,
+        allItems: this.items
+      })
+      
       this.keyWords = ''
+      this.$router.push({ path: '/SearchPage' })
    
    }
    }, 2000);
-
+    
    
    
    
