@@ -1,7 +1,7 @@
 <template>
   <div class="SearchPage" >
       <ul class="productsUl">
-        <li class="productsLi" v-for="item in items" :key="item.name">
+        <li class="productsLi" v-for="item in filteredList" :key="item.name">
             <img class="productImg" :src="item.img"/>
             <p class="productName">{{item.name}}</p>
             <p class="productPrice">Price: {{item.price}}</p>
@@ -36,35 +36,28 @@ export default {
     },
     searchInput() {
       return this.$store.state.searchText
-    }
+    },
+    filteredList() {
+      return this.items.filter(item => {
+      return item.name.toLowerCase().includes(this.searchInput.toLowerCase())
+      })
+      
+    },
 
   },
   
   mounted () {
     
-    console.log("searchPage")
-    console.log(this.items)
-    
-    console.log(this.searchInput)
-    
-    
-   
-    
-    //this.items = this.$store.state.items
-   
-    },
+  },
   methods: {
-    test: function(list) {
-    console.log("test")
-  
-   
     
-   
-   }
-    
-  
+      
+    }
   }
-}
+    
+  
+  
+
 
 </script>
 
