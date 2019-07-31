@@ -1,5 +1,5 @@
 <template>
-    <div  class="contactUs">
+    <div class="contactUs">
       <div class="backgroundImg"></div>
         <h1 class="questionH1">Send us a question!</h1>
         

@@ -31,6 +31,24 @@ export default {
       ContactInfo,
       GoogleMap
      }
+     ,
+  mounted() {
+    console.log("bodu")
+    
+  },
+  methods: {
+    test: function test () {
+      console.log("test")
+      
+      // document.body.style.backgroundColor = "yellow";
+      //  if(event.key == 27) {
+        
+      //   console.log("jibpi")
+      // }
+    }
+  }
+
+  
 }
 </script>
 

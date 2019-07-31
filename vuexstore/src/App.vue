@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" @click="test()">
     <HeaderTop></HeaderTop>
     <Header></Header> 
     <router-view>
@@ -32,7 +32,22 @@ export default {
     Footer,
     LandingPage,
     ProductPage
+  
+  },
+    methods: {
+    test: function test () {
+      console.log("test")
+     
+      // document.body.style.backgroundColor = "yellow";
+      //  if(event.key == 27) {
+        
+      //   console.log("jibpi")
+      // }
     }
+  }
+
+ 
+  
 }
 </script>
 
