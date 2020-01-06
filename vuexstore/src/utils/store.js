@@ -6,13 +6,13 @@ export default new Vuex.Store({
     state: {
         items: null,
         searchText: null,
-        searchedList: null
+        searchedList: null,
+        viewPortWidth: window.innerWidth
       },
       mutations: {
         SET_ITEMS: (state, products) => {
            state.items = products
-             console.log(state.items)
-         },
+          },
          SET_SEARCH: (state,searchedObj, searchedList, searchText) => {
          //console.log(searchedObj)
          state.searchText = searchedObj.searchWords
@@ -29,6 +29,9 @@ export default new Vuex.Store({
     //        console.log(filter)
     //  }
          },
+         SET_WIDTH:(state,width) => {
+           state.viewPortWidth = window.innerWidth
+         }
         
       },
       getters: {
