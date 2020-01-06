@@ -7,7 +7,7 @@ export default new Vuex.Store({
         items: null,
         searchText: null,
         searchedList: null,
-        viewPortWidth: window.innerWidth
+       // viewPortWidth: window.innerWidth
       },
       mutations: {
         SET_ITEMS: (state, products) => {
@@ -29,9 +29,9 @@ export default new Vuex.Store({
     //        console.log(filter)
     //  }
          },
-         SET_WIDTH:(state,width) => {
-           state.viewPortWidth = window.innerWidth
-         }
+        //  SET_WIDTH:(state,width) => {
+        //    state.viewPortWidth = window.innerWidth
+        //  }
         
       },
       getters: {
