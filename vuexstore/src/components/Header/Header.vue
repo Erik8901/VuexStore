@@ -41,11 +41,15 @@ export default {
       handleWindowSize() {
          this.viewWidth = window.innerWidth;
          let companyName = document.querySelector(".companyName")
-            if(this.viewWidth < 1300) {
-                companyName.style.display = "none"
-            } else {
-                companyName.style.display = "flex"
-          }
+         let buttonsMenu = document.querySelector(".buttonsMenu")
+             this.viewWidth < 1300 ? 
+               companyName.style.display = "none" : 
+               companyName.style.display = "flex"
+
+             this.viewWidth < 1300 ? 
+              buttonsMenu.style.left = "0" : 
+              buttonsMenu.style.left = "27%"
+          
      },
     toProductPage() {
       console.log("qqq")

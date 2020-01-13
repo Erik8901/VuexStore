@@ -27,7 +27,11 @@
     width: 700px;
     text-align: left;
     left: 27%;
-    background:none;
+    background: none;
+    display: flex;
+
+    
+    justify-content: space-around;
 }
 
 .buttons {
