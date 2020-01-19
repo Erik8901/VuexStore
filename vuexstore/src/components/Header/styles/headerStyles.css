@@ -11,16 +11,6 @@
     
 }
 
-.companyName {
-    position: absolute;
-    left: 3%;
-    top: 16%;
-    font-size: 200%;
-    font-family: "Lucida Bright", Georgia, serif;
-    font-style: oblique;
-    color: white;
-}
-
 .buttonsMenu {
     position: relative;
     top: 60%;
@@ -29,8 +19,6 @@
     left: 27%;
     background: none;
     display: flex;
-
-    
     justify-content: space-around;
 }
 
@@ -39,11 +27,23 @@
     background-repeat:no-repeat;
     border: none;
     cursor:pointer;
-    margin-left: 27px;
     font-size: 120%;
     font-family: Arial, Helvetica, sans-serif;
-    color: white;
+    color: #ffff;
+    width: fit-content;
+    display: flex;
+}
 
+.desktop-menu {
+    
+    display: flex;
+    flex-direction: row;
+    width: 80rem;
+    position: relative;
+    margin: 0 auto;
+    left: 13%;
+    justify-content: space-evenly;
+    text-align: center;
 }
 
 .buttons:hover {
@@ -51,10 +51,13 @@
 }
 
 
+a {
+    height: fit-content;
+    text-decoration: none;
+}
+
+
 .searchBar {
-    position: absolute;
-    left: 72%;
-    bottom: 21%;
     font-size: 90%;
     font-family: Arial, Helvetica, sans-serif;
     border: none;
@@ -62,9 +65,46 @@
 
 .searchField {
     border: none;
-    width: 300px;
-    height: 20px;
+    width: 16rem;
+    height: 1.6rem;
     padding: 3px;
+    background-repeat: no-repeat;
+    top: 19%;
+    position: absolute;
+    left: 31%;
+}
+
+.hamburgerBtn{
+    left: 3%;
+    position: fixed;
+
+    height: 4rem;
+    width: fit-content;
+    height: fit-content;
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger-menu {
+    background-color: #507661;
+    display: none;
+    width: 100vw;
+    flex-direction: column;
+    position: fixed;
+    top: 10.7%;
+    left: 0;
+}
+
+.hamburger-buttons {
+    margin: 1rem;
+    background-color: Transparent;
     background-repeat:no-repeat;
-    left: 10%;
+    color: #ffff;
+    border: none;
+    font-size: 120%;
+    cursor: pointer;
+}
+
+.hamburger-buttons:hover {
+    border-bottom: 2px solid;
 }

@@ -31,15 +31,14 @@ export default {
   },
   data() {
     return {
-      keyWords: ''
+      keyWords: '',
+      viewWidth: 0
     }
-     },
-  mounted() {
-   
-  console.log("seachBar")
-    
-    },
-  methods: {
+},
+created() {
+      window.addEventListener('resize', this.handleWindowSize)
+  },
+methods: {
     loadSearchPage: function () {
     let minKeys = 3
    
@@ -54,21 +53,23 @@ export default {
       this.keyWords = ''
       this.$router.push({ path: '/SearchPage' })
    
-   }
-   }, 2000);
-    
-   
-   
-   
-   
-   }
-   
-    
-   
-    
-  
+      }
+    }, 2000)
+  }, //loadSearchPage
 
+  handleWindowSize() {
+      this.viewWidth = window.innerWidth;
+        let searchField = document.querySelector(".searchField");
+
+        this.viewWidth < 1300 ? 
+          searchField.style.left = "0" :
+          searchField.style.left = "31%"
+
+        this.viewWidth < 1300 ? 
+          searchField.style.width = "10rem" :
+          searchField.style.width = "16rem"
   
+    }
   } 
 }
 </script>

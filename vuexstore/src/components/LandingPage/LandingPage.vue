@@ -33,12 +33,11 @@ export default {
      }
      ,
   mounted() {
-    console.log("bodu")
     
   },
   methods: {
     test: function test () {
-      console.log("test")
+     
       
       // document.body.style.backgroundColor = "yellow";
       //  if(event.key == 27) {

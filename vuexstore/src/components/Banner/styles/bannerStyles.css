@@ -1,44 +1,62 @@
 .banner {
+    position: relative;
+    top: 8.1rem;
+    height: 40rem;
+    width: 80rem;
     background-image: url("../img/brunch.jpg");
     background-repeat: no-repeat;
-    background-size: 69%;
-    position: relative;
-    margin-top: 130px;
-    width: 100vw;
-    height: 700px;
-    margin-left: 270px;
     font-family: Arial, Helvetica, sans-serif;
-    z-index: 100;
-    
-    
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    margin: 0 auto;
 }
 
-h1 {
+.bannerText1{
     position: relative;
-    color: white;
+    color: #ffffff;
     left: 6%;
-    top: 36%;
+    height: fit-content;
     font-size: 300%;
-    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
-    
 }
 
-h3 {
+
+.bannerText2 {
+    position: relative;
+    color: #ffffff;
+    height: fit-content;
+    top: 34%;
+    top: 17%;
+    font-size: 184%;
+    right: 60%;
+}
+
+a {
+
+    color: #ffffff;
+}
+
+/* h3 {
     position: relative;
     color: white;
     left: 6%;
+    
     top: 34%;
     font-size: 200%;
     text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
-}
+} */
 
 p {
-    position: relative;
+    /* position: relative;
     color: white;
     left: 6%;
     top: 31%;
     
-    font-size: 100%;
+    
+    
+    font-size: 100%; */
+
+
 }
 
    
