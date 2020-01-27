@@ -1,15 +1,18 @@
 <template>
   <div class="SearchPage" >
+    <div class="title-div">
+      <h3 class="search-title">Search results ({{this.filteredList.length}}):</h3>
       <ul class="productsUl">
         <li class="productsLi" v-for="item in filteredList" :key="item.name">
             <img class="productImg" :src="item.img"/>
             <p class="productName">{{item.name}}</p>
             <p class="productPrice">Price: {{item.price}}</p>
-            <p class="info">{{ item.info }}</p> <hr/>
+            <p class="productInfo">{{ item.info }}</p> <hr/>
             <button class="addToCart">Add to cart</button>
             <button class="getInfo">Info</button>
         </li>
       </ul>
+      </div>
   </div>
 </template>
 
@@ -47,6 +50,8 @@ export default {
   },
   
   mounted () {
+
+    console.log(this.filteredList)
     
   },
   methods: {

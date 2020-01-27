@@ -1,12 +1,9 @@
 <template>
     <div class="header">
        <div class="buttonsMenu">
-                 
-
-                    <div class="hamburgerBtn" v-on:click="openMenu"><i class="fas fa-bars fa-2x"></i></div>
-                    
-                    <div class="hamburger-menu">
-                       <router-link to="/"><button class="hamburger-buttons" >Home</button></router-link>
+            <div class="hamburgerBtn" v-on:click="openMenu"><i class="fas fa-bars fa-2x"></i></div>
+                <div class="hamburger-menu" style="display:none;">
+                      <router-link to="/"><button class="hamburger-buttons" >Home</button></router-link>
                       <router-link to="/Productpage"><button class="hamburger-buttons" >Products</button></router-link>
                       <router-link to="/Inspiration"><button class="hamburger-buttons">Inspiration</button></router-link>
                       <router-link to="/About"><button class="hamburger-buttons">About</button></router-link>
@@ -15,15 +12,13 @@
                   </div>              
                   
                   <div class="desktop-menu">
-                   <router-link to="/"><button class="buttons" >Home</button></router-link>
-                  <router-link to="/Productpage"><button class="buttons" >Products</button></router-link>
-                  <router-link to="/Inspiration"><button class="buttons">Inspiration</button></router-link>
-                  <router-link to="/About"><button class="buttons">About</button></router-link>
-                  <router-link to="/"><button class="buttons" >Jobs</button></router-link>
-                  <router-link to="/Contactpage"><button class="buttons">Contact</button></router-link>
+                      <router-link to="/"><button class="buttons">Home</button></router-link>
+                      <router-link to="/Productpage"><button class="buttons">Products</button></router-link>
+                      <router-link to="/Inspiration"><button class="buttons">Inspiration</button></router-link>
+                      <router-link to="/About"><button class="buttons">About</button></router-link>
+                      <router-link to="/"><button class="buttons" >Jobs</button></router-link>
+                      <router-link to="/Contactpage"><button class="buttons">Contact</button></router-link>
                   </div>
-                 
-
                 </div>
             </div>
   </template>
@@ -79,16 +74,17 @@ export default {
           
      },
      openMenu() {
-       console.log("menu")
-       let hamburgerMenu = document.querySelector(".hamburger-menu")
-       if(hamburgerMenu.style.display === "none") {
-         hamburgerMenu.style.display = "flex"
-       } else {
+      let hamburgerMenu = document.querySelector(".hamburger-menu")
+       
+       
+    hamburgerMenu.style.display === "none" ?
+         hamburgerMenu.style.display = "flex" :
+   
           hamburgerMenu.style.display = "none"
-       }
+       
      },
     toProductPage() {
-      console.log("qqq")
+    
     }
   },
     mounted() {

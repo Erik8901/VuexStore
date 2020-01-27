@@ -1,10 +1,10 @@
 <template>
   <div class="search-container">
-      <input placeholder="Search our store" class="searchField"
+      <input placeholder="Search our webstore" class="searchField"
       type="text"
       @keyup="loadSearchPage"
       v-model="keyWords"
-   />
+    />
    
      <!-- <SearchPage/> -->
   </div>

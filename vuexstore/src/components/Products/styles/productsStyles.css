@@ -51,6 +51,7 @@ li {
     position: absolute;
     display: block;
     top: 72%;
+    padding-left: 0.9rem;
     font-size: 72%;
 }
 
@@ -95,6 +96,7 @@ hr {
     left: 22%;
     background: none;
     z-index: 0;
+   
 }
 
 @media only screen and (max-width: 1600px) {
@@ -107,6 +109,7 @@ hr {
     position: relative;
     display: inline-block;
     margin: 30px;
+    font-size: 1rem;
 }
 
 .productImg {
@@ -117,13 +120,21 @@ hr {
 .productName {
     position: relative;
     display: block;
+    font-size: 72;
     top: 1%;
+    padding-left: 0.9rem;
 }
 
 .productPrice {
     position: relative;
     display: block;
     top: 1%;
+    padding-left: 0.9rem;
+}
+
+.productInfo {
+    padding-left: 0.9rem;
+    padding-right: 0.9rem;
 }
 
 .getInfo {
@@ -149,6 +160,21 @@ hr {
     top: 130px;
     height: auto;
     width: 600px;
+}
+
+.search-title {
+    position: absolute;
+    top: 2%;
+    left: 40%;
+    height: fit-content;
+    width: fit-content;
+    color: #507661;
+    text-shadow: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.title-div {
+    /* background-color: #d4a55d */
 }
 
 

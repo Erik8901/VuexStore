@@ -35,7 +35,6 @@
 }
 
 .desktop-menu {
-    
     display: flex;
     flex-direction: row;
     width: 80rem;
@@ -67,17 +66,17 @@ a {
     border: none;
     width: 16rem;
     height: 1.6rem;
-    padding: 3px;
+    padding: 0.2rem;
     background-repeat: no-repeat;
     top: 19%;
     position: absolute;
     left: 31%;
+    text-indent: 0.3rem;
 }
 
 .hamburgerBtn{
     left: 3%;
     position: fixed;
-
     height: 4rem;
     width: fit-content;
     height: fit-content;
@@ -87,12 +86,14 @@ a {
 
 .hamburger-menu {
     background-color: #507661;
-    display: none;
+    
+    /* display: none; */
     width: 100vw;
     flex-direction: column;
     position: fixed;
     top: 10.7%;
     left: 0;
+    height: fit-content;
 }
 
 .hamburger-buttons {
@@ -107,4 +108,5 @@ a {
 
 .hamburger-buttons:hover {
     border-bottom: 2px solid;
+    display: block;
 }

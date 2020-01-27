@@ -15,8 +15,28 @@
     font-size: 200%;
     display: flex;
     position: absolute;
-    left: 3%;
+    left: 5%;
     top: -57%;
+}
+
+.cart-and-checkout {
+    position: relative;
+    display: flex;
+    width: 10rem;
+    left: 29%;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    height: fit-content;
+    cursor: pointer;
+    justify-content: space-evenly;
+    top: 30%;
+}
+
+.checkout-text {
+    cursor: pointer;
+}
+.checkout-text:hover {
+    text-decoration:underline;
 }
 
 .container {
@@ -46,5 +66,5 @@
 }
 
 .buttonsCustomers:hover {
-    text-decoration:underline
+    text-decoration:underline;
 }

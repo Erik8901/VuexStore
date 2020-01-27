@@ -36,7 +36,7 @@ export default {
   },
     methods: {
     test: function test () {
-      console.log("test")
+     
      
       // document.body.style.backgroundColor = "yellow";
       //  if(event.key == 27) {
