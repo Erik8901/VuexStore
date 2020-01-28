@@ -6,7 +6,7 @@
         <p class="name">{{ product.name }}</p>
         <p class="price">Price: {{ product.price }} €</p>
         <p class="info">{{ product.info }}</p> <hr/>
-        <button class="addToCart">Add to cart</button>
+        <button class="addToCart" @click="addToCart()">Add to cart</button>
         <button class="getInfo">Info</button>
       </li>
     </ul>   
@@ -40,6 +40,14 @@ export default {
   //     // loading: "$_Cart/loading"
   //   })
   // },
+  methods: {
+  addToCart: function(ev) {
+    
+
+     
+
+  }
+},
   mounted () {
     axios
       .get("products.json")
@@ -47,7 +55,8 @@ export default {
       this.$store.commit('SET_ITEMS', response.data)
       this.products = store.state.items
       })
-}
+},
+
 }
 </script>
 

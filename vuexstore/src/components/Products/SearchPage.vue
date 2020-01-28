@@ -51,7 +51,7 @@ export default {
   
   mounted () {
 
-    console.log(this.filteredList)
+   // console.log(this.filteredList)
     
   },
   methods: {
