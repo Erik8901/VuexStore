@@ -8,7 +8,7 @@
             <p class="productName">{{item.name}}</p>
             <p class="productPrice">Price: {{item.price}}</p>
             <p class="productInfo">{{ item.info }}</p> <hr/>
-            <button class="addToCart">Add to cart</button>
+            <button class="addToCart" @click="addToCart(item)">Add to cart</button>
             <button class="getInfo">Info</button>
         </li>
       </ul>
@@ -30,7 +30,12 @@ export default {
   },
   data() {
     return {
-     
+      productAddToCart: {
+          name: '',
+          price: 0,
+          type: '',
+          img: ''
+        }
     }
   },
  computed: {
@@ -55,7 +60,17 @@ export default {
     
   },
   methods: {
-    
+     addToCart: function(item) {
+      this.productAddToCart.name = item.name
+      this.productAddToCart.price = item.price
+      this.productAddToCart.type = item.type
+      this.productAddToCart.img = item.img
+      
+      this.$store.commit('SET_CART', {
+        productsCart: this.productAddToCart
+      })
+     
+    }
       
     }
   }

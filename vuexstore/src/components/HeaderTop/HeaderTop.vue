@@ -5,7 +5,11 @@
         <searchBar class="searchBar"></searchBar>
           <div class="cart-and-checkout">
           <i class="fas fa-shopping-cart"></i>
-          <span class="checkout-text">To Checkout()</span>
+          <span class="checkout-text">To Checkout (<span class="cartAmount">{{this.productsCart.length}}</span>)
+            
+            
+            
+           </span>
           </div>
         <div class="loginButtonsDiv">
         <button class="buttonsCustomers">Login</button>
@@ -32,6 +36,13 @@ export default {
       viewWidth: 0
       }
     },
+    computed: {
+      productsCart() {
+        return this.$store.state.productsCart
+
+        console.log(this.state.productsCart)
+      }
+    },
      created() {
       window.addEventListener('resize', this.handleWindowSize)
   },
@@ -40,23 +51,15 @@ export default {
           this.viewWidth = window.innerWidth;
           let checkoutText = document.querySelector(".checkout-text");
           let cartAndCheckOut = document.querySelector(".cart-and-checkout");
-          // let brackets = document.createElement("span") 
-          // brackets.innerHTML = "()"
-          
+         
           this.viewWidth < 1300 ?  
-            checkoutText.style.display = "none" :
-            checkoutText.style.display = "flex"
+              checkoutText.style.display = "none" :
+              checkoutText.style.display = "flex"
 
           this.viewWidth < 1300 ?
                cartAndCheckOut.style.left = "6%" :
                cartAndCheckOut.style.left = "29%"
 
-          // this.viewWidth < 1300 ?
-          //      cartAndCheckOut.appendChild(brackets[0]) :
-          //      cartAndCheckOut.removeChild(brackets)
-
-
-          
     }
   }
 }
