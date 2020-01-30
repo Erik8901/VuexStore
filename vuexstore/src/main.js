@@ -6,6 +6,7 @@ import About from './components/About/About.vue'
 import SearchPage from './components/Products/SearchPage.vue'
 import ContactPage from './components/ContactPage/contactPage.vue'
 import Inspiration from './components/Inspiration/Inspiration.vue'
+import CheckoutPage from './components/CheckoutPage/checkoutPage.vue'
 import VueRouter from 'vue-router';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faCoffee } from '@fortawesome/free-solid-svg-icons'
@@ -41,6 +42,9 @@ const routes = [
         },
         { path: '/contactPage',
         component: ContactPage
+      },
+      { path: '/checkoutPage',
+        component: CheckoutPage
       },
   ];
 

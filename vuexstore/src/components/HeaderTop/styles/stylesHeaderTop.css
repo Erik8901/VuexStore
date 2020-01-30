@@ -33,7 +33,9 @@
 }
 
 .checkout-text {
+    display: flex;
     cursor: pointer;
+    display: flex;
 }
 .checkout-text:hover {
     text-decoration:underline;
@@ -42,6 +44,13 @@
 .cartAmount {
     display: flex;
     color: #507661;
+}
+
+.mobileCartAmount {
+    display: none;
+    color: #507661;
+    position: relative;
+    left: -12%
 }
 
 .container {

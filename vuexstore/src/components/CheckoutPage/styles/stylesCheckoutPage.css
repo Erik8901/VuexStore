@@ -1,0 +1,8 @@
+.checkout {
+    position: fixed;
+    top: 20%;
+    /* background: yellow; */
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+}

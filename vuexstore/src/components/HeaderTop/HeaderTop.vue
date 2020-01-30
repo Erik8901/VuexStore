@@ -5,12 +5,15 @@
         <searchBar class="searchBar"></searchBar>
           <div class="cart-and-checkout">
           <i class="fas fa-shopping-cart"></i>
-          <span class="checkout-text">To Checkout (<span class="cartAmount">{{this.productsCart.length}}</span>)
-            
-            
-            
-           </span>
-          </div>
+          <router-link to="/checkoutPage">
+              <span class="mobileCartAmount">({{this.productsCart.length}})</span>
+           </router-link>
+              
+              <router-link to="/checkoutPage">
+                  <span class="checkout-text">To Checkout (<span class="cartAmount">{{this.productsCart.length}}</span>)
+                </span>
+              </router-link>
+            </div>
         <div class="loginButtonsDiv">
         <button class="buttonsCustomers">Login</button>
         <button class="buttonsCustomers">Register</button>
@@ -39,8 +42,6 @@ export default {
     computed: {
       productsCart() {
         return this.$store.state.productsCart
-
-        console.log(this.state.productsCart)
       }
     },
      created() {
@@ -51,6 +52,9 @@ export default {
           this.viewWidth = window.innerWidth;
           let checkoutText = document.querySelector(".checkout-text");
           let cartAndCheckOut = document.querySelector(".cart-and-checkout");
+          let checkOutText = document.querySelector(".checkout-text");
+
+          let mobileCartAmount = document.querySelector(".mobileCartAmount ")
          
           this.viewWidth < 1300 ?  
               checkoutText.style.display = "none" :
@@ -59,6 +63,12 @@ export default {
           this.viewWidth < 1300 ?
                cartAndCheckOut.style.left = "6%" :
                cartAndCheckOut.style.left = "29%"
+
+        
+        
+        this.viewWidth < 1300 ? 
+              mobileCartAmount.style.display = "flex" :
+              mobileCartAmount.style.display = "none"
 
     }
   }

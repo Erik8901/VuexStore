@@ -62,7 +62,7 @@ methods: {
         let searchField = document.querySelector(".searchField");
 
         this.viewWidth < 1300 ? 
-          searchField.style.left = "0" :
+          searchField.style.left = "-17%" :
           searchField.style.left = "31%"
 
         this.viewWidth < 1300 ? 
