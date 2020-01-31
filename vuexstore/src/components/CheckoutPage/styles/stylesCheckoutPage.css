@@ -1,8 +1,31 @@
 .checkout {
-    position: fixed;
-    top: 20%;
-    /* background: yellow; */
+    position: absolute;
+    top: 16%;
     width: 100vw;
     height: 100vh;
     left: 0;
+    overflow-y: scroll;
+    height: 100%;
+   }
+
+.checkoutUl {
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    height: fit-content
+}
+
+.checkoutLi {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    padding: 3rem;
+}
+
+.img {
+    height: 12rem;
+}
+
+.emptyCart {
+    /* position: absolute; */
 }

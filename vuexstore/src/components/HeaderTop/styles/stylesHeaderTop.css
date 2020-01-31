@@ -32,6 +32,21 @@
     top: 30%;
 }
 
+.if-empty {
+    position: absolute;
+    color: #FFF;
+    width: fit-content;
+    display: none;
+    top: -37%;
+    left: 52%;
+    z-index: 100;
+    font-size: 82%;
+    background: gray;
+    height: fit-content;
+    padding: 0.3rem;
+    border: 0.1rem solid #FFF;
+}
+
 .checkout-text {
     display: flex;
     cursor: pointer;
@@ -51,6 +66,10 @@
     color: #507661;
     position: relative;
     left: -12%
+}
+
+.cart-div {
+   z-index: 1000;
 }
 
 .container {

@@ -1,11 +1,19 @@
 <template>
   <div class="checkout">
       <span class="checkout-title">Checkout Page</span>
-        <span>{{this.productsCart}}</span>
-
-      
-
-  </div>
+        <div>
+            <ul class="checkoutUl">
+              <li class="checkoutLi" v-for="product in productsCart" :key="product.name">
+                <img class="img" :src="product.img"/>
+                <span>{{product.name}}</span>
+                <span>{{product.price}}</span>
+                <span>{{product.type}}</span>
+                <button>remove product</button>
+              </li>
+               <button class="emptyCart">Empty Cart</button>
+          </ul>
+      </div>
+    </div>
 </template>
 
 
@@ -14,7 +22,6 @@
 <script>
 //styles
 import stylesCheckoutPage from './styles/stylesCheckoutPage.css';
-
 
 export default {
   name: 'Inspiration',
@@ -26,7 +33,6 @@ export default {
 computed: {
     productsCart() {
         return this.$store.state.productsCart
-        console.log(this.productsCart)
       }
     },
 }

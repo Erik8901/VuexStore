@@ -18,6 +18,7 @@
 //styles
 import productsStyles from './styles/productsStyles.css';
 import axios from 'axios'
+import store from "@/utils/store.js";
 //import { mapGetters } from "vuex";
 
 export default {
@@ -50,10 +51,14 @@ export default {
      
     }
 },
-
 mounted () {
-  
-    }
+  axios
+      .get("products.json")
+      .then(response => {
+      this.$store.commit('SET_ITEMS', response.data)
+      this.products = store.state.items
+      })
+  }
 }
 
 
