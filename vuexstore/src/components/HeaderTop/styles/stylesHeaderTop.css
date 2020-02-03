@@ -51,6 +51,7 @@
     display: flex;
     cursor: pointer;
     display: flex;
+    color: #FFF;
 }
 .checkout-text:hover {
     text-decoration:underline;

@@ -3,14 +3,14 @@
       <span class="checkout-title">Checkout Page</span>
         <div>
             <ul class="checkoutUl">
-              <li class="checkoutLi" v-for="product in productsCart" :key="product.name">
+              <li class="checkoutLi" v-for="(product, index) in productsCart" :key="product.name">
                 <img class="img" :src="product.img"/>
                 <span>{{product.name}}</span>
                 <span>{{product.price}}</span>
                 <span>{{product.type}}</span>
-                <button>remove product</button>
+                <button @click="removeProduct(index)">remove product</button>
               </li>
-               <button class="emptyCart">Empty Cart</button>
+               <button class="emptyCart" @click="emptyCart()">Empty Cart</button>
           </ul>
       </div>
     </div>
@@ -35,6 +35,15 @@ computed: {
         return this.$store.state.productsCart
       }
     },
+
+  methods: {
+      emptyCart() {
+        this.$store.state.productsCart = []
+    },
+    removeProduct(index) {
+     this.$delete(this.$store.state.productsCart, index)
+    }
+  },
 }
 </script>
 

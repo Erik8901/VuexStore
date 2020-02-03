@@ -2,7 +2,7 @@
   <div class="productsPage">
       
       <ul class=" productsUl">
-        <li class="productsLi" v-for="(item) in items" :key="item.id" >
+        <li class="productsLi" v-for="(item) in items" :key="item.name" >
             <img class="productImg" :src="item.img"/>
             <p class="productName">{{item.name}}</p>
             <p class="productPrice">Price: {{item.price}}</p>
@@ -25,12 +25,7 @@ export default {
   name: 'ProductPage',
     data() {
       return {
-        productAddToCart: {
-          name: '',
-          price: 0,
-          type: '',
-          img: ''
-        }
+        
       }
     },
   computed: {
@@ -40,15 +35,10 @@ export default {
   },
   methods: {
     addToCart: function(item) {
-      this.productAddToCart.name = item.name
-      this.productAddToCart.price = item.price
-      this.productAddToCart.type = item.type
-      this.productAddToCart.img = item.img
-      
-      this.$store.commit('SET_CART', {
-        productsCart: this.productAddToCart
+     this.$store.commit('SET_CART', {
+        productsCart:item
       })
-     
+   
     }
 },
 mounted () {
