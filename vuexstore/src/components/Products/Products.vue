@@ -58,11 +58,7 @@ export default {
       this.$store.commit('SET_CART', {
         productsCart: this.productAddToCart
       })
-    
-
-     
-
-  }
+    }
 },
   mounted () {
     axios

@@ -2,9 +2,9 @@
   <div class="LandingPage">
      <Banner></Banner>
      <Products></Products>
-      <BannerTwo></BannerTwo>
+      <!-- <BannerTwo></BannerTwo>
       <ContactInfo></ContactInfo>
-      <GoogleMap></GoogleMap> 
+      <GoogleMap></GoogleMap>  -->
   </div>
 </template>
 
