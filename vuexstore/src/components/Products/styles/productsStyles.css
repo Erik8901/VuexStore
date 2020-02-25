@@ -3,45 +3,30 @@
     top: 10.1rem;
     height: 40rem;
     width: 80rem;
-    background: yellow;
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     -ms-flex-direction: row;
     flex-direction: row;
-    text-align: center;
     margin: 0 auto;
    }
 
 ul {
-    position: relative;
-    display: flex;
-    width: fit-content;
-    height:fit-content;
-    margin: 0 auto;
-    
-    /* //top: 1rem; */
+   height:fit-content;
+   display: flex;
+   padding: 1px;
+   background-color: #d4a55d;
 }
 
 li {
     position: relative;
-    background-color: #507661;
     list-style: none;
     height: 27rem;
-    width: 25%;
-    border: none;
-    margin: 0.25rem;
-    /* margin-left: 2.5rem;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 120%;
-    margin: 1.25rem;
-    text-align: left;
+    float: left;
+    margin: 1rem;
+    width: 24%;
     background-color: #507661;
-    color: #ffff;
-    list-style: none;
-    height: 25rem;
-    width: 18.75rem; */
 }
 
 .img {
@@ -49,25 +34,65 @@ li {
     width: 100%;;
 }
 
-/* .name {
-    position: absolute;
-    display: block;
-    top: 49%;
+.product-info {
+    display:flex;
+    flex-direction: column;
+    color: #ffffff;
+    padding-left: 1rem;
 }
 
-.price {
-    position: absolute;
-    display: block;
-    top: 59%;
-   }
+.product-name {
+   padding-top: 1rem;
+}
 
-.info {
-    position: absolute;
-    display: block;
-    top: 72%;
-    padding-left: 0.9rem;
-    font-size: 72%;
-} */
+.product-text {
+    padding-top: 0.4rem;
+    font-size: 0.84rem;
+}
+
+.product-price {
+   padding-top: 1.6rem;
+}
+
+
+.btns {
+    padding-left: 1rem;
+    margin-top: 1rem;
+    border-top: 2px solid #F5DEB3;
+    height: 4rem;
+}
+
+.addToCart {
+    height: 1.6rem;
+    width: 7rem;
+    border: none;
+    margin-top: 2rem;
+    background: #8FBC8B;
+    color: white;
+    cursor: pointer;
+}
+
+.addToCart:hover {
+    background: #90EE90;
+}
+
+.getInfo {
+    height: 1.6rem;
+    width: 4rem;
+    margin-left: 4rem;
+   
+    border: none;
+    margin-top: 2rem;
+    background: #8FBC8B;
+    color: white;
+    cursor: pointer;
+}
+
+.getInfo:hover {
+    background: #90EE90;
+}
+
+
 
 hr {
     /* position: absolute;

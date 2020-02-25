@@ -2,13 +2,17 @@
   <div class="products">
     <ul id="example-1">
         <li v-for="product in products.slice(0,4)" :key="product.name">
-        <img class="img" :src="product.img"/>
-        <p class="name">{{ product.name }}</p>
-        <p class="price">Price: {{ product.price }} €</p>
-        <p class="info">{{ product.info }}</p> <hr/>
-        <button class="addToCart" @click="addToCart(product)">Add to cart</button>
-        <button class="getInfo">Info</button>
-      </li>
+            <img class="img" :src="product.img"/>
+                <div class="product-info">
+                    <span class="product-name">{{ product.name }}</span>
+                    <span class="product-text">{{ product.info }}</span> 
+                    <span class="product-price">Price: {{ product.price }} €</span>
+                </div>
+                <div class="btns">
+                    <button class="addToCart" @click="addToCart(product)">Add to cart</button>
+                    <button class="getInfo">Info</button>
+                </div>
+          </li>
     </ul>   
   </div>
 </template>
