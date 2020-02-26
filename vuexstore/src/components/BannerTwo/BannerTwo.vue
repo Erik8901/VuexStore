@@ -1,13 +1,17 @@
 <template>
     <div class="bannerTwo">
        <div class="img1">
+            <div class="imgText1">
             <h1>Be Inspired!</h1>
             <h3>Checkout our tips and tricks on decoration!</h3>
                  <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                </br>sed do eiusmod tempor incididunt ut labore et dolore magna aliquas</span>
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliquas</span>
+                </div>
         </div>
         <div  class="img2">
-            <h2>Only high Quality!</h2> 
+             <div class="imgText2">
+                    <h1>Only high Quality!</h1> 
+             </div>
        </div>
     </div>
 </template>
