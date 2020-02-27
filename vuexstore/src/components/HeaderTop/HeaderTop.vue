@@ -9,7 +9,7 @@
               <span class="mobileCartAmount">({{this.productsCart.length}})</span>
            </router-link>
 
-            <div class="empty-cart" v-if="!this.productsCart.length" @click="checkIfCartIsEmpty()" @mouseleave="mouseleave()" >
+            <div class="empty-cart" v-if="!this.productsCart.length" @mouseover="checkIfCartIsEmpty()" @mouseleave="mouseleave()" >
               <div class="if-empty" >Your cart is empty</div>
                 <span to="/checkoutPage" class="link-checkout"  >
                   <span class="checkout-text">To Checkout (<span class="cartAmount" >{{this.productsCart.length}}</span>)

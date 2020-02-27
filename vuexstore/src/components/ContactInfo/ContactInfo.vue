@@ -1,12 +1,20 @@
 <template>
     <div class="contactInfo" >
-        <h3 class="companyName2">Kitchen Equipment</h3>
-                <p class="city">Göteborg</p>
-                <p class="street">Teststreet 4D</p>
-                <p class="adress">416 99 Göteborg</p>
-                <p class="tele">Tel: 031 - 01 01 01</p>
-                <button id="btnq" class="dropLine" @click="isHidden = !isHidden">{{ this.text }}</button>
-                <contactUs id="test" class="sendForm" v-if="!isHidden"/>
+        <h1 class="companyName2">Kitchen Equipment</h1>
+            <div class="align-contact">
+                <span class="city">City: Göteborg</span >
+                <span  class="street">Address: Teststreet 4D</span >
+                <span  class="adress">Areacode: 416 99 Göteborg</span >
+                <span  class="tele">Tel: 031 - 01 01 01</span >
+            </div>
+          <h3 class="companyName2">Drop Us a Line!</h3>
+              <div class="user-info">
+                    Name:<input type="text" />
+                    Email:<input type="text" />
+            </div>
+                <span class="msg">Messege:</span><textarea textarea maxlength="400" />
+            <button class="btnSend">{{ this.text }}</button>
+                <!-- <contactUs id="test" class="sendForm" v-if="!isHidden"/> -->
                 
     </div>
 </template>
@@ -25,7 +33,7 @@ export default {
   data() {
       return {
         isHidden: true,
-        text: "Drop us a line!",
+        text: "Send Messege!",
         text2: "Close"
       }
   },
@@ -34,11 +42,13 @@ export default {
 
   },
     updated() {
-        if(!this.isHidden) {
-           this.text = this.text2
-       } else if(this.isHidden) {
-           this.text = "Drop us a line!"
-    }
+       
+    //    if(!this.isHidden) {
+    //        this.text = this.text2
+    //    } else if(this.isHidden) {
+    //        this.text = "Drop us a line!"
+    
+    // }
     // let sendForm = document.getElementById("test");
     // let btnq = document.getElementById("btnq");
     //   //   console.log(sendForm)

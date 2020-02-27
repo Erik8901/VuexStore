@@ -2,11 +2,13 @@
   <div class="LandingPage">
      <Banner></Banner>
      <Products></Products>
-      
       <BannerTwo></BannerTwo>
-      
-      <ContactInfo></ContactInfo>
-      <GoogleMap></GoogleMap> 
+          <div class="contact-info">
+              <div class="center">
+                  <ContactInfo></ContactInfo>
+                  <GoogleMap></GoogleMap> 
+            </div>
+        </div>
   </div>
 </template>
 
