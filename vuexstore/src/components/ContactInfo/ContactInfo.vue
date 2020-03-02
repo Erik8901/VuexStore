@@ -34,6 +34,7 @@ export default {
       return {
         isHidden: true,
         text: "Send Messege!",
+        viewWidth: 0,
         text2: "Close"
       }
   },
@@ -65,8 +66,18 @@ export default {
     //   }
 
 },
+ created() {
+      window.addEventListener('resize', this.handleWindowSize)
+  },
     methods: {
-     
+       handleWindowSize() {
+         this.viewWidth = window.innerWidth;
+         
+         let contactInfo  = document.querySelector(".contactInfo");
+         this.viewWidth < 1300 ? 
+           contactInfo.style.width = "100%" : 
+          contactInfo.style.width = "50%"
+     }
   }
 }
 </script>
