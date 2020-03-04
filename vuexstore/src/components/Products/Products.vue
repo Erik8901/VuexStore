@@ -1,16 +1,20 @@
 <template>
   <div class="products">
     <ul id="example-1">
-        <li v-for="product in products.slice(0,4)" :key="product.name">
-            <img class="img" :src="product.img"/>
+        <li v-for="product in products.slice(0,4)" :key="product.name" @click="getProductInfo(product)">
+          <router-link to="/productInfo" class="link-productInfo" >
+            <img class="img" :src="product.img" @click="getProductInfo(product)"/>
+          </router-link>
                 <div class="product-info">
                     <span class="product-name">{{ product.name }}</span>
                     <span class="product-text">{{ product.info }}</span> 
                     <span class="product-price">Price: {{ product.price }} €</span>
                 </div>
-                <div class="btns">
+              <div class="btns">
                     <button class="addToCart" @click="addToCart(product)">Add to cart</button>
-                    <button class="getInfo">Info</button>
+                     <router-link to="/productInfo" class="link-productInfo" >
+                        <button class="getInfo" @click="getProductInfo(product)">Info</button>
+                     </router-link>
                 </div>
           </li>
     </ul>   
@@ -39,8 +43,14 @@ export default {
           price: 0,
           type: '',
           img: ''
+        },
+         productGetInfo: {
+          name: '',
+          info: '',
+          price: 0,
+          type: '',
+          img: ''
         }
-      
       }
     },
   // computed: {
@@ -52,9 +62,9 @@ export default {
   //   })
   // },
   methods: {
-  addToCart: function(product) {
-    
-     this.productAddToCart.name = product.name
+    addToCart: function(product) {
+   
+      this.productAddToCart.name = product.name
       this.productAddToCart.price = product.price
       this.productAddToCart.type = product.type
       this.productAddToCart.img = product.img
@@ -62,7 +72,19 @@ export default {
       this.$store.commit('SET_CART', {
         productsCart: this.productAddToCart
       })
-    }
+    },
+   getProductInfo: function(product) {
+    
+      this.productGetInfo.name = product.name
+      this.productGetInfo.price = product.price
+      this.productGetInfo.info = product.info
+      this.productGetInfo.img = product.img
+
+    
+      this.$store.commit('SET_PRODUCT_INFO', {
+        productInfo: this.productGetInfo
+      })
+  }
 },
   mounted () {
     axios

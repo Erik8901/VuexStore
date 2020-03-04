@@ -6,6 +6,12 @@ export default new Vuex.Store({
     state: {
         items: null,
         searchText: null,
+        productInfo: {
+          name: '',
+          price: 0,
+          type: '',
+          img: ''
+        },
         searchedList: null,
         productsCart: []
       },
@@ -31,8 +37,14 @@ export default new Vuex.Store({
     //  }
          },
          SET_CART:(state, productsAdded) => {
-          state.productsCart.push(productsAdded.productsCart)
-         }
+            state.productsCart.push(productsAdded.productsCart)
+        },
+         SET_PRODUCT_INFO:(state, productSelected) => {
+           state.productInfo.name = productSelected.productInfo.name
+           state.productInfo.price = productSelected.productInfo.price
+           state.productInfo.info = productSelected.productInfo.info
+           state.productInfo.img = productSelected.productInfo.img
+        }
       },
       getters: {
         //items: state => state.items
