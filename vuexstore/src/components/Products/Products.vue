@@ -3,7 +3,7 @@
     <ul id="example-1">
         <li v-for="product in products.slice(0,4)" :key="product.name" @click="getProductInfo(product)">
           <router-link to="/productInfo" class="link-productInfo" >
-            <img class="img" :src="product.img" @click="getProductInfo(product)"/>
+            <img class="imgs-landpage" :src="product.img" @click="getProductInfo(product)"/>
           </router-link>
                 <div class="product-info">
                     <span class="product-name">{{ product.name }}</span>
@@ -31,7 +31,7 @@ import store from "@/utils/store.js";
 
 export default {
   name: 'Products',
-  props: ["items"],
+  // props: ["items"],
   components: {
     store
   },
@@ -61,16 +61,21 @@ export default {
   //     // loading: "$_Cart/loading"
   //   })
   // },
+   computed: {
+    items() {
+      return this.$store.state.products
+    },
+  },
   methods: {
     addToCart: function(product) {
    
-      this.productAddToCart.name = product.name
-      this.productAddToCart.price = product.price
-      this.productAddToCart.type = product.type
-      this.productAddToCart.img = product.img
+      // this.productAddToCart.name = product.name
+      // this.productAddToCart.price = product.price
+      // this.productAddToCart.type = product.type
+      // this.productAddToCart.img = product.img
       
       this.$store.commit('SET_CART', {
-        productsCart: this.productAddToCart
+        productsCart: product
       })
     },
    getProductInfo: function(product) {

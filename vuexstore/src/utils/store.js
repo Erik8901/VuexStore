@@ -13,6 +13,7 @@ export default new Vuex.Store({
           img: ''
         },
         searchedList: null,
+        totalPrice: 0,
         productsCart: []
       },
       mutations: {
@@ -44,6 +45,10 @@ export default new Vuex.Store({
            state.productInfo.price = productSelected.productInfo.price
            state.productInfo.info = productSelected.productInfo.info
            state.productInfo.img = productSelected.productInfo.img
+        },
+        SET_TOTAL_PRICE:(state, finalPrice) => {
+            state.totalPrice = finalPrice.price
+           // console.log(state.totalPrice)
         }
       },
       getters: {

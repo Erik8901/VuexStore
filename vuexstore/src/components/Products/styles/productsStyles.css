@@ -29,7 +29,7 @@ li {
     background-color: #507661;
 }
 
-.img {
+.imgs-landpage{
     height: 12.5rem;
     width: 100%;;
 }
@@ -80,7 +80,6 @@ li {
     height: 1.6rem;
     width: 4rem;
     margin-left: 4rem;
-   
     border: none;
     margin-top: 2rem;
     background: #8FBC8B;

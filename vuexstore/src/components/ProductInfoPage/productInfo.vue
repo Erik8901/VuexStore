@@ -39,8 +39,7 @@ computed: {
       }
     },
      mounted() {
-
-       window.scrollTo(0, 0);
+      window.scrollTo(0, 0);
       this.selectedProductinfo.name = this.productInfo.name
       this.selectedProductinfo.price = this.productInfo.price
       this.selectedProductinfo.info = this.productInfo.info
