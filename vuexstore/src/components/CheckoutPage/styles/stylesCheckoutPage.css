@@ -15,6 +15,11 @@
     margin-top: 3rem;
 }
 
+.emptyH1 {
+    margin-left: 39%;
+    margin-top: 3rem;
+}
+
    .checkoutUl {
     position: absolute;
     display: flex;
@@ -25,7 +30,6 @@
 .checkoutLi {
     height: 10rem;
     position: relative;
-    /* display: -webkit-box; */
     width: 40rem;
 }
 
@@ -77,9 +81,9 @@
 }
 
 .totals {
-    position: absolute;
-    top: 84%;
-    left: 3%;
+    margin-top: -4rem;
+    margin-bottom: 3rem;
+    margin-left: 1rem;
     font-size: 160%;
 }
 
