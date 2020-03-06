@@ -2,7 +2,6 @@
   <div class="checkout">
       <h1 class="checkout-title">Checkout</h1>
           <div v-if="this.productsCart.length === 0">
-              
               <h1 class="emptyH1">Your Car is Empty</h1>
           </div>
       <div v-else>

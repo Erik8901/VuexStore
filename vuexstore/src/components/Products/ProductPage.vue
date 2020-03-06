@@ -1,7 +1,33 @@
 <template>
   <div class="productsPage">
+    <div class="categories-div">
+      <h3 class="titleCategories">Categories</h3>
+
+          <div class="checkboxes">
+              <div class="checkbox-div">
+                  <span class="cat">Knifes</span>
+                  <span class="amountOf">12 st</span>
+              </div>
+              <div class="checkbox-div">
+                <span class="cat">Cutlery</span>
+                 <span class="amountOf">12 st</span>
+              </div>
+              <div class="checkbox-div">
+                <span class="cat">Pans</span>
+                 <span class="amountOf">12 st</span>
+              </div>
+              <div class="checkbox-div">
+                <span class="cat">Storage</span>
+                 <span class="amountOf">12 st</span>
+              </div>
+          </div>
+           
+          
+
+
+    </div>
       
-      <ul class=" productsUl">
+      <ul class="productsUl">
         <li class="productsLi" v-for="(item) in items" :key="item.name" @click="getProductInfo(item)" >
              <router-link to="/productInfo" class="link-productInfo" >
                 <img class="productImg" :src="item.img" @click="getProductInfo(item)"/>

@@ -24,6 +24,7 @@
     position: absolute;
     display: flex;
     flex-wrap: wrap;
+    margin-left: 3rem;
     flex-direction: column;
 }
 

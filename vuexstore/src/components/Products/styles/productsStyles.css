@@ -12,6 +12,47 @@
     margin: 0 auto;
    }
 
+
+.categories-div {
+    height: 30rem;
+    width: 16rem;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #507661;
+    margin-left: 3rem;
+    position: absolute;
+    color: #ffff;
+}
+
+.titleCategories {
+    margin-left: 5.1rem;
+}
+
+.checkboxes{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.checkbox-div {
+    font-size: 1rem;
+    /* display: flex; */
+    margin-left: 2rem;
+    margin-top: 1rem;
+}
+
+.cat {
+    cursor: pointer;
+}
+
+.cat:hover {
+    color: lightgray;
+}
+
+.amountOf {
+    position: absolute;
+    right: 21%;
+}
+
 ul {
    height:fit-content;
    display: flex;
@@ -130,7 +171,7 @@ hr {
     width: 240%;
     display: inline-block;
     margin: 40px;
-    left: 22%;
+    left: 60%;
     background: none;
     z-index: 0;
    
