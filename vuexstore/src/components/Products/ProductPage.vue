@@ -4,12 +4,12 @@
             <h3 class="titleCategories">Categories</h3>
             <div class="checkboxes">
                 <div class="checkbox-div">
-                    <span class="cat">Knifes</span>
-                    <span class="amountOf">12 st</span>
+                    <span class="cat" @click="sortArrayByKnifes()">Knifes</span>
+                    <span class="amountOf">{{this.knifes}} st</span>
                 </div>
                 <div class="checkbox-div">
-                    <span class="cat">Cutlery</span>
-                    <span class="amountOf">12 st</span>
+                    <span class="cat" @click="sortArrayByCutlery()">Cutlery</span>
+                    <span class="amountOf">{{this.cutlery}} st</span>
                 </div>
                 <div class="checkbox-div">
                     <span class="cat">Pans</span>
@@ -58,9 +58,12 @@ export default {
           productGetInfo: {
               name: '',
               price: 0,
+              type: '',
               info: '',
               img: ''
-        }
+        },
+        knifes: 0,
+        cutlery: 0
       }
     },
   computed: {
@@ -83,6 +86,16 @@ export default {
         this.$store.commit('SET_PRODUCT_INFO', {
           productInfo: this.productGetInfo
     })
+  },
+  sortArrayByKnifes: function() {
+ this.$store.state.items = this.products
+   let filter = this.$store.state.items.filter(arr => arr.type === "knifes")
+   this.$store.state.items = filter
+  },
+  sortArrayByCutlery: function() {
+   this.$store.state.items = this.products
+    let filter = this.$store.state.items.filter(arr => arr.type === "cutlery")
+    this.$store.state.items = filter
   }
 },
 mounted () {
@@ -91,9 +104,25 @@ mounted () {
       .then(response => {
       this.$store.commit('SET_ITEMS', response.data)
       this.products = store.state.items
-      })
+     
+      var amountOfCutlery = 0;
+      var amountOfKnifes = 0;
+        
+      for(var i = 0; i <  this.products.length; ++i){
+        if(this.products[i].type == "cutlery") {
+            amountOfCutlery++;
+            this.cutlery = amountOfCutlery
+        }
+        if(this.products[i].type == "knifes") {
+          amountOfKnifes++;
+          this.knifes = amountOfKnifes
+          }
+      }//for loop
+    })
   }
+  
 }
+
 
 
 
