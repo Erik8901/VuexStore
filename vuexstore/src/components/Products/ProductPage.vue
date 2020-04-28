@@ -88,12 +88,12 @@ export default {
     })
   },
   sortArrayByKnifes: function() {
- this.$store.state.items = this.products
-   let filter = this.$store.state.items.filter(arr => arr.type === "knifes")
-   this.$store.state.items = filter
+    this.$store.state.items = this.products
+    let filter = this.$store.state.items.filter(arr => arr.type === "knifes")
+    this.$store.state.items = filter
   },
   sortArrayByCutlery: function() {
-   this.$store.state.items = this.products
+    this.$store.state.items = this.products
     let filter = this.$store.state.items.filter(arr => arr.type === "cutlery")
     this.$store.state.items = filter
   }
