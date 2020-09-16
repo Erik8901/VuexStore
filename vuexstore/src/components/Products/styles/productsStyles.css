@@ -208,6 +208,20 @@
     color: white;
     cursor: pointer;
     margin-top: 1.3rem;
+    right: 1rem;
+    position: absolute;
+}
+
+.getInfoSearchPage {
+    height: 2rem;
+    width: 4rem;
+    border: none;
+    background: #8FBC8B;
+    color: white;
+    cursor: pointer;
+    margin-top: 1.3rem;
+    right: 1rem;
+    position: absolute;
 }
 
 .getInfo:hover {
