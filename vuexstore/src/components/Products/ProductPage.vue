@@ -29,15 +29,17 @@
                       <img class="productImg" :src="item.img" @click="getProductInfo(item)"/>
                   </router-link>
               <div class="spans">
-                  <p class="productName">{{item.name}}</p>
-                  <p class="productPrice">Price: {{item.price}}</p>
+                <router-link to="/productInfo" class="link-productInfo-name" >
+                  <span class="productName"  @click="getProductInfo(item)">{{item.name}}</span>
+                 </router-link>
+                  <span class="productPrice">Price {{item.price}}</span>
             </div>
-            <div class="products-buttons">
+            <!-- <div class="products-buttons">
                 <button class="addToCart" @click="addToCart(item)">Add to cart</button>
                     <router-link to="/productInfo" class="link-productInfo" >
                         <button class="getInfo" @click="getProductInfo(item)">Info</button>
                       </router-link>
-                </div>
+                </div> -->
               </li>
             </ul>
       </div>

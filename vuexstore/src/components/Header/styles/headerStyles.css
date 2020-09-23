@@ -71,6 +71,7 @@ a {
     top: 19%;
     position: absolute;
     left: 31%;
+    border-radius: 0.2rem;
     text-indent: 0.3rem;
 }
 
