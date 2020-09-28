@@ -74,7 +74,7 @@ export default {
 
           this.viewWidth < 1300 ?
                cartAndCheckOut.style.left = "6%" :
-               cartAndCheckOut.style.left = "29%"
+               cartAndCheckOut.style.left = "20%"
 
           this.viewWidth < 1300 ? 
               mobileCartAmount.style.display = "flex" :

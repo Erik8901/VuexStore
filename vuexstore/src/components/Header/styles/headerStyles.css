@@ -62,17 +62,29 @@ a {
     border: none;
 }
 
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
 .searchField {
     border: none;
     width: 16rem;
     height: 1.6rem;
     padding: 0.2rem;
     background-repeat: no-repeat;
-    top: 19%;
+    /* top: 19%;
     position: absolute;
-    left: 31%;
+    left: 31%; */
     border-radius: 0.2rem;
     text-indent: 0.3rem;
+}
+
+
+.div-searchIcon {
+    position: absolute;
+    top: 35%;
+    left: 51.4%;
 }
 
 .hamburgerBtn{

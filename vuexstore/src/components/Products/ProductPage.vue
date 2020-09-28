@@ -32,6 +32,8 @@
                 <router-link to="/productInfo" class="link-productInfo-name" >
                   <span class="productName"  @click="getProductInfo(item)">{{item.name}}</span>
                  </router-link>
+
+                  <span class="productInfo">{{ item.info }}</span> 
                   <span class="productPrice">Price {{item.price}}</span>
             </div>
             <!-- <div class="products-buttons">

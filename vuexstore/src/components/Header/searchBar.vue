@@ -1,11 +1,15 @@
 <template>
   <div class="search-container">
-      <input placeholder="Search our webstore" class="searchField"
+      <input placeholder="Search our webstore..." class="searchField"
       type="text"
       @keyup="loadSearchPage"
       v-model="keyWords"
+      
     />
-   
+      <div class="div-searchIcon">
+        <i class="fas fa-search"></i>
+      </div>
+      <!-- <img src="/img/searchIcon.png" /> -->
      <!-- <SearchPage/> -->
   </div>
 </template>
@@ -40,6 +44,8 @@ created() {
   },
 methods: {
     loadSearchPage: function () {
+
+      console.log("test")
     let minKeys = 3
    
   setTimeout(() =>{
@@ -60,10 +66,15 @@ methods: {
   handleWindowSize() {
       this.viewWidth = window.innerWidth;
         let searchField = document.querySelector(".searchField");
+        let searchIcon = document.querySelector(".searchIcon");
 
         this.viewWidth < 1300 ? 
           searchField.style.left = "-17%" :
           searchField.style.left = "31%"
+
+        this.viewWidth < 1300 ? 
+          searchIcon.style.left = "-17%" :
+          searchIcon.style.left = "31%"
 
         this.viewWidth < 1300 ? 
           searchField.style.width = "10rem" :
