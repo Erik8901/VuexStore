@@ -64,21 +64,22 @@ methods: {
   }, //loadSearchPage
 
   handleWindowSize() {
-      this.viewWidth = window.innerWidth;
-        let searchField = document.querySelector(".searchField");
-        let searchIcon = document.querySelector(".searchIcon");
+      // this.viewWidth = window.innerWidth;
+        
+      //   let searchField = document.querySelector(".searchField");
+      //   let searchIcon = document.querySelector(".searchIcon");
 
-        this.viewWidth < 1300 ? 
-          searchField.style.left = "-17%" :
-          searchField.style.left = "31%"
+      //   this.viewWidth < 1300 ? 
+      //     searchField.style.left = "-17%" :
+      //     searchField.style.left = "31%"
 
-        this.viewWidth < 1300 ? 
-          searchIcon.style.left = "-17%" :
-          searchIcon.style.left = "31%"
+      //   this.viewWidth < 1300 ? 
+      //     searchIcon.style.left = "-17%" :
+      //     searchIcon.style.left = "31%"
 
-        this.viewWidth < 1300 ? 
-          searchField.style.width = "10rem" :
-          searchField.style.width = "16rem"
+        // this.viewWidth < 1300 ? 
+        //   searchField.style.width = "10rem" :
+        //   searchField.style.width = "16rem"
   
     }
   } 

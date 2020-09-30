@@ -171,9 +171,20 @@
     /* padding: 1rem; */
 }
 
+.productsLi:hover {
+    transition: all .2s ease-in-out;
+    transform: scale(1.042);
+    
+    /* -webkit-filter: blur(6px);
+    -moz-filter: blur(6px);
+    -o-filter: blur(6px);
+    -ms-filter: blur(6px);
+    filter: blur(6px); */
+} 
+
 .productImg {
-    height: 17rem;
-    width: 22rem;
+    height: 11rem;
+    width: 17rem;
 }
 .spans {
     margin: 0.3rem;
