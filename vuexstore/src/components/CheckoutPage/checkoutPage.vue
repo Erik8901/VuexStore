@@ -1,11 +1,11 @@
 <template>
   <div class="checkout">
-      <h1 class="checkout-title">Checkout</h1>
+      <h1 class="checkout-title">Your Cart:</h1>
           <div v-if="this.productsCart.length === 0">
-              <h1 class="emptyH1">Your Car is Empty</h1>
+              <h1 class="emptyH1">Your Cart is Empty</h1>
           </div>
       <div v-else>
-        <div>
+        <div class=checkout-container>
             <ul class="checkoutUl">
                 <li class="checkoutLi" v-for="(product, index) in productsCart" :key="product.name" @click="getProductInfo(product)">
                     <router-link to="/productInfo" class="link-productInfo" >
@@ -19,9 +19,10 @@
                     </router-link>
                     <button class="removeProduct" @click="removeProduct(index, product)">X</button>
               </li>
-            <button class="emptyCart" @click="emptyCart()">Empty Cart</button>
+              <button class="emptyCart" @click="emptyCart()">Empty Cart</button>
             <span class="totals">Your Total: {{this.totalPrice}} €</span>
           </ul>
+          <billingInfo class="billingInfo"></billingInfo>
       </div>
     </div><!-- //v-else -->
   </div>
@@ -30,9 +31,13 @@
 <script>
 //styles
 import stylesCheckoutPage from './styles/stylesCheckoutPage.css';
+import billingInfo from './billingInfo.vue'
 
 export default {
   name: 'CheckoutPage',
+   components: {
+     billingInfo
+   },
   data() {
       return {
          productGetInfo: {
