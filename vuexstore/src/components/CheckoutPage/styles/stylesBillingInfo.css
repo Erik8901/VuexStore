@@ -1,11 +1,90 @@
 .billing-info {
     position: absolute;
-    left: 51%;
+    left: 57%;
     background: #507661;
-    width: 10rem;
-    height: 10rem;
-    position: absolute;
-    
-   
-    color: #1111;
+    display: flex;
+    flex-direction: column;
+    width: 34vw;
+    margin-top: 2rem;
+    /* color: #1111; */
+    padding: 1rem;
+}
+
+.billing-text {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 1rem;
+}
+
+.contact-title {
+    font-size: 1.2rem;
+}
+
+.accountTitle {
+    margin-right: 1rem;
+}
+
+.loginTitle {
+    color: #33A8FF;
+    cursor: pointer;
+}
+  
+.input-email {
+    width: 33vw;
+    margin-left: 1rem;
+    height: 2rem;
+    text-indent: 0.3rem;
+    border-radius: 0.3rem;
+    margin-top: 1rem;
+    border: unset;
+}
+
+.userInputs {
+    margin-top: 0.6rem;
+}
+
+.checkbox-div {
+    margin-left: 1rem;
+    display: flex;
+    margin-top: 1rem;
+    flex-direction: row;
+}
+
+.checkbox{
+    cursor: pointer;
+    height: 1rem;
+    width: 1rem;
+}
+
+.subscribe-text {
+    margin-left: 0.6rem;
+    margin-top: 0.2rem;
+}
+
+
+.personal-info-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
+    margin-top: 2rem;
+}
+
+.personal-title {
+    font-size: 1.2rem;
+}
+
+.input-names {
+    border-radius: 0.3rem;
+    text-indent: 0.3rem;
+    border: unset;
+    height: 1.6rem;
+    width: 14vw;
+    margin-top: 0.3rem;
+}
+
+.names-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
