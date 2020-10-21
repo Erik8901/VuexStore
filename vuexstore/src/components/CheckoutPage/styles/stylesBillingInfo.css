@@ -10,11 +10,15 @@
     padding: 1rem;
 }
 
+.user-info-container {
+    padding: 1.3rem;
+}
+
 .billing-text {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-left: 1rem;
+    /* margin-left: 1rem; */
 }
 
 .contact-title {
@@ -31,8 +35,8 @@
 }
   
 .input-email {
-    width: 33vw;
-    margin-left: 1rem;
+    width: 32vw;
+    /* margin-left: 1rem; */
     height: 2rem;
     text-indent: 0.3rem;
     border-radius: 0.3rem;
@@ -45,7 +49,7 @@
 }
 
 .checkbox-div {
-    margin-left: 1rem;
+    margin-left: 0rem;
     display: flex;
     margin-top: 1rem;
     flex-direction: row;
@@ -66,7 +70,7 @@
 .personal-info-container {
     display: flex;
     flex-direction: column;
-    margin-left: 1rem;
+    /* margin-left: 1rem; */
     margin-top: 2rem;
 }
 
@@ -78,7 +82,7 @@
     border-radius: 0.3rem;
     text-indent: 0.3rem;
     border: unset;
-    height: 1.6rem;
+    height: 2rem;
     width: 14vw;
     margin-top: 0.3rem;
 }
@@ -87,4 +91,54 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    width: 32.2vw;
+}
+
+.input-info {
+    width: 32.2vw;
+    /* margin-left: 1rem; */
+    height: 2rem;
+    text-indent: 0.3rem;
+    border-radius: 0.3rem;
+    margin-top: 1rem;
+    border: unset;
+}
+
+.personal-info-fields {
+    margin-top: 1.3rem;
+}
+
+.user-location-info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 32.4vw;
+    margin-top: 1rem;
+}
+
+.dropDown-country {
+    border-radius: 0.3rem;
+    text-indent: 0.3rem;
+    border: unset;
+    height: 2rem;
+    width: 14vw;
+    margin-top: 0.3rem;
+    color: #808080;
+    cursor: pointer;
+}
+
+.btn-send-info-container {
+    background: aqua;
+    width: 32.2vw;
+    margin-top: 3rem;
+    height: 2rem;
+    border-radius: 0.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.btn-place-order-text {
+   margin: unset;
 }
