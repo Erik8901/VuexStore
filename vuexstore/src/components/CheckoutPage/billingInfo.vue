@@ -10,7 +10,8 @@
     </div>
       <div class="inputFields">
         <div class="userInputs">
-          <input class="input-email" placeholder="Email" type="text" />
+          <p class="email-warning" v-show="wrongEmail">Please enter a valid email adress</p>
+          <input class="input-email" v-model="userEmail" placeholder="Email" type="email" />
             <div class="checkbox-div">
             <input type="checkbox" class="checkbox" value="subscribe" />
             <span class="subscribe-text">Keep me up to date with news and special offers</span>
@@ -297,7 +298,7 @@
                 <input class="input-names" placeholder="Postal code" type="text" />
             </div>
                 <input class="input-info" placeholder="Phone number (optional)" type="text" />
-            <div class="btn-send-info-container">
+            <div class="btn-send-info-container"  @click="placeOrder()">
                 <span class="btn-place-order-text">Place Order</span>
             </div>
         </div>
@@ -317,18 +318,39 @@ export default {
   name: 'BillingInfo',
   data() {
       return {
-         
+         userEmail: '',
+         wrongEmail: false
       }
      },
 computed: {
    
 },
 mounted()  {
-  
+  console.log("loading billingPage")
+
 },
 methods: {
-    
-  },
+    placeOrder: function() {
+      console.log("test btnq")
+      let re = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+        if (re.test(this.userEmail)) {
+          //do something with email, send to store...
+          console.log("email ok")
+          console.log(this.userEmail)
+          if(this.wrongEmail === true) {
+             this.wrongEmail = false;
+          }
+             this.userEmail = ''
+        } else {
+             this.wrongEmail = true;
+             this.userEmail = ''
+            return (false)
+          }
+        }
+
+      
+    }
+  
 }
 </script>
 

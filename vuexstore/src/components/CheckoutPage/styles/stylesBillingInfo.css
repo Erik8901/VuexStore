@@ -128,7 +128,9 @@
 }
 
 .btn-send-info-container {
-    background: aqua;
+    
+    
+    background: #1482FE;
     width: 32.2vw;
     margin-top: 3rem;
     height: 2rem;
@@ -141,4 +143,14 @@
 
 .btn-place-order-text {
    margin: unset;
+}
+
+
+.email-warning {
+    
+    font-size: 0.7rem;
+    color:#FA0C0C;
+    position: absolute;
+    top: 3.4rem;
+
 }
