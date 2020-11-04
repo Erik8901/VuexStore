@@ -147,10 +147,26 @@
 
 
 .email-warning {
-    
     font-size: 0.7rem;
     color:#FA0C0C;
     position: absolute;
     top: 3.4rem;
+}
 
+input.formValid::-webkit-input-placeholder {
+    color: #000;
+ }
+
+input.formInvalid::-webkit-input-placeholder {
+    color: #FA0C0C;
+ }
+
+
+.name-warning {
+    top: -2rem;
+    font-size: 0.7rem;
+    color: #FA0C0C;
+    position: relative;
+    left: 13rem;
+    left: 13rem;
 }

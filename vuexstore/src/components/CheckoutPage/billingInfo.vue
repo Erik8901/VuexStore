@@ -10,20 +10,22 @@
     </div>
       <div class="inputFields">
         <div class="userInputs">
-          <p class="email-warning" v-show="wrongEmail">Please enter a valid email adress</p>
-          <input class="input-email" v-model="userEmail" placeholder="Email" type="email" />
+          <!-- <p class="email-warning" v-show="wrongEmail">Please enter a valid email adress</p> -->
+          <input class="input-email"  v-model="userEmail" :placeholder="placeholderValue" type="email" />
             <div class="checkbox-div">
-            <input type="checkbox" class="checkbox" value="subscribe" />
-            <span class="subscribe-text">Keep me up to date with news and special offers</span>
+              <input type="checkbox" class="checkbox" v-model="checkSubscription" value="subscribe" />
+              <span class="subscribe-text">Keep me up to date with news and special offers</span>
           </div>
         <div class="personal-info-container">
             <span class="personal-title">Shipping address</span>
               <div class="names-container">
-                <input class="input-names" placeholder="First Name" type="text" />
-                <input class="input-names" placeholder="Last Name" type="text" />
+                <!-- <span class="name-warning" v-show="wrongName">*Required</span> -->
+                  <input class="input-names" placeholder="First Name" v-model="userName" type="text" />
+                <!-- <p class="last-name-warning" v-show="wrongLastName">* Required</p> -->
+                  <input class="input-names" placeholder="Last Name" v-model="userLastName" type="text" />
               </div>
             <div class="personal-info-fields">
-              <input class="input-info" placeholder="Company name (optional)" type="text" />
+              <input class="input-info" placeholder="Company name (optional)" v-model="userCompanyName" type="text" />
               <input class="input-info" placeholder="Address" type="text" />
               <input class="input-info" placeholder="Apartment, suite, etc (optional)" type="text" />
               <input class="input-info" placeholder="City" type="text" />
@@ -319,7 +321,14 @@ export default {
   data() {
       return {
          userEmail: '',
-         wrongEmail: false
+         wrongEmail: false,
+         checkSubscription: false,
+         userName: '',
+         wrongName: true,
+         userLastName: '',
+         wrongLastName: true,
+         userCompanyName: '',
+         placeholderValue: 'Email'
       }
      },
 computed: {
@@ -333,23 +342,59 @@ methods: {
     placeOrder: function() {
       console.log("test btnq")
       let re = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+      let emailInput = document.getElementsByClassName("input-email")[0];
         if (re.test(this.userEmail)) {
           //do something with email, send to store...
           console.log("email ok")
           console.log(this.userEmail)
           if(this.wrongEmail === true) {
-             this.wrongEmail = false;
+              this.placeholderValue = 'Email' 
+              emailInput.classList.remove("formInvalid")
+              this.wrongEmail = false;
           }
-             this.userEmail = ''
+              this.userEmail = ''
         } else {
-             this.wrongEmail = true;
-             this.userEmail = ''
-            return (false)
-          }
-        }
+              emailInput.className += " formInvalid"
+              this.placeholderValue = '* Email Required' 
+              this.wrongEmail = true;
+              this.userEmail = ''
+        } //handle email
+       
+       console.log("user subscription = " + this.checkSubscription) //handle sub
 
-      
-    }
+        if(this.userName === '') {
+           this.wrongName = true
+           this.userName = ''
+           
+        } else {
+         // console.log(this.userName) 
+          //do something with name, send to store...
+          this.wrongName = false
+          this.userName = ''
+        } //handle name
+
+        
+        if(this.userLastName === '') {
+          //console.log("here")
+           console.log(this.userLastName) 
+           this.wrongLastName = true
+           this.userLastName= ''
+           
+        } else {
+          //console.log(this.userLastName) 
+          //do something with lastname, send to store...
+          this.wrongLastName = false
+          this.userLastName = ''
+        } //handle lastname
+
+
+         
+        
+        
+        
+        
+        }//placeOrder
+      }
   
 }
 </script>
