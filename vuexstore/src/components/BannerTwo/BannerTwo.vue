@@ -17,8 +17,6 @@
 </template>
 
 
-
-
 <script>
 //styles
 import bannerTwostyles from './styles/bannerTwoStyles.css';

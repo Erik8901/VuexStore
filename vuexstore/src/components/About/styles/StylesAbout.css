@@ -1,4 +1,11 @@
 .about{
     position: absolute;
-    top: 40%;
+    top: 20%;
+    left: 42%;
+}
+
+.about-text {
+    position: absolute;
+    top: 36%;
+    padding: 1rem;
 }

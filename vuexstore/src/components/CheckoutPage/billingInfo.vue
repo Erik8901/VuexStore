@@ -328,7 +328,18 @@ export default {
          userLastName: '',
          wrongLastName: true,
          userCompanyName: '',
-         placeholderValue: 'Email'
+         placeholderValue: 'Email',
+         userInfo: {
+           email: '',
+           subscribtion: false,
+           name: '',
+           lastName: 'bob',
+           company: '',
+           city: '',
+           country: '',
+           postalCode: '',
+           phone: ''
+         },
       }
      },
 computed: {
@@ -388,7 +399,7 @@ methods: {
         } //handle lastname
 
 
-         
+         console.log(this.userInfo)
         
         
         

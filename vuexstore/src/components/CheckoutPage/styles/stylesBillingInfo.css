@@ -153,9 +153,6 @@
     top: 3.4rem;
 }
 
-input.formValid::-webkit-input-placeholder {
-    color: #000;
- }
 
 input.formInvalid::-webkit-input-placeholder {
     color: #FA0C0C;

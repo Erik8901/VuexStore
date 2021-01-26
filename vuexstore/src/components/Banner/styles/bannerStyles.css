@@ -25,38 +25,14 @@
     position: relative;
     color: #ffffff;
     height: fit-content;
-    top: 34%;
     top: 17%;
     font-size: 184%;
     right: 60%;
 }
 
-a {
-
+.link {
     color: #ffffff;
-}
-
-/* h3 {
-    position: relative;
-    color: white;
-    left: 6%;
-    
-    top: 34%;
-    font-size: 200%;
-    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
-} */
-
-p {
-    /* position: relative;
-    color: white;
-    left: 6%;
-    top: 31%;
-    
-    
-    
-    font-size: 100%; */
-
-
+    text-decoration: underline;
 }
 
    

@@ -53,6 +53,7 @@
 import productsStyles from './styles/productsStyles.css';
 import axios from 'axios'
 import store from "@/utils/store.js";
+
 //import { mapGetters } from "vuex";
 
 export default {
