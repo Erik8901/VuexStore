@@ -65,6 +65,7 @@ a {
 .search-container {
     display: flex;
     align-items: center;
+    
 }
 
 .searchField {
@@ -82,9 +83,8 @@ a {
 
 
 .div-searchIcon {
-    position: absolute;
-    top: 35%;
-    left: 51.4%;
+    right: 10%;
+    position: relative;
 }
 
 .hamburgerBtn{
