@@ -16,28 +16,27 @@
     flex-direction: row;
 }
 
-.buttons {
-    background-color: Transparent;
-    background-repeat:no-repeat;
-    border: none;
-    cursor:pointer;
-    font-size: 120%;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #ffff;
-    width: fit-content;
-    display: flex;
-}
-
 .desktop-menu {
     height: 3rem;
     display: flex;
     margin: 0 auto;
-    text-align: center;
+    width: 60%;
+    justify-content: space-evenly
 }
 
-.buttons:hover {
-    border-bottom: 2px solid;
+.buttons {
+    height: 2rem;
+    padding-top: 1rem;
+    color: #ffff;
 }
+
+.btn-text-desktop:hover {
+    text-decoration: underline;
+}
+
+/* .buttons:hover {
+    text-decoration: 2px solid;
+} */
 
 
 a {
