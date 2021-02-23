@@ -1,25 +1,19 @@
 .header {
     position: fixed;
     background-color: #507661;
-    height: 100px;
+    height: 3rem;
+    font-family: Arial, Helvetica, sans-serif;
+    top: 3rem;
     width: 100vw;
-    top:0%;
-    left: 0%;
     color: white;
     z-index: 1000;
-    font-family: Arial, Helvetica, sans-serif;
-    
+    left: 0%;
 }
 
 .buttonsMenu {
-    position: relative;
-    top: 60%;
-    width: 700px;
-    text-align: left;
-    left: 27%;
-    background: none;
+    height: 3rem;
     display: flex;
-    justify-content: space-around;
+    flex-direction: row;
 }
 
 .buttons {
@@ -35,13 +29,9 @@
 }
 
 .desktop-menu {
+    height: 3rem;
     display: flex;
-    flex-direction: row;
-    width: 80rem;
-    position: relative;
     margin: 0 auto;
-    left: 13%;
-    justify-content: space-evenly;
     text-align: center;
 }
 

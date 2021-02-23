@@ -17,14 +17,14 @@
               <div class="empty-cart" v-if="!this.productsCart.length" @mouseover="checkIfCartIsEmpty()" @mouseleave="mouseleave()" >
                   <div class="if-empty" >Your cart is empty</div>
                       <span to="/checkoutPage" class="link-checkout" >
-                      <span class="checkout-text">To Checkout (<span class="cartAmount" >{{this.productsCart.length}}</span>)
+                      <span class="checkout-text"><span class="cartAmount" >{{this.productsCart.length}}</span>
                       </span>
                       </span>
                   </div>
 
               <div class="cart-div" v-if="this.productsCart.length"  >
                   <router-link to="/checkoutPage" class="link-checkout"  >
-                      <span class="checkout-text">To Checkout (<span class="cartAmount" >{{this.productsCart.length}}</span>)
+                      <span class="checkout-text"><span class="cartAmount" >{{this.productsCart.length}}</span>
                       </span>
                     </router-link>
               </div>
