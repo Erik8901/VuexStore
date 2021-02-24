@@ -2,17 +2,17 @@
   <div class="headerTop">
       <div class="header-container">
             <div class="company-name-container">
-                <router-link to="/"><span class="companyName">Kitchen Equipment</span></router-link>
+                <router-link to="/"><span class="companyName">Kitchen Equipment |||</span></router-link>
             </div>
             <div class="search-bar-container">
                 <searchBar class="searchBar"></searchBar>
             </div>
           
           <div class="cart-and-checkout" @mouseover="checkIfCartIsEmpty()" @mouseleave="mouseleave()" >
-              <i class="fas fa-shopping-cart" ></i>
-                  <router-link to="/checkoutPage">
+              <router-link to="/checkoutPage" class="link-to-checkout">
+                   <i class="fas fa-shopping-cart"></i>
                       <span class="mobileCartAmount">{{this.productsCart.length}}</span>
-                  </router-link>
+              </router-link>
 
               <!-- <div class="empty-cart" v-if="!this.productsCart.length">
                   <div class="if-empty" >Your cart is empty</div>
@@ -23,8 +23,8 @@
                   </div> -->
 
               <div class="cart-div">
-                  <router-link to="/checkoutPage" class="link-checkout"  >
-                      <span class="checkout-text"><span class="cartAmount" >{{this.productsCart.length}}</span>
+                  <router-link to="/checkoutPage" class="link-checkout">
+                      <span class="checkout-text"><span class="cartAmount">{{this.productsCart.length}}</span>
                       </span>
                     </router-link>
               </div>

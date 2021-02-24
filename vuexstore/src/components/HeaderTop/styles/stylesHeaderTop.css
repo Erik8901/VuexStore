@@ -29,7 +29,11 @@
 
 .companyName {
     color: #FFF;
-    font-size: 1.51rem;
+    display: flex;
+    font-family: "Times New Roman", Times, serif;
+    text-decoration: underline;
+    font-style: oblique;
+    font-size: 1.6rem;
 }
 
 .search-bar-container {
@@ -44,10 +48,14 @@
     font-family: Arial, Helvetica, sans-serif;
     height: fit-content;
     cursor: pointer;
-   
 }
 
-.if-empty {
+.link-to-checkout {
+    color: #fff;
+}
+
+
+/* .if-empty {
     position: absolute;
     color: #FFF;
     width: fit-content;
@@ -60,16 +68,13 @@
     height: fit-content;
     padding: 0.3rem;
     border: 0.1rem solid #FFF;
-}
+} */
 
 .checkout-text {
     display: flex;
     cursor: pointer;
-    display: flex;
     color: #FFF;
 }
-
-
 
 .cartAmount {
     display: flex;
