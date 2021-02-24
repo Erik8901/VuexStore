@@ -8,21 +8,21 @@
                 <searchBar class="searchBar"></searchBar>
             </div>
           
-          <div class="cart-and-checkout">
-              <i class="fas fa-shopping-cart"></i>
+          <div class="cart-and-checkout" @mouseover="checkIfCartIsEmpty()" @mouseleave="mouseleave()" >
+              <i class="fas fa-shopping-cart" ></i>
                   <router-link to="/checkoutPage">
-                      <span class="mobileCartAmount">({{this.productsCart.length}})</span>
+                      <span class="mobileCartAmount">{{this.productsCart.length}}</span>
                   </router-link>
 
-              <div class="empty-cart" v-if="!this.productsCart.length" @mouseover="checkIfCartIsEmpty()" @mouseleave="mouseleave()" >
+              <!-- <div class="empty-cart" v-if="!this.productsCart.length">
                   <div class="if-empty" >Your cart is empty</div>
                       <span to="/checkoutPage" class="link-checkout" >
                       <span class="checkout-text"><span class="cartAmount" >{{this.productsCart.length}}</span>
+                      </span> v-if="this.productsCart.length"  
                       </span>
-                      </span>
-                  </div>
+                  </div> -->
 
-              <div class="cart-div" v-if="this.productsCart.length"  >
+              <div class="cart-div">
                   <router-link to="/checkoutPage" class="link-checkout"  >
                       <span class="checkout-text"><span class="cartAmount" >{{this.productsCart.length}}</span>
                       </span>

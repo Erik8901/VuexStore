@@ -38,7 +38,7 @@
 
 .cart-and-checkout {
     justify-content: space-evenly;
-    width: 4rem;
+    width: 3rem;
     display: flex;
     padding-top: 1rem;
     font-family: Arial, Helvetica, sans-serif;
@@ -68,18 +68,17 @@
     display: flex;
     color: #FFF;
 }
-.checkout-text:hover {
-    text-decoration:underline;
-}
+
+
 
 .cartAmount {
     display: flex;
-    /* color: #507661; */
+    color: #fff;
 }
 
 .mobileCartAmount {
     display: none;
-    color: #507661;
+    color: #fff;
     position: relative;
     left: -12%
 }

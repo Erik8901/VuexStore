@@ -25,18 +25,18 @@
 }
 
 .buttons {
-    height: 2rem;
+    height: 1.3rem;
     padding-top: 1rem;
     color: #ffff;
 }
 
-.btn-text-desktop:hover {
+/* .btn-text-desktop:hover {
     text-decoration: underline;
-}
-
-/* .buttons:hover {
-    text-decoration: 2px solid;
 } */
+
+.buttons:hover {
+    border-bottom: 1px solid #fff;
+}
 
 
 a {
