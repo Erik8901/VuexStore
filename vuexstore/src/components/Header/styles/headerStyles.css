@@ -30,10 +30,6 @@
     color: #ffff;
 }
 
-/* .btn-text-desktop:hover {
-    text-decoration: underline;
-} */
-
 .buttons:hover {
     border-bottom: 1px solid #fff;
 }
@@ -44,7 +40,6 @@ a {
     text-decoration: none;
 }
 
-
 .searchBar {
     font-size: 90%;
     font-family: Arial, Helvetica, sans-serif;
@@ -54,7 +49,6 @@ a {
 .search-container {
     display: flex;
     align-items: center;
-    
 }
 
 .searchField {
@@ -63,13 +57,9 @@ a {
     height: 1.6rem;
     padding: 0.2rem;
     background-repeat: no-repeat;
-    /* top: 19%;
-    position: absolute;
-    left: 31%; */
     border-radius: 0.2rem;
     text-indent: 0.3rem;
 }
-
 
 .div-searchIcon {
     right: 10%;
@@ -88,8 +78,6 @@ a {
 
 .hamburger-menu {
     background-color: #507661;
-    
-    /* display: none; */
     width: 100vw;
     flex-direction: column;
     position: fixed;
@@ -111,4 +99,22 @@ a {
 .hamburger-buttons:hover {
     border-bottom: 2px solid;
     display: block;
+}
+
+@media screen and (max-width: 1300px) {
+    .searchField {
+        border: none;
+        width: 40vw;
+        height: 1.6rem;
+        padding: 0.2rem;
+        background-repeat: no-repeat;
+        border-radius: 0.2rem;
+        text-indent: 0.3rem;
+        position: absolute;
+        left: 1%;
+        top: 16%;
+    }
+    .div-searchIcon {
+        display: none;
+    }
 }

@@ -8,33 +8,21 @@
                 <searchBar class="searchBar"></searchBar>
             </div>
           
-          <div class="cart-and-checkout" @mouseover="checkIfCartIsEmpty()" @mouseleave="mouseleave()" >
-              <router-link to="/checkoutPage" class="link-to-checkout">
-                   <i class="fas fa-shopping-cart"></i>
-                      <span class="mobileCartAmount">{{this.productsCart.length}}</span>
-              </router-link>
-
-              <!-- <div class="empty-cart" v-if="!this.productsCart.length">
-                  <div class="if-empty" >Your cart is empty</div>
-                      <span to="/checkoutPage" class="link-checkout" >
-                      <span class="checkout-text"><span class="cartAmount" >{{this.productsCart.length}}</span>
-                      </span> v-if="this.productsCart.length"  
-                      </span>
-                  </div> -->
-
-              <div class="cart-div">
+        
+              <div class="cart-div-header-top">
                   <router-link to="/checkoutPage" class="link-checkout">
-                      <span class="checkout-text"><span class="cartAmount">{{this.productsCart.length}}</span>
-                      </span>
-                    </router-link>
+                      <i class="fas fa-shopping-cart"></i>
+                      <span class="cartAmount"> {{this.productsCart.length}}</span>
+                  </router-link>
               </div>
-          </div>
+
               <div class="loginButtonsDiv">
                   <button class="buttonsCustomers">Login</button>
                   <button class="buttonsCustomers">Register</button>
               </div>
+          </div>
+              
     </div>
-  </div>
 </template>
 
 

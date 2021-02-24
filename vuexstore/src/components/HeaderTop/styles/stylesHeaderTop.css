@@ -17,7 +17,6 @@
     flex-direction: row;
     justify-content: space-evenly;
     width: 66vw;
-    
 }
 
 .company-name-container {
@@ -40,57 +39,21 @@
     padding-top: 0.5rem;
 }
 
-.cart-and-checkout {
-    justify-content: space-evenly;
+
+.cart-div-header-top {
     width: 3rem;
     display: flex;
-    padding-top: 1rem;
+    flex-direction: row;
+    justify-content: ;
     font-family: Arial, Helvetica, sans-serif;
-    height: fit-content;
-    cursor: pointer;
+    padding-top: 1rem;
 }
 
-.link-to-checkout {
+
+.link-checkout {
     color: #fff;
 }
 
-
-/* .if-empty {
-    position: absolute;
-    color: #FFF;
-    width: fit-content;
-    display: none;
-    top: -37%;
-    left: 52%;
-    z-index: 100;
-    font-size: 82%;
-    background: gray;
-    height: fit-content;
-    padding: 0.3rem;
-    border: 0.1rem solid #FFF;
-} */
-
-.checkout-text {
-    display: flex;
-    cursor: pointer;
-    color: #FFF;
-}
-
-.cartAmount {
-    display: flex;
-    color: #fff;
-}
-
-.mobileCartAmount {
-    display: none;
-    color: #fff;
-    position: relative;
-    left: -12%
-}
-
-.cart-div {
-   z-index: 1000;
-}
 
 .loginButtonsDiv {
     height: 3rem;
@@ -108,4 +71,17 @@
 
 .buttonsCustomers:hover {
     text-decoration:underline;
+}
+
+@media screen and (max-width: 1300px) {
+    .company-name-container {
+      display: none;
+    }
+    .header-container {
+        width: 100vw;
+    }
+    .cart-div-header-top {
+        left: 14%;
+        position: relative;
+    }
 }
