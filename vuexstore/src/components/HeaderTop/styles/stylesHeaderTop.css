@@ -39,7 +39,6 @@
     padding-top: 0.5rem;
 }
 
-
 .cart-div-header-top {
     width: 3rem;
     display: flex;
@@ -49,11 +48,9 @@
     padding-top: 1rem;
 }
 
-
 .link-checkout {
     color: #fff;
 }
-
 
 .loginButtonsDiv {
     height: 3rem;
@@ -61,7 +58,7 @@
 }
 
 .buttonsCustomers {
-    color: black;
+    color: #000;
     background: transparent;
     background-repeat:no-repeat;
     border: none;

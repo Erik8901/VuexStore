@@ -68,22 +68,25 @@ a {
 
 .hamburgerBtn{
     left: 3%;
-    position: fixed;
     height: 4rem;
     width: fit-content;
     height: fit-content;
     display: none;
     cursor: pointer;
+    top: 16%;
+    position: relative;
 }
 
+
 .hamburger-menu {
-    background-color: #507661;
+    top: 100%;
     width: 100vw;
     flex-direction: column;
-    position: fixed;
-    top: 10.7%;
     left: 0;
     height: fit-content;
+    display: flex;
+    position: absolute;
+    background-color: rgb(212, 165, 93);
 }
 
 .hamburger-buttons {
@@ -96,9 +99,12 @@ a {
     cursor: pointer;
 }
 
+.hamburger-buttons > a {
+    color: #fff;
+}
+
 .hamburger-buttons:hover {
-    border-bottom: 2px solid;
-    display: block;
+    text-decoration: underline;
 }
 
 @media screen and (max-width: 1300px) {
@@ -116,5 +122,12 @@ a {
     }
     .div-searchIcon {
         display: none;
+    }
+    .desktop-menu {
+        display: none;
+    }
+    .hamburgerBtn {
+        display: block;
+        
     }
 }

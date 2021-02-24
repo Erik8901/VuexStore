@@ -4,26 +4,44 @@
       <div class="hamburgerBtn" v-on:click="openMenu">
         <i class="fas fa-bars fa-2x"></i>
       </div>
+      
       <div class="hamburger-menu" style="display: none">
-        <router-link to="/"
-          ><div class="hamburger-buttons"><span>Home</span></div></router-link
-        >
-        <router-link to="/Productpage"
-          ><div class="hamburger-buttons"><span>Products</span></div></router-link
-        >
-        <router-link to="/Inspiration"
-          ><div class="hamburger-buttons"><span>Inspiration</span></div></router-link
-        >
-        <router-link to="/About"
-          ><div class="hamburger-buttons"><span>About</span></div></router-link
-        >
-        <router-link to="/"
-          ><div class="hamburger-buttons"><span>Jobs</span></div></router-link
-        >
-        <router-link to="/Contactpage"
-          ><div class="hamburger-buttons"><span>Contact</span></div></router-link
-        >
-      </div>
+          <div class="hamburger-buttons">
+              <router-link to="/">
+                  <span>Home</span>
+              </router-link>
+          </div>
+        
+          <div class="hamburger-buttons">
+              <router-link to="/Productpage">
+                  <span>Products</span>
+              </router-link>
+          </div>
+        
+        <div class="hamburger-buttons">
+            <router-link to="/Inspiration">
+                <span>Inspiration</span>
+            </router-link>
+        </div>
+        
+        <div class="hamburger-buttons">
+            <router-link to="/About">
+                <span>About</span>
+            </router-link>
+        </div>
+        
+        <div class="hamburger-buttons">
+            <router-link to="/">
+                <span>Jobs</span>
+            </router-link>
+        </div>
+        
+        <div class="hamburger-buttons">
+            <router-link to="/Contactpage">
+                <span>Contact</span>
+            </router-link>
+        </div>
+    </div>
 
       <div class="desktop-menu">
           <router-link to="/">
@@ -112,14 +130,14 @@ export default {
     //     ? (deskTopMenu.style.display = "none")
     //     : (deskTopMenu.style.display = "flex");
     // },
-    // openMenu() {
-    //   let hamburgerMenu = document.querySelector(".hamburger-menu");
+    openMenu() {
+      let hamburgerMenu = document.querySelector(".hamburger-menu");
 
-    //   hamburgerMenu.style.display === "none"
-    //     ? (hamburgerMenu.style.display = "flex")
-    //     : (hamburgerMenu.style.display = "none");
-    // },
-    // toProductPage() {},
+      hamburgerMenu.style.display === "none"
+        ? (hamburgerMenu.style.display = "flex")
+        : (hamburgerMenu.style.display = "none");
+    },
+    toProductPage() {},
   },
   mounted() {}, //mounted
 }; //export
