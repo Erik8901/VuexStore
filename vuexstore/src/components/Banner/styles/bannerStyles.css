@@ -1,13 +1,13 @@
 .banner {
     position: relative;
-    top: 8.1rem;
+    top: 7rem;
     height: 40rem;
     width: 60%;
     background-image: url("../img/brunch.jpg");
     background-repeat: no-repeat;
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     text-align: center;
     margin: 0 auto;
 }
@@ -15,19 +15,17 @@
 .bannerText1{
     position: relative;
     color: #ffffff;
-    left: 6%;
     height: fit-content;
+    top: 16%;
     font-size: 300%;
 }
-
 
 .bannerText2 {
     position: relative;
     color: #ffffff;
     height: fit-content;
-    top: 17%;
+    top: 24%;
     font-size: 184%;
-    right: 60%;
 }
 
 .link {
@@ -35,4 +33,10 @@
     text-decoration: underline;
 }
 
+
+@media screen and (max-width: 1000px) {
+    .banner {
+        display: none;
+    }
+}
    

@@ -1,11 +1,11 @@
 <template>
   <div class="header">
     <div class="buttonsMenu">
-      <div class="hamburgerBtn" v-on:click="openMenu">
+      <div class="hamburgerBtn" v-on:click="showHamMenu = !showHamMenu">
         <i class="fas fa-bars fa-2x"></i>
       </div>
       
-      <div class="hamburger-menu" style="display: none">
+      <div class="hamburger-menu"  v-if="!showHamMenu">
           <div class="hamburger-buttons">
               <router-link to="/">
                   <span>Home</span>
@@ -97,46 +97,13 @@ export default {
   data() {
     return {
       viewWidth: 0,
+      showHamMenu: true
     };
   },
   created() {
     window.addEventListener("resize", this.handleWindowSize);
   },
   methods: {
-    scrollTo() {
-      window.scrollTo(0, 3900);
-    },
-    // handleWindowSize() {
-    //   this.viewWidth = window.innerWidth;
-
-    //   let companyName = document.querySelector(".companyName");
-    //   let buttonsMenu = document.querySelector(".buttonsMenu");
-    //   let hamburgerBtn = document.querySelector(".hamburgerBtn");
-    //   let deskTopMenu = document.querySelector(".desktop-menu");
-
-    //   this.viewWidth < 1300
-    //     ? (companyName.style.display = "none")
-    //     : (companyName.style.display = "flex");
-
-    //   //  this.viewWidth < 1300 ?
-    //   //     buttonsMenu.style.display = "flex" :
-    //   //     buttonsMenu.style.display = "none"
-
-    //   this.viewWidth < 1300
-    //     ? (hamburgerBtn.style.display = "flex")
-    //     : (hamburgerBtn.style.display = "none");
-
-    //   this.viewWidth < 1300
-    //     ? (deskTopMenu.style.display = "none")
-    //     : (deskTopMenu.style.display = "flex");
-    // },
-    openMenu() {
-      let hamburgerMenu = document.querySelector(".hamburger-menu");
-
-      hamburgerMenu.style.display === "none"
-        ? (hamburgerMenu.style.display = "flex")
-        : (hamburgerMenu.style.display = "none");
-    },
     toProductPage() {},
   },
   mounted() {}, //mounted

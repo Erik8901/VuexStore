@@ -34,7 +34,6 @@
     border-bottom: 1px solid #fff;
 }
 
-
 a {
     height: fit-content;
     text-decoration: none;
@@ -128,6 +127,5 @@ a {
     }
     .hamburgerBtn {
         display: block;
-        
     }
 }
