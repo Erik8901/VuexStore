@@ -10,8 +10,10 @@
    }
 
 .checkout-title {
-    margin-left: 6rem;
+    position: relative;
+    left: 20%;
     margin-top: 3rem;
+    font-size: 1.6rem;
     color: #111;
 }
 
@@ -21,40 +23,82 @@
     color: #111;
 }
 
-.checkoutUl {
-    position: absolute;
+.checkout-container {
+    height: 30rem;
+    width: 60%;
+    margin: 0 auto;
     display: flex;
-    flex-wrap: wrap;
-    margin-left: 3rem;
     flex-direction: column;
+    margin-bottom: 3rem;
+    background: #507661;
 }
 
-.checkoutLi {
-    height: 10rem;
-    position: relative;
-    width: 40rem;
-    margin: 1rem;
-    background-color: #507661;
+.checkout-header-info {
+    height: 3rem;
+    width: 100%;
+    background: #507661;
+    border-top: 2px solid #ffff;
+    border-bottom: 2px solid #ffff;
+    display: flex;
+    flex-direction: row;
+}
+
+.product-details-container {
+    display: flex;
+    width: 30%;
+    flex-direction: row;
+}
+
+
+.product-price-container {
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.details-title {
+    padding-top: 1rem;
+    padding-left: 1rem;
+    font-size: 0.7rem;
+}
+
+.shopping-cart-products-container {
+    height: 30rem;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.checkout-li {
+    height: 7rem;
+    width: 100%;
     list-style: none;
+    margin-top: 1rem;
+}
+
+.product-cart-details {
+    width: 30%;
+    height: 7rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .img {
-    position: relative;
-    height: 10rem;
-    width: 12rem;
+    height: 7rem;
+    width: 10vw
 }
 
-.checkout-name {
-    font-size: 1.1rem;
-    padding-left: 1rem;
-    top: 10%;
-    position: absolute;
+.checkout-product-name {
+    left: 6%;
+    top: 40%;
+    position: relative;
 }
 
 .checkout-price {
-    font-size: 1.1rem;
+    font-size: 0.7rem;
     padding-left: 1rem;
-    top: 30%;
+    top: 34%;
     position: absolute;
 }
 
@@ -76,13 +120,13 @@
 }
 
 .removeProduct {
-    border: none;
+    /* border: none;
     position: absolute;
     right: 6%;
     top: 40%;
     background: none;
     font-size: larger;
-    cursor: pointer;
+    cursor: pointer; */
 }
 
 .totals {

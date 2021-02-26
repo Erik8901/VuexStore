@@ -301,7 +301,7 @@
             </div>
                 <input class="input-info" placeholder="Phone number (optional)" type="text" />
             <div class="btn-send-info-container"  @click="placeOrder()">
-                <span class="btn-place-order-text">Place Order</span>
+                <span class="btn-place-order-text">Continue To Payment</span>
             </div>
         </div>
       </div>
