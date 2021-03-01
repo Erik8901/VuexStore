@@ -1,9 +1,29 @@
 <template>
-  <div class="billing-page">
-     <h1 class="billing-title">Billing Info</h1>
-  <div class="billing-container">
+    <div class="billing-page">
+        <h1 class="billing-title">Billing Info</h1>
+            <div class="billing-container">
+                <div class="cart-container">
+                  <span>Products in Cart: {{this.productsCart.length}}</span>
+                      <li class="checkout-li" v-for="(product, index) in productsCart" :key="product.name">
+                          <div class="product-cart-details">
+                              <span class="checkout-product-name">{{product.name}}</span>
+                            <!-- <router-link to="/productInfo" class="link-productInfo" >
+                                <img class="img" :src="product.img" @click="getProductInfo(product)"/>
+                            </router-link> -->
+                          </div>
+                      </li>
+                        
+                       
+                   
+                   
+                   
+                    
+                
+                
+                
+                </div>
      
-         
+         <!-- <StripeCheckout /> -->
     <!-- <div class="user-info-container">
     <div class="billing-text">
       <span class="contact-title">Contact Information</span>
@@ -312,7 +332,7 @@
     </div>
     
     </div> -->
-    </div>
+            </div>
   </div>
 </template>
 
@@ -320,6 +340,7 @@
 //styles
 import stylesBillingInfo from './styles/stylesBillingInfo.css';
 import stylesCheckoutPage from './styles/stylesCheckoutPage.css';
+import { StripeCheckout } from '@vue-stripe/vue-stripe';
 
 export default {
   name: 'BillingInfo',
@@ -347,11 +368,17 @@ export default {
          },
       }
      },
+components: {
+    StripeCheckout,
+  },
 computed: {
-   
+   productsCart() {
+       return this.$store.state.productsCart
+      },
 },
 mounted()  {
   console.log("loading billingPage")
+   console.log(this.productsCart)
 
 },
 methods: {

@@ -16,15 +16,22 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import '@fortawesome/fontawesome-free/css/all.css'
 import '@fortawesome/fontawesome-free/js/all.js'
 import store from "./utils/store.js";
+import { StripePlugin } from '@vue-stripe/vue-stripe';
 library.add(faCoffee)
 
 
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
+const options = {
+  pk: process.env.STRIPE_PUBLISHABLE_KEY,
+  stripeAccount: process.env.STRIPE_ACCOUNT,
+  apiVersion: process.env.API_VERSION,
+  locale: process.env.LOCALE,
+};
 
 Vue.config.productionTip = false
-Vue.use(VueRouter);
+Vue.use(VueRouter, StripePlugin, options);
 
 const routes = [
         { path: '/productpage',
