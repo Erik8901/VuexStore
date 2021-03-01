@@ -1,6 +1,10 @@
 <template>
-  <div class="billing-info">
-    <div class="user-info-container">
+  <div class="billing-page">
+     <h1 class="billing-title">Billing Info</h1>
+  <div class="billing-container">
+     
+         
+    <!-- <div class="user-info-container">
     <div class="billing-text">
       <span class="contact-title">Contact Information</span>
         <div class="account-text">
@@ -10,7 +14,7 @@
     </div>
       <div class="inputFields">
         <div class="userInputs">
-          <!-- <p class="email-warning" v-show="wrongEmail">Please enter a valid email adress</p> -->
+        
           <input class="input-email"  v-model="userEmail" :placeholder="placeholderValue" type="email" />
             <div class="checkbox-div">
               <input type="checkbox" class="checkbox" v-model="checkSubscription" value="subscribe" />
@@ -19,9 +23,9 @@
         <div class="personal-info-container">
             <span class="personal-title">Shipping address</span>
               <div class="names-container">
-                <!-- <span class="name-warning" v-show="wrongName">*Required</span> -->
+               
                   <input class="input-names" placeholder="First Name" v-model="userName" type="text" />
-                <!-- <p class="last-name-warning" v-show="wrongLastName">* Required</p> -->
+               
                   <input class="input-names" placeholder="Last Name" v-model="userLastName" type="text" />
               </div>
             <div class="personal-info-fields">
@@ -307,6 +311,7 @@
       </div>
     </div>
     
+    </div> -->
     </div>
   </div>
 </template>

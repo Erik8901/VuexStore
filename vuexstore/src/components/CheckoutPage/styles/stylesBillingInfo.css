@@ -1,15 +1,33 @@
-.billing-info {
+.billing-page {
     position: absolute;
-    left: 57%;
-    background: #507661;
-    display: flex;
-    flex-direction: column;
-    width: 34vw;
-    margin-top: 2rem;
-    padding: 1rem;
+    top: 10%;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    overflow-y: scroll;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-.user-info-container {
+.billing-container {
+    height: 30rem;
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3rem;
+    background: #507661;
+}
+
+.billing-title {
+    position: relative;
+    left: 20%;
+    margin-top: 3rem;
+    font-size: 1.6rem;
+    color: #111;
+}
+
+/* .user-info-container {
     padding: 1.3rem;
 }
 
@@ -158,4 +176,4 @@ input.formInvalid::-webkit-input-placeholder {
     color: #FA0C0C;
     position: relative;
     left: 13rem;
-}
+} */

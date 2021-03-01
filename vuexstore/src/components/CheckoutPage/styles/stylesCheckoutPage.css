@@ -7,7 +7,7 @@
     overflow-y: scroll;
     color: #ffffff;
     font-family: Arial, Helvetica, sans-serif;
-   }
+}
 
 .checkout-title {
     position: relative;
@@ -127,6 +127,13 @@
     background: none;
     font-size: larger;
     cursor: pointer; */
+}
+
+
+.to-checkout-btn {
+    height: 3rem;
+    border-top: 3px solid #ffff;
+    cursor: pointer;
 }
 
 .totals {
