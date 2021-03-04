@@ -7,6 +7,7 @@
                       <li class="checkout-li" v-for="(product, index) in productsCart" :key="product.name">
                           <div class="product-cart-details">
                               <span class="checkout-product-name">{{product.name}}</span>
+                              <span class="checkout-product-name">{{product.price}}</span>
                             <!-- <router-link to="/productInfo" class="link-productInfo" >
                                 <img class="img" :src="product.img" @click="getProductInfo(product)"/>
                             </router-link> -->

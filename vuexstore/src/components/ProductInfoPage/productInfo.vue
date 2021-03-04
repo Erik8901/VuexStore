@@ -60,26 +60,7 @@ computed: {
       })
    },
    handleWindowSize() {
-         this.viewWidth = window.innerWidth;
-         
-         let infoBtn  = document.querySelector(".info-btn-div");
-         let productInfoPage = document.querySelector("product-info-page");
-        
-        this.viewWidth < 1300 ? 
-          infoBtn.style.top = "unset" : 
-          infoBtn.style.top = "8.1%"
-
-      this.viewWidth < 1300 ? 
-          infoBtn.style.left = "unset" : 
-          infoBtn.style.left = "40%"
-      
-        this.viewWidth < 1300 ? 
-          productInfoPage.style.display = "flex" : 
-          productInfoPage.style.display = "block"
-
-        this.viewWidth < 1300 ? 
-          productInfoPage.style.flexDirection = "column" : 
-          productInfoPage.style.flexDirection  = "unset" 
+     
      
      
      }

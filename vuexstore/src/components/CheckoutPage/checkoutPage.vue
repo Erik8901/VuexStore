@@ -5,6 +5,7 @@
               <h1 class="emptyH1">Your Cart is Empty</h1>
           </div>
       <div v-else>
+        
         <div class=checkout-container>
             <div class="checkout-header-info">
                 <div class="product-details-container">
@@ -16,38 +17,34 @@
                     <span class="details-title">TOTAL</span>
                 </div>
             </div>
-            <div class="shopping-cart-products-container">
-                
-                    <li class="checkout-li" v-for="(product, index) in productsCart" :key="product.name" @click="getProductInfo(product)">
-                        <div class="product-cart-details">
-                            <span class="checkout-product-name">{{product.name}}</span>
-                            <router-link to="/productInfo" class="link-productInfo" >
-                                <img class="img" :src="product.img" @click="getProductInfo(product)"/>
-                            </router-link>
-                        </div>
-                        
-                        <!-- <span class="checkout-price">Price: {{product.price}} €</span> -->
-                    
-                   
-                   
-                   
-                    <button class="removeProduct" @click="removeProduct(index, product)">Remove</button>
-                  </li>
-              <!-- <button class="emptyCart" @click="emptyCart()">Empty Cart</button>
-            <span class="totals">Your Total: {{this.totalPrice}} €</span> -->
-              
-          </div>
-         
-          <div class="to-checkout-btn">
-               <router-link to="/BillingInfo">
-                  <span>Proceed To Checkout</span>
-                </router-link>
-          </div>
-
-         
-                
             
-      </div>
+            <div class="shopping-cart-products-container">
+                <li class="checkout-li" v-for="(product, index) in productsCart" :key="product.name" @click="getProductInfo(product)">
+                    <div class="product-cart-details">
+                        <div class="product-details-container">
+                            <span class="checkout-product-name">{{product.name}}</span>
+                                <router-link to="/productInfo" class="link-productInfo" >
+                                    <img class="img" :src="product.img" @click="getProductInfo(product)"/>
+                                </router-link>
+                        </div>
+                        <div class="product-price-info-container">
+                            <span class="product-price">1</span>
+                            <span class="product-price">{{product.price}}</span>
+                            <span class="product-price">{{product.price}}</span>
+                        </div>
+                            <div class="removeProduct" @click="removeProduct(index, product)"><span class="delete-product">X</span></div>
+                      </div>
+                  </li>
+              </div>
+         
+            <div class="to-checkout-btn">
+                <button class="emptyCart" @click="emptyCart()">Empty Cart</button>
+                <span class="totals">Your Total: {{this.totalPrice}} €</span>
+                <router-link to="/BillingInfo">
+                    <span>Proceed To Checkout</span>
+                </router-link>
+            </div>
+        </div><!-- checkout-containers -->
     </div><!-- //v-else -->
   </div>
 </template>

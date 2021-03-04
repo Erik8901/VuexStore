@@ -31,6 +31,7 @@
     flex-direction: column;
     margin-bottom: 3rem;
     background: #507661;
+    overflow-y: scroll;
 }
 
 .checkout-header-info {
@@ -43,14 +44,7 @@
     flex-direction: row;
 }
 
-.product-details-container {
-    display: flex;
-    width: 30%;
-    flex-direction: row;
-}
-
-
-.product-price-container {
+.product-price-container{
     width: 70%;
     display: flex;
     flex-direction: row;
@@ -59,7 +53,6 @@
 
 .details-title {
     padding-top: 1rem;
-    padding-left: 1rem;
     font-size: 0.7rem;
 }
 
@@ -70,18 +63,31 @@
 }
 
 .checkout-li {
-    height: 7rem;
-    width: 100%;
-    list-style: none;
-    margin-top: 1rem;
+   list-style: none;
+   padding-top: 0.4rem;
+   
 }
 
 .product-cart-details {
+    height: 7rem;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.product-details-container {
     width: 30%;
     height: 7rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+
+.product-price-info-container {
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
 .img {
@@ -95,81 +101,35 @@
     position: relative;
 }
 
-.checkout-price {
+.product-price {
+    top: 20%;
+    position: relative;
+    padding-left: 2rem;
     font-size: 0.7rem;
-    padding-left: 1rem;
-    top: 34%;
-    position: absolute;
 }
 
-.checkout-getInfo {
-    top: 40%;
-    position: absolute;
-    height: 1.6rem;
-    width: 4rem;
-    margin-left: 1rem;
-    border: none;
-    margin-top: 2rem;
-    background: #8FBC8B;
-    color: white;
+.delete-product {
+    position: relative;
+    top:40%;
+    right: 2rem;
     cursor: pointer;
+    color: #cc0000;
 }
-
-.checkout-getInfo:hover {
-    background: #90EE90;
-}
-
-.removeProduct {
-    /* border: none;
-    position: absolute;
-    right: 6%;
-    top: 40%;
-    background: none;
-    font-size: larger;
-    cursor: pointer; */
-}
-
 
 .to-checkout-btn {
     height: 3rem;
     border-top: 3px solid #ffff;
     cursor: pointer;
-}
-
-.totals {
-    margin-top: -4rem;
-    margin-bottom: 3rem;
-    margin-left: 1rem;
-    font-size: 160%;
-    color: #111;
-    font-style: bold;
-    font-weight: 600;
-    width: fit-content;
-}
-
-.emptyCart {
     margin-top: 1rem;
-    margin-bottom: 2rem;
-    margin-left: 31rem;
-    border: none;
-    background: #ff3333;
-    width: 10rem;
-    height: 2rem;
-    color: #ffff;
-    cursor: pointer;
 }
 
-.emptyCart:hover {
-    background: #ff6666;
-}
+@media screen and (max-width: 1000px) {
+    .checkout-container {
+      width: 100vw;
+    }
+  }
+  
 
-.billingInfo {
-    /* position: absolute;
-    left: 51%;
-    background: red;
-    width: 10rem;
-    height: rem;
-    height: 10rem;
 
-    color: black; */
-}
+
+
