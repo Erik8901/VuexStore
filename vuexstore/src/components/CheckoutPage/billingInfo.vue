@@ -24,7 +24,7 @@
                 
                 </div>
      
-         <!-- <StripeCheckout /> -->
+         <StripeCheckout />
     <!-- <div class="user-info-container">
     <div class="billing-text">
       <span class="contact-title">Contact Information</span>
@@ -341,7 +341,8 @@
 //styles
 import stylesBillingInfo from './styles/stylesBillingInfo.css';
 import stylesCheckoutPage from './styles/stylesCheckoutPage.css';
-import { StripeCheckout } from '@vue-stripe/vue-stripe';
+import StripeCheckout  from './StripeCheckout.vue';
+//import { StripeCheckout } from '@vue-stripe/vue-stripe';
 
 export default {
   name: 'BillingInfo',
