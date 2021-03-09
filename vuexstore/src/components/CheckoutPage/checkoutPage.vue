@@ -9,7 +9,7 @@
         <div class=checkout-container>
             <div class="checkout-header-info">
                 <div class="product-details-container">
-                    <span class="details-title">PRODUCT DETAILS</span>
+                    <span class="details-title" style="padding-left: 1rem;">PRODUCT DETAILS</span>
                 </div>
                 <div class="product-price-container">
                     <span class="details-title">QUANTITY</span>
@@ -28,7 +28,7 @@
                                 </router-link>
                         </div>
                         <div class="product-price-info-container">
-                            <span class="product-price">1</span>
+                            <span class="product-price" >1</span>
                             <span class="product-price">{{product.price}}</span>
                             <span class="product-price">{{product.price}}</span>
                         </div>
@@ -72,12 +72,11 @@ export default {
      },
 computed: {
     productsCart() {
+      console.log("1")
        return this.$store.state.productsCart
+       
       },
-    productsPrice() {
-      return this.$store.state.totalPrice
-        this.totalPrice = this.$store.state.totalPrice
-    }
+   
     },
 mounted()  {
   let prices = []  

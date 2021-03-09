@@ -27,6 +27,24 @@
     color: #111;
 }
 
+.cart-container {
+    height: 30rem;
+    width: 20%;
+    border-top: 2px solid #ffff;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    /* border-right: 2px solid #ffff; */
+}
+
+.products-in-cart-text {
+    padding-top: 2rem;
+}
+
+.cart-tota-amoount-text {
+    padding-top: 1rem;
+}
+
 /* .user-info-container {
     padding: 1.3rem;
 }

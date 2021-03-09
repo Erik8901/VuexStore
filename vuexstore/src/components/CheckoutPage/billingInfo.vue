@@ -1,18 +1,22 @@
 <template>
     <div class="billing-page">
-        <h1 class="billing-title">Billing Info</h1>
+        <h1 class="billing-title">ORDER SUMMARY</h1>
             <div class="billing-container">
                 <div class="cart-container">
-                  <span>Products in Cart: {{this.productsCart.length}}</span>
+                    <span class="products-in-cart-text">Items in Cart: {{this.amount.length}}</span>
+                    <span class="cart-tota-amoount-text">Total Cost: €{{this.totalPrice}}</span>
                       <li class="checkout-li" v-for="(product, index) in productsCart" :key="product.name">
                           <div class="product-cart-details">
-                              <span class="checkout-product-name">{{product.name}}</span>
-                              <span class="checkout-product-name">{{product.price}}</span>
+                           
+                            <!-- <span class="totals">Your Total: {{this.totalPrice}} €</span> -->
+                              <!-- <span class="checkout-product-name">{{product.name}}</span>
+                              <span class="checkout-product-name">{{product.price}}</span> -->
                             <!-- <router-link to="/productInfo" class="link-productInfo" >
                                 <img class="img" :src="product.img" @click="getProductInfo(product)"/>
                             </router-link> -->
                           </div>
                       </li>
+                </div>
                         
                        
                    
@@ -22,9 +26,10 @@
                 
                 
                 
-                </div>
+                
      
-         <StripeCheckout />
+<!--          
+         <StripeCheckout /> -->
     <!-- <div class="user-info-container">
     <div class="billing-text">
       <span class="contact-title">Contact Information</span>
@@ -346,7 +351,7 @@ import StripeCheckout  from './StripeCheckout.vue';
 
 export default {
   name: 'BillingInfo',
-  data() {
+  data () {
       return {
          userEmail: '',
          wrongEmail: false,
@@ -368,6 +373,8 @@ export default {
            postalCode: '',
            phone: ''
          },
+         amount: [],
+         totalPrice: 0
       }
      },
 components: {
@@ -375,13 +382,12 @@ components: {
   },
 computed: {
    productsCart() {
-       return this.$store.state.productsCart
-      },
+      this.amount = this.$store.state.productsCart
+      this.totalPrice = this.$store.state.totalPrice
+  },
 },
 mounted()  {
   console.log("loading billingPage")
-   console.log(this.productsCart)
-
 },
 methods: {
     placeOrder: function() {
