@@ -37,14 +37,21 @@
                   </li>
               </div>
          
-            <div class="to-checkout-btn">
-                <button class="emptyCart" @click="emptyCart()">Empty Cart</button>
-                <span class="totals">Your Total: {{this.totalPrice}} €</span>
-                <router-link to="/BillingInfo">
-                    <span>Proceed To Checkout</span>
-                </router-link>
-            </div>
+            
         </div><!-- checkout-containers -->
+        <div class="to-checkout-div">
+                <div class="emptyCart" @click="emptyCart()">
+                    <span class="empty-btn-text">Empty Cart X</span>
+                </div>
+                <div class="emptyCart">
+                    <span class="checkout-btn-text">Your Total: {{this.totalPrice}} €</span>
+                </div>
+                <div class="emptyCart-checkout">
+                    <router-link to="/BillingInfo" class="checkout-link-text">
+                        <span class="checkout-btn-text">Proceed To Checkout</span>
+                    </router-link>
+                </div>
+            </div>
     </div><!-- //v-else -->
   </div>
 </template>
@@ -72,11 +79,8 @@ export default {
      },
 computed: {
     productsCart() {
-      console.log("1")
-       return this.$store.state.productsCart
-       
-      },
-   
+     return this.$store.state.productsCart
+       },
     },
 mounted()  {
   let prices = []  

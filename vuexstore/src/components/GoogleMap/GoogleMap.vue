@@ -31,12 +31,12 @@ export default {
   },
   methods: {
     handleWindowSize() {
-         this.viewWidth = window.innerWidth;
+        //  this.viewWidth = window.innerWidth;
          
-         let map = document.querySelector(".googleMap");
-         this.viewWidth < 1300 ? 
-           map.style.display = "none" : 
-           map.style.display = "flex"
+        //  let map = document.querySelector(".googleMap");
+        //  this.viewWidth < 1300 ? 
+        //    map.style.display = "none" : 
+        //    map.style.display = "flex"
          
                 
 

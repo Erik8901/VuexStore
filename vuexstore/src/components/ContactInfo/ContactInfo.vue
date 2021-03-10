@@ -67,17 +67,17 @@ export default {
 
 },
  created() {
-      window.addEventListener('resize', this.handleWindowSize)
+     // window.addEventListener('resize', this.handleWindowSize)
   },
     methods: {
-       handleWindowSize() {
-         this.viewWidth = window.innerWidth;
+    //    handleWindowSize() {
+    //      this.viewWidth = window.innerWidth;
          
-         let contactInfo  = document.querySelector(".contactInfo");
-         this.viewWidth < 1300 ? 
-           contactInfo.style.width = "100%" : 
-          contactInfo.style.width = "50%"
-     }
+    //      let contactInfo  = document.querySelector(".contactInfo");
+    //      this.viewWidth < 1300 ? 
+    //        contactInfo.style.width = "100%" : 
+    //       contactInfo.style.width = "50%"
+    //  }
   }
 }
 </script>

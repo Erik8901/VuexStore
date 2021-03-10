@@ -14,7 +14,7 @@
     width: 60%;
     margin: 0 auto;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     margin-bottom: 3rem;
     background: #507661;
 }
@@ -41,9 +41,161 @@
     padding-top: 2rem;
 }
 
-.cart-tota-amoount-text {
+.cart-tota-amount-text {
     padding-top: 1rem;
 }
+
+
+.promo-code-div {
+    height: 3rem;
+    display: flex;
+    flex-direction: row;
+    font-size: 0.7rem;
+    justify-content: space-around;
+    margin-top: 3rem;
+    cursor:pointer;
+}
+
+.promo-code-div:hover {
+    color: #b3b3b3;
+}
+
+.promo-text {
+    margin-top: 1rem;
+}
+
+.promo-code-input-div {
+    font-size: 0.7rem;
+}
+
+.promo-inout {
+    padding: 0.3rem
+}
+
+.user-info-container {
+    display: flex;
+    width: 80%;
+    /* background:darkviolet; */
+    background-color: #d4a55d;
+    flex-direction: column;
+    border-top: 2px solid #ffff;
+}
+
+.contact-title {
+    margin: 0 auto;
+    padding-top: 1rem
+}
+
+.account-text-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 0.7rem;
+    margin-top: 0.6rem;
+}
+
+.loginTitle {
+    padding-left: 0.6rem;
+    cursor: pointer;
+}
+
+.loginTitle:hover {
+    color: #0033cc;
+}
+
+.user-billing-info-container {
+    padding-top: 1rem;
+    width: 90%;
+    height: 22rem;
+    margin: 0 auto;
+}
+
+.input-fields-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.input-email {
+    padding-left: 0.3rem;
+    height: 1.3rem;
+    width: 30%;
+}
+
+.checkbox-container {
+    font-size: 0.7rem;
+    padding-top: 0.3rem;
+}
+
+.checkbox {
+    cursor: pointer;
+}
+
+.user-personal-info-container {
+    margin-top: 1rem;
+    text-align: center;
+    width: 90%;
+    /* background:darkviolet; */
+}
+
+.input-names, .input-info {
+    padding-left: 0.3rem;
+    height: 1.3rem;
+    width: 33%;
+}
+
+.names-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.personal-info-fields {
+    display: flex;
+    flex-direction: column;
+}
+
+.personal-info-fields-1, .personal-info-fields-2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1000px) {
+    .billing-container {
+        flex-direction: column;
+        width: 100vw;
+    }
+    .cart-container {
+        width: 100vw;
+    }
+    .user-billing-info-container, .user-info-container {
+        width: 100vw;
+    }
+    .user-billing-info-container {
+        flex-direction: column;
+    }
+    .input-fields-div {
+        flex-direction: column;
+        margin: 0 auto;
+    }
+}
+  
+
+
+
+
 
 /* .user-info-container {
     padding: 1.3rem;

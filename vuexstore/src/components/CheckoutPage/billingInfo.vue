@@ -4,19 +4,57 @@
             <div class="billing-container">
                 <div class="cart-container">
                     <span class="products-in-cart-text">Items in Cart: {{this.amount.length}}</span>
-                    <span class="cart-tota-amoount-text">Total Cost: €{{this.totalPrice}}</span>
-                      <li class="checkout-li" v-for="(product, index) in productsCart" :key="product.name">
-                          <div class="product-cart-details">
-                           
-                            <!-- <span class="totals">Your Total: {{this.totalPrice}} €</span> -->
-                              <!-- <span class="checkout-product-name">{{product.name}}</span>
-                              <span class="checkout-product-name">{{product.price}}</span> -->
-                            <!-- <router-link to="/productInfo" class="link-productInfo" >
-                                <img class="img" :src="product.img" @click="getProductInfo(product)"/>
-                            </router-link> -->
+                    <span class="cart-tota-amount-text">Total Cost: € {{this.totalPrice}}</span>
+                    <div class="promo-code-div" v-on:click="showPromoCode = !showPromoCode">
+                        <span class="promo-text">PROMOTIONAL CODE</span>
+                        <span class="promo-text">+</span>
+                    </div>
+                    <div class=promo-code-input-div v-if="showPromoCode" id="hide">
+                        <form>
+                            <span>Enter Promotional Code:</span>
+                            <input class="promo-input" placeholder="promo-code">
+                        </form>
+                    </div>
+              </div>
+              <div class="user-info-container">
+                  <span class="contact-title">Contact Information</span>
+                  <div class="account-text-div">
+                      <span class="accountTitle">Already have an acccount?</span>
+                      <span class="loginTitle">Log in</span>
+                  </div>
+                  <div class="user-billing-info-container">
+                      <div class="input-fields-div">
+                          <input class="input-email" v-model="userEmail" :placeholder="placeholderValue" type="email" />
+                              <div class="checkbox-container">
+                                  <input type="checkbox" class="checkbox" v-model="checkSubscription" value="subscribe" />
+                                  <span class="subscribe-text">Keep me up to date with news and special offers</span>
+                              </div>
+                      </div>
+                      <div class="user-personal-info-container">
+                          <span class="personal-title">Shipping address</span>
+                          <div class="names-container">
+                              <input class="input-names" placeholder="First Name" v-model="userName" type="text" />
+                              <input class="input-names" placeholder="Last Name" v-model="userLastName" type="text" />
                           </div>
-                      </li>
-                </div>
+                          <div class="personal-info-fields">
+                              <div class="personal-info-fields-1">
+                                  <input class="input-info" placeholder="Company name (optional)" v-model="userCompanyName" type="text" />
+                                  <input class="input-info" placeholder="Address" type="text" />
+                              </div>
+                              <div class="personal-info-fields-2">
+                                  <input class="input-info" placeholder="Apartment, suite, etc (optional)" type="text" />
+                                  <input class="input-info" placeholder="City" type="text" />
+                              </div>
+                          </div>
+                      </div>
+                  
+                  
+                  </div>
+              
+              
+              
+              </div>
+
                         
                        
                    
@@ -32,34 +70,14 @@
          <StripeCheckout /> -->
     <!-- <div class="user-info-container">
     <div class="billing-text">
-      <span class="contact-title">Contact Information</span>
-        <div class="account-text">
-          <span class="accountTitle">Already have an acccount?</span>
-          <span class="loginTitle">Log in</span>
-      </div>
+      
+       
     </div>
-      <div class="inputFields">
-        <div class="userInputs">
-        
-          <input class="input-email"  v-model="userEmail" :placeholder="placeholderValue" type="email" />
-            <div class="checkbox-div">
-              <input type="checkbox" class="checkbox" v-model="checkSubscription" value="subscribe" />
-              <span class="subscribe-text">Keep me up to date with news and special offers</span>
-          </div>
+      
         <div class="personal-info-container">
             <span class="personal-title">Shipping address</span>
-              <div class="names-container">
-               
-                  <input class="input-names" placeholder="First Name" v-model="userName" type="text" />
-               
-                  <input class="input-names" placeholder="Last Name" v-model="userLastName" type="text" />
-              </div>
-            <div class="personal-info-fields">
-              <input class="input-info" placeholder="Company name (optional)" v-model="userCompanyName" type="text" />
-              <input class="input-info" placeholder="Address" type="text" />
-              <input class="input-info" placeholder="Apartment, suite, etc (optional)" type="text" />
-              <input class="input-info" placeholder="City" type="text" />
-            </div>
+              
+            
             <div class="user-location-info">
                 <select name="country" class="dropDown-country" id="country">
                     <option value="0" label="Select a country ... " selected="selected" >Select a country ... </option>
@@ -374,7 +392,8 @@ export default {
            phone: ''
          },
          amount: [],
-         totalPrice: 0
+         totalPrice: 0,
+         showPromoCode: false
       }
      },
 components: {
