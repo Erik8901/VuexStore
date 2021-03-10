@@ -144,6 +144,7 @@
 .emptyCart-checkout {
     background: #0052cc;
     color: #ffff;
+    height: 1rem;
     padding: 1rem;
 }
 
@@ -151,9 +152,6 @@
     background:#3385ff
 }
 
-.checkout-link-text {
-    color: #ffff;
-}
 
 @media screen and (max-width: 1000px) {
     .checkout-container {

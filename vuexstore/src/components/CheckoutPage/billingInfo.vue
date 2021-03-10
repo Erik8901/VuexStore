@@ -401,12 +401,13 @@ components: {
   },
 computed: {
    productsCart() {
-      this.amount = this.$store.state.productsCart
-      this.totalPrice = this.$store.state.totalPrice
-  },
+    },
 },
 mounted()  {
-  console.log("loading billingPage")
+    console.log("loading billingPage")
+    this.amount = this.$store.state.productsCart
+    this.totalPrice = this.$store.state.totalPrice
+  
 },
 methods: {
     placeOrder: function() {

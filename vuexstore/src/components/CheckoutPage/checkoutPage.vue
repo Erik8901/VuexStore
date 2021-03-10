@@ -46,11 +46,13 @@
                 <div class="emptyCart">
                     <span class="checkout-btn-text">Your Total: {{this.totalPrice}} €</span>
                 </div>
-                <div class="emptyCart-checkout">
+                
                     <router-link to="/BillingInfo" class="checkout-link-text">
+                    <div class="emptyCart-checkout">
                         <span class="checkout-btn-text">Proceed To Checkout</span>
+                        </div>
                     </router-link>
-                </div>
+                
             </div>
     </div><!-- //v-else -->
   </div>
