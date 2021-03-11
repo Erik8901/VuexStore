@@ -156,15 +156,35 @@
     flex-direction: column;
 }
 
-.personal-info-fields-1, .personal-info-fields-2 {
+.personal-info-fields-1, .personal-info-fields-2, .personal-info-fields-3 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin-top: 1rem;
 }
 
+.dropDown-country {
+    padding-left: 0.3rem;
+    height: 1.6rem;
+    width: 34.8%;
+    cursor: pointer;
+}
 
+.personal-info-fields-4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
 
+.btn-send-info-container {
+    margin-top: 3rem;
+    cursor: pointer;
+}
+
+.btn-place-order-text:hover {
+    text-decoration: underline;
+}
 
 
 
@@ -190,6 +210,21 @@
         flex-direction: column;
         margin: 0 auto;
     }
+    .names-container, .personal-info-fields-1, .personal-info-fields-2, .personal-info-fields-3 {
+        display: flex;
+        flex-direction: column;
+    }
+    .input-names, .input-info, .input-email, .dropDown-country {
+        width: 100vh;
+        margin-top: 1rem;
+    }
+    .user-billing-info-container {
+        padding-top: 1rem;
+        width: 100%;
+        height: fit-content;
+        margin: 0 auto;
+        padding-bottom: 3rem;
+    }
 }
   
 
@@ -197,153 +232,3 @@
 
 
 
-/* .user-info-container {
-    padding: 1.3rem;
-}
-
-.billing-text {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.contact-title {
-    font-size: 1.2rem;
-}
-
-.accountTitle {
-    margin-right: 1rem;
-}
-
-.loginTitle {
-    color: #33A8FF;
-    cursor: pointer;
-}
-  
-.input-email {
-    width: 32vw;
-    height: 2rem;
-    text-indent: 0.3rem;
-    border-radius: 0.3rem;
-    margin-top: 1rem;
-    border: unset;
-}
-
-.userInputs {
-    margin-top: 0.6rem;
-}
-
-.checkbox-div {
-    margin-left: 0rem;
-    display: flex;
-    margin-top: 1rem;
-    flex-direction: row;
-}
-
-.checkbox{
-    cursor: pointer;
-    height: 1rem;
-    width: 1rem;
-}
-
-.subscribe-text {
-    margin-left: 0.6rem;
-    margin-top: 0.2rem;
-}
-
-
-.personal-info-container {
-    display: flex;
-    flex-direction: column;
-    margin-top: 2rem;
-}
-
-.personal-title {
-    font-size: 1.2rem;
-}
-
-.input-names {
-    border-radius: 0.3rem;
-    text-indent: 0.3rem;
-    border: unset;
-    height: 2rem;
-    width: 14vw;
-    margin-top: 0.3rem;
-}
-
-.names-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 32.2vw;
-}
-
-.input-info {
-    width: 32.2vw;
-    height: 2rem;
-    text-indent: 0.3rem;
-    border-radius: 0.3rem;
-    margin-top: 1rem;
-    border: unset;
-}
-
-.personal-info-fields {
-    margin-top: 1.3rem;
-}
-
-.user-location-info{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 32.4vw;
-    margin-top: 1rem;
-}
-
-.dropDown-country {
-    border-radius: 0.3rem;
-    text-indent: 0.3rem;
-    border: unset;
-    height: 2rem;
-    width: 14vw;
-    margin-top: 0.3rem;
-    color: #808080;
-    cursor: pointer;
-}
-
-.btn-send-info-container {
-    background: #1482FE;
-    width: 32.2vw;
-    margin-top: 3rem;
-    height: 2rem;
-    border-radius: 0.3rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-}
-
-.btn-place-order-text {
-   margin: unset;
-}
-
-
-.email-warning {
-    font-size: 0.7rem;
-    color:#FA0C0C;
-    position: absolute;
-    top: 3.4rem;
-}
-
-
-input.formInvalid::-webkit-input-placeholder {
-    color: #FA0C0C;
- }
-
-
-.name-warning {
-    top: -2rem;
-    font-size: 0.7rem;
-    color: #FA0C0C;
-    position: relative;
-    left: 13rem;
-} */
