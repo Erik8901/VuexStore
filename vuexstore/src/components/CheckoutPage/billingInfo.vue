@@ -64,13 +64,14 @@
             </div>
             <div class="personal-info-fields">
               <div class="personal-info-fields-1">
-                <input class="input-info" placeholder="City" type="text" />
-                <input class="input-info" placeholder="Address" type="text" />
+                <input class="input-info" placeholder="City" v-model="userCity" type="text" />
+                <input class="input-info" placeholder="Address" v-model="userAddress" type="text" />
               </div>
               <div class="personal-info-fields-2">
                 <input
                   class="input-info"
                   placeholder="Apartment, suite, etc (optional)"
+                  v-model="userApartment"
                   type="text"
                 />
                 <input
@@ -81,7 +82,7 @@
                 />
               </div>
               <div class="personal-info-fields-3">
-                <select name="country" class="dropDown-country" id="country">
+                <select name="country" class="dropDown-country" id="country" v-model="selectedCountry">
                   <option
                     value="0"
                     label="Select a country ... "
@@ -504,6 +505,7 @@
                 <input
                   class="input-info"
                   placeholder="Postal code"
+                  v-model="userPostalCode"
                   type="text"
                 />
               </div>
@@ -511,6 +513,7 @@
                 <input
                   class="input-info"
                   placeholder="Phone number (optional)"
+                  v-model="userPhoneNumber"
                   type="text"
                 />
                 <div class="btn-send-info-container" @click="placeOrder()">
@@ -549,18 +552,33 @@ export default {
       wrongName: true,
       userLastName: "",
       wrongLastName: true,
+      emptyCompanyNam: true,
       userCompanyName: "",
       placeholderValue: "Email",
+      emptyCity: true,
+      userCity: "",
+      userAddress: "",
+      emptyAddress: true,
+      emptyApartment: true,
+      userApartment: "",
+      emptyPostalCode: true,
+      userPostalCode: "",
+      emptyPhoneNumber: true,
+      userPhoneNumber: "",
+      emptySelectedCountry: true,
+      selectedCountry: 0,
       userInfo: {
         email: "",
         subscribtion: false,
         name: "",
-        lastName: "bob",
+        lastName: "",
         company: "",
         city: "",
+        address: "",
         country: "",
         postalCode: "",
         phone: "",
+        apartment: ""
       },
       amount: [],
       totalPrice: 0,
@@ -580,14 +598,14 @@ export default {
   },
   methods: {
     placeOrder: function () {
-      console.log("test btnq");
       let re = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
       let emailInput = document.getElementsByClassName("input-email")[0];
       if (re.test(this.userEmail)) {
         //do something with email, send to store...
         console.log("email ok");
-        console.log(this.userEmail);
-        if (this.wrongEmail === true) {
+        this.userInfo.email = this.userEmail
+       
+        if(this.wrongEmail === true) {
           this.placeholderValue = "Email";
           emailInput.classList.remove("formInvalid");
           this.wrongEmail = false;
@@ -599,30 +617,99 @@ export default {
         this.wrongEmail = true;
         this.userEmail = "";
       } //handle email
-
+      
+      this.userInfo.subscribtion = this.checkSubscription
       console.log("user subscription = " + this.checkSubscription); //handle sub
 
       if (this.userName === "") {
         this.wrongName = true;
         this.userName = "";
       } else {
-        // console.log(this.userName)
         //do something with name, send to store...
+        this.userInfo.name = this.userName
         this.wrongName = false;
         this.userName = "";
       } //handle name
 
       if (this.userLastName === "") {
-        //console.log("here")
-        console.log(this.userLastName);
         this.wrongLastName = true;
         this.userLastName = "";
       } else {
-        //console.log(this.userLastName)
         //do something with lastname, send to store...
+        this.userInfo.lastName = this.userLastName
         this.wrongLastName = false;
         this.userLastName = "";
       } //handle lastname
+
+      if(this.userCity === "") {
+        this.emptyCity = true;
+        this.userCity = "";
+      } else {
+        this.emptyCity = false;
+        this.userInfo.city = this.userCity
+        this.userCity = "";
+      } //handle city
+
+       if(this.userAddress=== "") {
+        this.emptyAddress = true;
+        this.userAddress = "";
+      } else {
+        this.emptyAddress = false;
+        this.userInfo.address = this.userAddress
+        this.userAddress = "";
+      } //handle address
+
+       if(this.userApartment=== "") {
+        this.emptyApartment = true;
+        this.userApartment = "";
+      } else {
+        this.emptyApartment = false;
+        this.userInfo.apartment = this.userApartment
+        this.userApartment = "";
+      } //handle apartment
+     
+      if(this.userCompanyName === "") {
+        this.emptyCompanyName = true;
+        this.userCompanyName = "";
+      } else {
+        this.emptyCompanyName = false;
+        this.userInfo.company = this.userCompanyName
+        this.userCompanyName = "";
+      } //handle companyName
+
+
+      
+      if(this.selectedCountry === "") {
+        this.emptySelectedCountry = true;
+        this.selectedCountry = 0;
+      } else {
+        this.emptySelectedCountry = false;
+        this.userInfo.country = this.selectedCountry;
+        this.selectedCountry = 0;
+      } //handle country
+
+      if(this.userPostalCode === "") {
+        this.emptyPostalCode = true;
+        this.userPostalCode = "";
+      } else {
+        this.emptyPostalCode = false;
+        this.userInfo.postalCode = this.userPostalCode
+        this.userPostalCode = "";
+      } //handle postalCode
+
+      if(this.userPhoneNumber === "") {
+        this.emptyPhoneNumber = true;
+        this.userPostalCode = "";
+      } else {
+        this.emptyPhoneNumber = false;
+        this.userInfo.phone = this.userPhoneNumber
+        this.userPhoneNumber = "";
+      } //handle PhoneNumber
+
+
+
+
+      
 
       console.log(this.userInfo);
     }, //placeOrder
