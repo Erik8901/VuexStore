@@ -64,8 +64,18 @@
             </div>
             <div class="personal-info-fields">
               <div class="personal-info-fields-1">
-                <input class="input-info" placeholder="City" v-model="userCity" type="text" />
-                <input class="input-info" placeholder="Address" v-model="userAddress" type="text" />
+                <input
+                  class="input-info"
+                  placeholder="City"
+                  v-model="userCity"
+                  type="text"
+                />
+                <input
+                  class="input-info"
+                  placeholder="Address"
+                  v-model="userAddress"
+                  type="text"
+                />
               </div>
               <div class="personal-info-fields-2">
                 <input
@@ -82,7 +92,12 @@
                 />
               </div>
               <div class="personal-info-fields-3">
-                <select name="country" class="dropDown-country" id="country" v-model="selectedCountry">
+                <select
+                  name="country"
+                  class="dropDown-country"
+                  id="country"
+                  v-model="selectedCountry"
+                >
                   <option
                     value="0"
                     label="Select a country ... "
@@ -578,7 +593,7 @@ export default {
         country: "",
         postalCode: "",
         phone: "",
-        apartment: ""
+        apartment: "",
       },
       amount: [],
       totalPrice: 0,
@@ -603,9 +618,9 @@ export default {
       if (re.test(this.userEmail)) {
         //do something with email, send to store...
         console.log("email ok");
-        this.userInfo.email = this.userEmail
-       
-        if(this.wrongEmail === true) {
+        this.userInfo.email = this.userEmail;
+
+        if (this.wrongEmail === true) {
           this.placeholderValue = "Email";
           emailInput.classList.remove("formInvalid");
           this.wrongEmail = false;
@@ -617,8 +632,8 @@ export default {
         this.wrongEmail = true;
         this.userEmail = "";
       } //handle email
-      
-      this.userInfo.subscribtion = this.checkSubscription
+
+      this.userInfo.subscribtion = this.checkSubscription;
       console.log("user subscription = " + this.checkSubscription); //handle sub
 
       if (this.userName === "") {
@@ -626,7 +641,7 @@ export default {
         this.userName = "";
       } else {
         //do something with name, send to store...
-        this.userInfo.name = this.userName
+        this.userInfo.name = this.userName;
         this.wrongName = false;
         this.userName = "";
       } //handle name
@@ -636,50 +651,48 @@ export default {
         this.userLastName = "";
       } else {
         //do something with lastname, send to store...
-        this.userInfo.lastName = this.userLastName
+        this.userInfo.lastName = this.userLastName;
         this.wrongLastName = false;
         this.userLastName = "";
       } //handle lastname
 
-      if(this.userCity === "") {
+      if (this.userCity === "") {
         this.emptyCity = true;
         this.userCity = "";
       } else {
         this.emptyCity = false;
-        this.userInfo.city = this.userCity
+        this.userInfo.city = this.userCity;
         this.userCity = "";
       } //handle city
 
-       if(this.userAddress=== "") {
+      if (this.userAddress === "") {
         this.emptyAddress = true;
         this.userAddress = "";
       } else {
         this.emptyAddress = false;
-        this.userInfo.address = this.userAddress
+        this.userInfo.address = this.userAddress;
         this.userAddress = "";
       } //handle address
 
-       if(this.userApartment=== "") {
+      if (this.userApartment === "") {
         this.emptyApartment = true;
         this.userApartment = "";
       } else {
         this.emptyApartment = false;
-        this.userInfo.apartment = this.userApartment
+        this.userInfo.apartment = this.userApartment;
         this.userApartment = "";
       } //handle apartment
-     
-      if(this.userCompanyName === "") {
+
+      if (this.userCompanyName === "") {
         this.emptyCompanyName = true;
         this.userCompanyName = "";
       } else {
         this.emptyCompanyName = false;
-        this.userInfo.company = this.userCompanyName
+        this.userInfo.company = this.userCompanyName;
         this.userCompanyName = "";
       } //handle companyName
 
-
-      
-      if(this.selectedCountry === "") {
+      if (this.selectedCountry === "") {
         this.emptySelectedCountry = true;
         this.selectedCountry = 0;
       } else {
@@ -688,28 +701,23 @@ export default {
         this.selectedCountry = 0;
       } //handle country
 
-      if(this.userPostalCode === "") {
+      if (this.userPostalCode === "") {
         this.emptyPostalCode = true;
         this.userPostalCode = "";
       } else {
         this.emptyPostalCode = false;
-        this.userInfo.postalCode = this.userPostalCode
+        this.userInfo.postalCode = this.userPostalCode;
         this.userPostalCode = "";
       } //handle postalCode
 
-      if(this.userPhoneNumber === "") {
+      if (this.userPhoneNumber === "") {
         this.emptyPhoneNumber = true;
         this.userPostalCode = "";
       } else {
         this.emptyPhoneNumber = false;
-        this.userInfo.phone = this.userPhoneNumber
+        this.userInfo.phone = this.userPhoneNumber;
         this.userPhoneNumber = "";
       } //handle PhoneNumber
-
-
-
-
-      
 
       console.log(this.userInfo);
     }, //placeOrder
