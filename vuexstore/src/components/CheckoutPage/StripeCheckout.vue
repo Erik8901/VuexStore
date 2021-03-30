@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="payment-container">
     helo
     <stripe-checkout
       ref="checkoutRef"
@@ -16,6 +16,11 @@
 
 <script>
 import { StripeCheckout } from '@vue-stripe/vue-stripe';
+
+//styles
+import stylesStripCheckout from './styles/stylesStripCheckout.css';
+
+
 export default {
   components: {
     StripeCheckout,

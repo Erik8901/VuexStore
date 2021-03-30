@@ -531,9 +531,13 @@
                   v-model="userPhoneNumber"
                   type="text"
                 />
-                <div class="btn-send-info-container" @click="placeOrder()">
-                  <span class="btn-place-order-text">Continue To Payment</span>
-                </div>
+                <router-link to="/paymentPage" class="payment-link-text">
+                  <div class="btn-send-info-container" @click="placeOrder()">
+                    <span class="btn-place-order-text"
+                      >Continue To Payment</span
+                    >
+                  </div>
+                </router-link>
               </div>
             </div>
             <!-- personal-info-fields -->

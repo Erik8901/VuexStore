@@ -9,6 +9,7 @@ import Inspiration from './components/Inspiration/Inspiration.vue'
 import CheckoutPage from './components/CheckoutPage/checkoutPage.vue'
 import Billinginfo from './components/CheckoutPage/billingInfo.vue'
 import ProductInfo from './components/ProductInfoPage/productInfo.vue'
+import StripeCheckout from './components/CheckoutPage/StripeCheckout'
 import VueRouter from 'vue-router';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faCoffee } from '@fortawesome/free-solid-svg-icons'
@@ -34,39 +35,51 @@ Vue.config.productionTip = false
 Vue.use(VueRouter, StripePlugin, options);
 
 const routes = [
-        { path: '/productpage',
-          component: ProductPage
-         },
-        { path: '/',
-          component: LandingPage
-        },
-        { path: '/about',
-          component: About
-        },
-        { path: '/inspiration',
-          component: Inspiration
-        },
-        { path: '/searchPage',
-          component: SearchPage
-        },
-        { path: '/contactPage',
-        component: ContactPage
-      },
-      { path: '/checkoutPage',
-        component: CheckoutPage
-      },
-      { path: '/productInfo',
-        component: ProductInfo
-      },
-      {
-        path: '/billingInfo',
-        component: Billinginfo
-      }
-  ];
+  {
+    path: '/productpage',
+    component: ProductPage
+  },
+  {
+    path: '/',
+    component: LandingPage
+  },
+  {
+    path: '/about',
+    component: About
+  },
+  {
+    path: '/inspiration',
+    component: Inspiration
+  },
+  {
+    path: '/searchPage',
+    component: SearchPage
+  },
+  {
+    path: '/contactPage',
+    component: ContactPage
+  },
+  {
+    path: '/checkoutPage',
+    component: CheckoutPage
+  },
+  {
+    path: '/productInfo',
+    component: ProductInfo
+  },
+  {
+    path: '/billingInfo',
+    component: Billinginfo
+  },
+  {
+    path: '/paymentPage',
+    component: StripeCheckout
+  }
+];
 
 
 const router = new VueRouter({
-    routes
+  routes
 })
 
 new Vue({
