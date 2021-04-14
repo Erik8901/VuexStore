@@ -1,6 +1,7 @@
 <template>
   <div class="stripe-checkout-page">
     <h1 class="billing-title">COMPLETE ORDER</h1>
+    
     <div class="payment-container">
       <stripe-checkout
         ref="checkoutRef"
