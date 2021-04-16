@@ -1,7 +1,6 @@
 <template>
   <div class="stripe-checkout-page">
     <h1 class="billing-title">COMPLETE ORDER</h1>
-    
     <div class="payment-container">
       <stripe-checkout
         ref="checkoutRef"
@@ -12,7 +11,33 @@
         :cancel-url="cancelURL"
         @loading="(v) => (loading = v)"
       />
-      <button @click="submit">Pay now!</button>
+      <!-- <button @click="submit">Confirm Purchase</button> -->
+
+      <div class="credit-card-form">
+        <span class="card-info-title">Credit Card Information</span>
+        <div class="card-inputs-container">
+          <input
+            class="input-owner-card"
+            placeholder="Card Owner"
+            v-model="userName"
+            type="text"
+          />
+          <input
+            class="input-card-CCV"
+            placeholder="CVV"
+            v-model="userName"
+            type="text"
+          />
+        </div>
+        <div class="card-number-div">
+        <input
+          class="input-card-number"
+          placeholder="Card Number"
+          v-model="userName"
+          type="text"
+        />
+        </div>
+      </div>
     </div>
   </div>
 </template>
