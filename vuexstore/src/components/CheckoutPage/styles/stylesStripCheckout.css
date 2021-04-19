@@ -21,7 +21,6 @@
 
 .credit-card-form {
   background: #d4a55d;
-  
   width: 100%;
   margin: 4rem;
 }
@@ -36,32 +35,94 @@
 
 .card-inputs-container {
   display: flex;
-  padding-top: 1rem;
-  margin-left: 10rem;
-  margin-right: 10rem;
+  padding-top: 2rem;
+  width: 42%;
+  margin: 0 auto;
   flex-direction: row;
   justify-content: space-between;
 }
 
-.input-owner-card {
-  height: 2rem;
-  width: 15rem;
+.input-expiry-card {
+  height: 1.3rem;
+  width: 10rem;
   padding-left: 0.3rem;
 }
 
 .input-card-CCV {
-  height: 2rem;
+  height: 1.3rem;
   padding-left: 0.3rem;
   width: 7rem;
 }
 
 .card-number-div {
-  margin-top: 2rem;
-  padding-left: 10rem;
+  margin: 0 auto;
+  width: 42%;
+  padding-top: 2rem;
+  display: flex;
 }
 
 .input-card-number {
-  height: 2rem;
+  height: 1.3rem;
   padding-left: 0.3rem;
-  width: 28.6rem;
+  width: 20.1rem;
+}
+
+.btn-complete {
+  background: #0052cc;
+  width: 42%;
+  margin: 0 auto;
+  top: 15%;
+  position: relative;
+  height: 2rem;
+  padding-top: 1rem;
+  cursor: pointer;
+  text-align: center;
+}
+
+.btn-complete:hover {
+  background:#3385ff
+}
+
+@media screen and (max-width: 1200px) {
+  .billing-title {
+    left: 10%;
+  }
+  .payment-container {
+    width:100%;
+  }
+  .credit-card-form {
+    height: 30rem;
+    width: 100%;
+    margin: unset;
+  }
+  .card-inputs-container {
+    display: flex;
+    margin-left: 1rem;
+    flex-direction: column;
+  }
+  .input-card-CCV {
+    margin-top: 1rem;
+    height: 2rem;
+  }
+  .input-expiry-card, .input-card-number {
+    height: 2rem;
+  }
+  .btn-complete {
+    margin-left: 1rem;
+    width: 86%;
+  }
+  .card-info-title, .card-number-div {
+    margin-left: 1rem;
+  }
+  .input-expiry-card {
+    width: 12rem
+  }
+  .input-card-CCV {
+    width: 7rem;
+  }
+  .input-card-number {
+    width: 15rem;
+    position: absolute;
+  }
+
 }

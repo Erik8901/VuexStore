@@ -15,10 +15,11 @@
 
       <div class="credit-card-form">
         <span class="card-info-title">Credit Card Information</span>
+
         <div class="card-inputs-container">
           <input
-            class="input-owner-card"
-            placeholder="Card Owner"
+            class="input-expiry-card"
+            placeholder="Expiry MM/YY"
             v-model="userName"
             type="text"
           />
@@ -30,12 +31,15 @@
           />
         </div>
         <div class="card-number-div">
-        <input
-          class="input-card-number"
-          placeholder="Card Number"
-          v-model="userName"
-          type="text"
-        />
+          <input
+            class="input-card-number"
+            placeholder="Card Number"
+            v-model="userName"
+            type="text"
+          />
+        </div>
+        <div class="btn-complete">
+          <span class="txt-complete-purchase">Complete Purchase</span>
         </div>
       </div>
     </div>
