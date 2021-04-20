@@ -17,16 +17,35 @@
         <span class="card-info-title">Credit Card Information</span>
 
         <div class="card-inputs-container">
-          <input
-            class="input-expiry-card"
-            placeholder="Expiry MM/YY"
-            v-model="userName"
-            type="text"
-          />
+          <div class="expiry-container">
+            <select name="expireMM" class="card-expireMM">
+              <option value="">Month</option>
+              <option value="01">January</option>
+              <option value="02">February</option>
+              <option value="03">March</option>
+              <option value="04">April</option>
+              <option value="05">May</option>
+              <option value="06">June</option>
+              <option value="07">July</option>
+              <option value="08">August</option>
+              <option value="09">September</option>
+              <option value="10">October</option>
+              <option value="11">November</option>
+              <option value="12">December</option>
+            </select>
+            <select name="expireYY" class="card-expireYY">
+              <option value="">Year</option>
+              <option value="20">2020</option>
+              <option value="21">2021</option>
+              <option value="22">2022</option>
+              <option value="23">2023</option>
+              <option value="24">2024</option>
+            </select>
+          </div>
           <input
             class="input-card-CCV"
             placeholder="CVV"
-            v-model="userName"
+            v-model="cardCCV"
             type="text"
           />
         </div>
@@ -34,11 +53,11 @@
           <input
             class="input-card-number"
             placeholder="Card Number"
-            v-model="userName"
+            v-model="cardNumber"
             type="text"
           />
         </div>
-        <div class="btn-complete">
+        <div class="btn-complete" @click="completePurchase()">
           <span class="txt-complete-purchase">Complete Purchase</span>
         </div>
       </div>
@@ -68,7 +87,18 @@ export default {
       ],
       successURL: "your-success-url",
       cancelURL: "your-cancel-url",
+      cardExpiryDate: "",
+      cardCCV: "",
+      cardNumber: "",
     };
+  },
+  methods: {
+    completePurchase: function () {
+      console.log("test");
+      console.log(this.cardExpiryDate);
+
+      this.cardExpiryDate = "";
+    },
   },
   // You will be redirected to Stripe's secure checkout page
   submit() {

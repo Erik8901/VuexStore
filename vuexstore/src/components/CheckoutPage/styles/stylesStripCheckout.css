@@ -32,7 +32,6 @@
   align-items: center;
 }
 
-
 .card-inputs-container {
   display: flex;
   padding-top: 2rem;
@@ -42,10 +41,17 @@
   justify-content: space-between;
 }
 
-.input-expiry-card {
-  height: 1.3rem;
-  width: 10rem;
+.card-expireMM, .card-expireYY {
+  height: 1.6rem;
   padding-left: 0.3rem;
+  cursor: pointer;
+}
+
+.expiry-container {
+  display: flex;
+  flex-direction: row;
+  width: 9rem;
+  justify-content: space-between
 }
 
 .input-card-CCV {
