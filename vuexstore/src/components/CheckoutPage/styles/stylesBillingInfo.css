@@ -212,11 +212,19 @@
         display: flex;
         flex-direction: column;
     }
-    .input-names, .input-info, .input-email, .dropDown-country {
-        width: 100vw;
+    .input-names, .input-info, .input-email {
+        width: 86vw;
         margin-top: 1rem;
-        
+        margin-left: 1rem;
     }
+    
+    
+    .dropDown-country {
+        width: 88.2vw;
+        margin-top: 1rem;
+        margin-left: 1rem;
+    }
+    
     .user-billing-info-container {
         padding-top: 1rem;
         width: 100%;
