@@ -110,6 +110,7 @@ a {
     text-decoration: underline;
 }
 
+
 @media screen and (max-width: 1300px) {
     .searchField {
         border: none;

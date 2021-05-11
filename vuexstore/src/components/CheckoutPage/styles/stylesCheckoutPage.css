@@ -153,21 +153,48 @@
 
 
 @media screen and (max-width: 1000px) {
+    .shopping-cart-products-container {
+        height: auto;
+    }
+    .checkout {
+        top: 16%;
+    }
     .checkout-container {
       height: auto;
       width: 100vw;
+      background: unset;
+    }
+    .checkout-title {
+        left: 3%;
+        font-size: 1rem;
     }
     .delete-product {
        right: 1rem;
     }
-    .img {
+    .checkout-header-info {
         display: none;
+    }
+    .img {
+        height: 6rem;
+        width: 33vw;
     }
     .to-checkout-div {
         width: 100%;
     }
+    .checkout-product-name {
+        display: none;
+    }
     .checkout-btn-text {
         font-size: 0.7rem;
+    }
+    .product-cart-details {
+        margin: 0 auto;
+        color: #000;
+        font-weight: 600;
+        width: 90%;
+    }
+    .product-price {
+        padding-left: unset;
     }
 }
   

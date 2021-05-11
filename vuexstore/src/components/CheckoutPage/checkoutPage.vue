@@ -28,8 +28,7 @@
                                 </router-link>
                         </div>
                         <div class="product-price-info-container">
-                            <span class="product-price" >1</span>
-                            <span class="product-price">€{{product.price}}</span>
+                            <span class="product-price" >1 X</span>
                             <span class="product-price">€{{product.price}}</span>
                         </div>
                             <div class="removeProduct" @click="removeProduct(index, product)"><span class="delete-product">X</span></div>
