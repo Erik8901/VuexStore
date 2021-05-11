@@ -76,9 +76,11 @@
     }
     .header-container {
         width: 100vw;
+        justify-content: space-around;
     }
     .cart-div-header-top {
-        left: 14%;
+        left: 20%;
         position: relative;
     }
+   
 }

@@ -7,38 +7,44 @@
       
       <div class="hamburger-menu"  v-if="!showHamMenu">
           <div class="hamburger-buttons">
-              <router-link to="/">
+              <router-link to="/" class="mobile-menu-btns">
                   <span>Home</span>
+                  <i class="fas fa-arrow-right"></i>
               </router-link>
           </div>
         
           <div class="hamburger-buttons">
-              <router-link to="/Productpage">
+              <router-link to="/Productpage" class="mobile-menu-btns">
                   <span>Products</span>
+                  <i class="fas fa-arrow-right"></i>
               </router-link>
           </div>
         
         <div class="hamburger-buttons">
-            <router-link to="/Inspiration">
+            <router-link to="/Inspiration" class="mobile-menu-btns">
                 <span>Inspiration</span>
+                <i class="fas fa-arrow-right"></i>
             </router-link>
         </div>
         
         <div class="hamburger-buttons">
-            <router-link to="/About">
+            <router-link to="/About" class="mobile-menu-btns">
                 <span>About</span>
+                <i class="fas fa-arrow-right"></i>
             </router-link>
         </div>
         
         <div class="hamburger-buttons">
-            <router-link to="/">
+            <router-link to="/" class="mobile-menu-btns">
                 <span>Jobs</span>
+                <i class="fas fa-arrow-right"></i>
             </router-link>
         </div>
         
         <div class="hamburger-buttons">
-            <router-link to="/Contactpage">
+            <router-link to="/Contactpage" class="mobile-menu-btns">
                 <span>Contact</span>
+                <i class="fas fa-arrow-right"></i>
             </router-link>
         </div>
     </div>

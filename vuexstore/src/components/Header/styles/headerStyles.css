@@ -132,4 +132,12 @@ a {
     .hamburgerBtn {
         display: block;
     }
+    .hamburger-menu {
+        height: 100vh;
+    }
+    .mobile-menu-btns {
+        display: flex;
+        justify-content: space-between;
+        width: 96%;
+    }
 }

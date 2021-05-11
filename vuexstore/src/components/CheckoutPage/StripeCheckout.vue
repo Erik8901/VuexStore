@@ -95,6 +95,8 @@ export default {
   methods: {
     completePurchase: function () {
       console.log("test");
+
+      this.$refs.checkoutRef.redirectToCheckout();
       console.log(this.cardExpiryDate);
 
       this.cardExpiryDate = "";
