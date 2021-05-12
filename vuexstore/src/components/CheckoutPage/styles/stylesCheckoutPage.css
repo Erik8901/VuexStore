@@ -218,23 +218,24 @@
         font-weight: 600;
     }
     .emptyCart-checkout-mobile {
-        display: block;
         background: #007acc;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         width: 90%;
         margin-left: 1rem;
         margin-top: 1rem;
         margin-bottom: 6rem;
+        color: #fff;
         height: 3rem;
     }
     .checkout-container {
         overflow-y: unset;
     }
     .checkout-btn-text-mobile {
-        position: relative;
-        left: 3.5rem;
-        color: #fff;
-        top: 0.9rem
+        margin-bottom: unset;
     }
+    
 
 }
   

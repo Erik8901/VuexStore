@@ -56,13 +56,11 @@
                 <span class="total-text-mobile">Your Total: {{this.totalPrice}} €</span>
             </div>
         </div>
-       
+         <router-link to="/BillingInfo" class="checkout-link-text">
             <div class="emptyCart-checkout-mobile">
-                 <router-link to="/BillingInfo" class="checkout-link-text">
                 <span class="checkout-btn-text-mobile">Proceed To Checkout</span>
-                </router-link>
             </div>
-         
+         </router-link>
     </div><!-- //v-else -->
   </div>
 </template>

@@ -6,7 +6,10 @@
       </div>
       
       <div class="hamburger-menu"  v-if="!showHamMenu">
-          <div class="hamburger-buttons">
+          <div class="close-btn-div">
+            <span class="close-menu" v-if="!showHamMenu">X</span>
+          </div>
+          <div class="hamburger-buttons-home">
               <router-link to="/" class="mobile-menu-btns">
                   <span>Home</span>
                   <i class="fas fa-arrow-right"></i>

@@ -92,6 +92,18 @@ a {
     background-color: rgb(212, 165, 93);
 }
 
+
+.close-menu {
+    position: absolute;
+    right: 10%;
+    top: 3%;
+    color: #000;
+    margin-bottom: unset;
+    font-weight: 501;
+}
+
+
+
 .hamburger-buttons {
     margin: 1rem;
     background-color: Transparent;
@@ -102,6 +114,21 @@ a {
     cursor: pointer;
 }
 
+.hamburger-buttons-home {
+    margin: 1rem;
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    color: #ffff;
+    border: none;
+    font-size: 120%;
+    cursor: pointer;
+    margin-top: 5.1rem;
+}
+
+.hamburger-buttons-home > a {
+    color: #fff;
+}
+
 .hamburger-buttons > a {
     color: #fff;
 }
@@ -109,7 +136,6 @@ a {
 .hamburger-buttons:hover {
     text-decoration: underline;
 }
-
 
 @media screen and (max-width: 1300px) {
     .searchField {
