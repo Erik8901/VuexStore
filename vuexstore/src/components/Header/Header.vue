@@ -7,7 +7,7 @@
       
       <div class="hamburger-menu"  v-if="!showHamMenu">
           <div class="close-btn-div">
-            <span class="close-menu" v-if="!showHamMenu">X</span>
+            <span class="close-menu" v-on:click="showHamMenu = !showHamMenu">X</span>
           </div>
           <div class="hamburger-buttons-home">
               <router-link to="/" class="mobile-menu-btns">
