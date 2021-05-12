@@ -150,6 +150,16 @@
 .emptyCart-checkout:hover {
     color:#3385ff
 }
+.to-checkout-div-mobile {
+    display: none;
+}
+.emptyCart-checkout-mobile {
+    display: none;
+}
+
+.if-empty-div {
+    overflow-y: scroll;
+}
 
 
 @media screen and (max-width: 1000px) {
@@ -196,6 +206,36 @@
     .product-price {
         padding-left: unset;
     }
+    .to-checkout-div {
+        display: none;
+    }
+    .to-checkout-div-mobile {
+        display: block;
+        margin-top: 3rem;
+        margin-left: 1rem;
+        color: #000;
+        width: 90%;
+        font-weight: 600;
+    }
+    .emptyCart-checkout-mobile {
+        display: block;
+        background: #007acc;
+        width: 90%;
+        margin-left: 1rem;
+        margin-top: 1rem;
+        margin-bottom: 6rem;
+        height: 3rem;
+    }
+    .checkout-container {
+        overflow-y: unset;
+    }
+    .checkout-btn-text-mobile {
+        position: relative;
+        left: 3.5rem;
+        color: #fff;
+        top: 0.9rem
+    }
+
 }
   
 

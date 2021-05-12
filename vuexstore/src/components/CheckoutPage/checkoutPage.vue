@@ -1,7 +1,7 @@
 <template>
   <div class="checkout">
       <h1 class="checkout-title">Shopping Cart</h1>
-          <div v-if="this.productsCart.length === 0">
+          <div v-if="this.productsCart.length === 0" class="if-empty-div">
               <h1 class="emptyH1">Your Cart is Empty</h1>
           </div>
       <div v-else>
@@ -45,14 +45,24 @@
                 <div class="emptyCart">
                     <span class="checkout-btn-text">Your Total: {{this.totalPrice}} €</span>
                 </div>
-                
-                    <router-link to="/BillingInfo" class="checkout-link-text">
+                <router-link to="/BillingInfo" class="checkout-link-text">
                     <div class="emptyCart-checkout">
                         <span class="checkout-btn-text">Proceed To Checkout</span>
-                        </div>
-                    </router-link>
-                
+                    </div>
+                </router-link>
+        </div>
+        <div class="to-checkout-div-mobile">
+            <div class="emptyCart-mobile" @click="emptyCart()">
+                <span class="total-text-mobile">Your Total: {{this.totalPrice}} €</span>
             </div>
+        </div>
+       
+            <div class="emptyCart-checkout-mobile">
+                 <router-link to="/BillingInfo" class="checkout-link-text">
+                <span class="checkout-btn-text-mobile">Proceed To Checkout</span>
+                </router-link>
+            </div>
+         
     </div><!-- //v-else -->
   </div>
 </template>
