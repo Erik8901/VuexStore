@@ -209,7 +209,7 @@
     .to-checkout-div {
         display: none;
     }
-    .to-checkout-div-mobile {
+    .total-price-div-mobile {
         display: block;
         margin-top: 3rem;
         margin-left: 1rem;
@@ -217,7 +217,7 @@
         width: 90%;
         font-weight: 600;
     }
-    .emptyCart-checkout-mobile {
+    .to-checkout-div-mobile {
         background: #007acc;
         display: flex;
         justify-content: center;

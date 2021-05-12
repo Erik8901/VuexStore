@@ -51,13 +51,11 @@
                     </div>
                 </router-link>
         </div>
-        <div class="to-checkout-div-mobile">
-            <div class="emptyCart-mobile" @click="emptyCart()">
-                <span class="total-text-mobile">Your Total: {{this.totalPrice}} €</span>
-            </div>
+        <div class="total-price-div-mobile">
+            <span class="total-price-text-mobile">Your Total: {{this.totalPrice}} €</span>
         </div>
          <router-link to="/BillingInfo" class="checkout-link-text">
-            <div class="emptyCart-checkout-mobile">
+            <div class="to-checkout-div-mobile">
                 <span class="checkout-btn-text-mobile">Proceed To Checkout</span>
             </div>
          </router-link>
