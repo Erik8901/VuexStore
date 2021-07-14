@@ -1,162 +1,167 @@
 .header {
-    position: fixed;
-    background-color: #507661;
-    height: 3rem;
-    font-family: Arial, Helvetica, sans-serif;
-    top: 3rem;
-    width: 100vw;
-    color: white;
-    z-index: 1000;
-    left: 0%;
+  position: fixed;
+  background-color: #507661;
+  height: 3rem;
+  font-family: Arial, Helvetica, sans-serif;
+  top: 3rem;
+  width: 100vw;
+  color: white;
+  z-index: 1000;
+  left: 0%;
 }
 
 .buttonsMenu {
-    height: 3rem;
-    display: flex;
-    flex-direction: row;
+  height: 3rem;
+  display: flex;
+  flex-direction: row;
 }
 
 .desktop-menu {
-    height: 3rem;
-    display: flex;
-    margin: 0 auto;
-    width: 60%;
-    justify-content: space-evenly
+  height: 3rem;
+  display: flex;
+  margin: 0 auto;
+  width: 60%;
+  justify-content: space-evenly;
 }
 
 .buttons {
-    height: 1.3rem;
-    padding-top: 1rem;
-    color: #ffff;
+  height: 1.3rem;
+  padding-top: 1rem;
+  color: #ffff;
 }
 
 .buttons:hover {
-    border-bottom: 1px solid #fff;
+  border-bottom: 1px solid #fff;
 }
 
 a {
-    height: fit-content;
-    text-decoration: none;
+  height: fit-content;
+  text-decoration: none;
 }
 
 .searchBar {
-    font-size: 90%;
-    font-family: Arial, Helvetica, sans-serif;
-    border: none;
+  font-size: 90%;
+  font-family: Arial, Helvetica, sans-serif;
+  border: none;
 }
 
 .search-container {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .searchField {
+  border: none;
+  width: 16rem;
+  height: 1.6rem;
+  padding: 0.2rem;
+  background-repeat: no-repeat;
+  border-radius: 0.2rem;
+  text-indent: 0.3rem;
+}
+
+.div-searchIcon {
+  right: 10%;
+  position: relative;
+}
+
+.hamburgerBtn {
+  left: 3%;
+  height: 4rem;
+  width: fit-content;
+  height: fit-content;
+  display: none;
+  cursor: pointer;
+  top: 16%;
+  position: relative;
+}
+
+.hamburger-menu {
+  top: 100%;
+  width: 100vw;
+  flex-direction: column;
+  left: 0;
+  height: fit-content;
+  display: flex;
+  position: absolute;
+  background-color: rgb(212, 165, 93);
+}
+
+.close-menu {
+  position: absolute;
+  right: 10%;
+  top: 3%;
+  color: #000;
+  margin-bottom: unset;
+  font-weight: 501;
+}
+
+.hamburger-buttons {
+  margin: 1rem;
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  color: #ffff;
+  border: none;
+  font-size: 120%;
+  cursor: pointer;
+}
+
+.hamburger-buttons-home {
+  margin: 1rem;
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  color: #ffff;
+  border: none;
+  font-size: 120%;
+  cursor: pointer;
+  margin-top: 5.1rem;
+}
+
+.hamburger-buttons-home > a {
+  color: #fff;
+}
+
+.hamburger-buttons > a {
+  color: #fff;
+}
+
+.hamburger-buttons:hover {
+  text-decoration: underline;
+}
+
+a:focus > .buttons {
+    border-bottom: 1px solid #fff;
+    
+}
+
+@media screen and (max-width: 1300px) {
+  .searchField {
     border: none;
-    width: 16rem;
+    width: 40vw;
     height: 1.6rem;
     padding: 0.2rem;
     background-repeat: no-repeat;
     border-radius: 0.2rem;
     text-indent: 0.3rem;
-}
-
-.div-searchIcon {
-    right: 10%;
-    position: relative;
-}
-
-.hamburgerBtn{
-    left: 3%;
-    height: 4rem;
-    width: fit-content;
-    height: fit-content;
-    display: none;
-    cursor: pointer;
+    position: absolute;
+    left: 1%;
     top: 16%;
-    position: relative;
-}
-
-.hamburger-menu {
-    top: 100%;
-    width: 100vw;
-    flex-direction: column;
-    left: 0;
-    height: fit-content;
+  }
+  .div-searchIcon {
+    display: none;
+  }
+  .desktop-menu {
+    display: none;
+  }
+  .hamburgerBtn {
+    display: block;
+  }
+  .hamburger-menu {
+    height: 100vh;
+  }
+  .mobile-menu-btns {
     display: flex;
-    position: absolute;
-    background-color: rgb(212, 165, 93);
-}
-
-.close-menu {
-    position: absolute;
-    right: 10%;
-    top: 3%;
-    color: #000;
-    margin-bottom: unset;
-    font-weight: 501;
-}
-
-.hamburger-buttons {
-    margin: 1rem;
-    background-color: Transparent;
-    background-repeat:no-repeat;
-    color: #ffff;
-    border: none;
-    font-size: 120%;
-    cursor: pointer;
-}
-
-.hamburger-buttons-home {
-    margin: 1rem;
-    background-color: Transparent;
-    background-repeat:no-repeat;
-    color: #ffff;
-    border: none;
-    font-size: 120%;
-    cursor: pointer;
-    margin-top: 5.1rem;
-}
-
-.hamburger-buttons-home > a {
-    color: #fff;
-}
-
-.hamburger-buttons > a {
-    color: #fff;
-}
-
-.hamburger-buttons:hover {
-    text-decoration: underline;
-}
-
-@media screen and (max-width: 1300px) {
-    .searchField {
-        border: none;
-        width: 40vw;
-        height: 1.6rem;
-        padding: 0.2rem;
-        background-repeat: no-repeat;
-        border-radius: 0.2rem;
-        text-indent: 0.3rem;
-        position: absolute;
-        left: 1%;
-        top: 16%;
-    }
-    .div-searchIcon {
-        display: none;
-    }
-    .desktop-menu {
-        display: none;
-    }
-    .hamburgerBtn {
-        display: block;
-    }
-    .hamburger-menu {
-        height: 100vh;
-    }
-    .mobile-menu-btns {
-        display: flex;
-        justify-content: space-between;
-        width: 96%;
-    }
+    justify-content: space-between;
+    width: 96%;
+  }
 }
