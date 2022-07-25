@@ -95,7 +95,7 @@
 
 .productsPage {
     position: relative;
-    top: 7rem;
+    top: 10rem;
     height: 40rem;
     width: CALC(100vw - 1rem);
 }
